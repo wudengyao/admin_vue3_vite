@@ -53,7 +53,7 @@
   // 如果将来需要进行主题替换，所以这里获取下动态样式
   const store = useStore()
   // eslint-disable-next-line
-  const linkHoverColor = ref(store.getters.cssVar.menuActiveText)
+  const linkHoverColor = ref(store.getters.cssVar.menuBg)
 </script>
 
 <style lang="scss" scoped>
@@ -75,6 +75,9 @@
     .redirect:hover {
       // 如果将来需要进行主题替换，所以这里不去写死样式
       color: v-bind(linkHoverColor);
+      font-weight: 900;
+      text-decoration:underline
+
     }
   }
 </style>
