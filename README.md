@@ -1,7 +1,7 @@
 
 ## 企业级后台管理系统通用架构，企业级！开箱即用！
 
-## 项目技术栈：Vue3 + JavaScript + Vite4 + element-plus2.3.5
+## 项目技术栈：Vue3 + JavaScript + Vite4 + Element-plus2.3.5
 <img width="1438" alt="image" src="https://github.com/wudengyao/admin_vue3_vite/assets/9073383/d6cd923c-3119-4258-a8e2-089a502e6984">
 
 
