@@ -1,7 +1,7 @@
 <template>
   <div class="">
     <p>后台管理系统通用架构，开箱即用！</p>
-    <p style="margin-top: 10px">项目技术栈：Vue3 + JavaScript + Vite4</p>
+    <p style="margin-top: 10px">项目技术栈：Vue3 + JavaScript + Vite4 + element-plus2.3.5</p>
     <p style="margin-top: 10px">项目主要技术方案：</p>
     <p>1、接口模块封装方案</p>
     <p>2、请求动作封装方案</p>
@@ -19,7 +19,6 @@
     <p style="margin-top: 10px;">博客主页：前端小三爷_</p>
     <a href="https://juejin.cn/user/1310273591836957" target="_blank">链接：https://juejin.cn/user/1310273591836957</a>
     <p>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
-
 
 
 
