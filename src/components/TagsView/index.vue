@@ -16,14 +16,7 @@
       >
         {{ tag.title }}
         <template v-if="!isAffiix(tag)">
-<!--          <i-->
-<!--              class="el-icon-close"-->
-<!--              @click.prevent.stop="onCloseClick(index,tag)"-->
-<!--          />-->
-
-
             <Close  @click.prevent.stop="onCloseClick(index,tag)" class="el-icon-close"/>
-
         </template>
 
       </router-link>

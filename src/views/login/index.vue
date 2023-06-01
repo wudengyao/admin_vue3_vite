@@ -26,15 +26,15 @@
         </span>
       </el-form-item>
 
-      <el-form-item class="code-box">
+      <el-form-item class="code-box" prop="captcha_code">
        <span class="icon-container">
           <Tickets style="width: 1em;height: 1em"/>
         </span>
         <el-input
             placeholder="图形验证码"
-            v-model="loginForm.captcha_code" class="code-input" maxlength="4">
+            v-model="loginForm.captcha_code" name="captcha_code" class="code-input" maxlength="4">
         </el-input>
-        <div class="code-img" @click="getCodeImg">{{loginForm.captcha_code}}</div>
+        <div class="code-img" @click="getCodeImg">{{code_net}}</div>
       </el-form-item>
 
 
@@ -55,12 +55,13 @@
 import {UserFilled,Lock,Tickets} from '@element-plus/icons'
 
 import { ref, onMounted } from 'vue'
-import { validatePassword } from './rules'
+import { validatePassword,validateCode } from './rules'
 import { getCode } from '@/api/api'
 import { useStore } from 'vuex'
 import { useRouter } from 'vue-router'
+import {ElMessage} from "element-plus";
 
-
+const  code_net = ref('')
 
 onMounted(() => {
   getCodeImg()
@@ -91,6 +92,14 @@ const loginRules = ref({
     },
 
   ],
+  captcha_code: [
+    {
+      required: true,
+      trigger: 'blur',
+      validator: validateCode()
+    },
+
+  ],
 })
 
 // 处理密码框文本显示状态
@@ -115,7 +124,11 @@ const router = useRouter()
 const handleLogin = () => {
   loginFromRef.value.validate(valid => {
     if (!valid) return
-    loading.value = true
+    console.log(loginForm.value)
+    if(loginForm.value.captcha_code != code_net.value){
+      ElMessage.error("验证码错误！")
+      return;
+    }
     store.dispatch('user/login', loginForm.value)
         .then(() => {
           loading.value = false
@@ -138,7 +151,7 @@ const handleLogin = () => {
 const getCodeImg = () => {
 
   loginForm.value.code_key = '43b0a022b1300a92199496ceff9d567f'
-  loginForm.value.captcha_code = getCodeOfRandom()
+  code_net.value = getCodeOfRandom()
 
   // getCode({})
   //   .then(data => {
@@ -206,32 +219,19 @@ $txt_color: #333;
       display: inline-block;
       height: 47px;
       width: 85%;
-
       input {
-        background: transparent;
-        -webkit-appearance: none;
         padding: 12px 5px 12px 15px;
         height: 47px;
         caret-color: $cursor;
         color: $txt_color;
       }
       .el-input__wrapper {
-        background: transparent;
-        -webkit-appearance: none;
-        padding: 12px 5px 12px 15px;
+        background: none;
+        box-shadow: none;
+        width:90%;
         height: 47px;
-        caret-color: $cursor;
-        color: $txt_color;
       }
-      .el-input__wrapper is-focus{
-        background: transparent;
-        -webkit-appearance: none;
-        border-radius: 0px;
-        padding: 12px 5px 12px 15px;
-        height: 47px;
-        caret-color: $cursor;
-        color: $txt_color;
-    }
+
     }
   }
 
