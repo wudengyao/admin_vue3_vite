@@ -5,16 +5,16 @@
         <h3 class="title">Vue3后台系统</h3>
       </div>
 
-      <el-form-item prop="username">
+      <el-form-item prop="username" style="display: flex;flex-direction: row">
         <span class="icon-container">
-          <i class="el-icon-user"></i>
+          <UserFilled style="width: 1em;height: 1em"/>
         </span>
-        <el-input placeholder="请输入用户名" name="username" type="text" v-model="loginForm.username" />
+        <el-input placeholder="请输入用户名" name="username" type="text" v-model="loginForm.username"/>
       </el-form-item>
 
       <el-form-item prop="password">
         <span class="icon-container">
-          <i class="el-icon-lock"></i>
+          <Lock style="width: 1em;height: 1em"/>
         </span>
         <el-input placeholder="请输入密码" name="password" :type="passwordType" v-model="loginForm.password" />
         <span class="show-pwd">
@@ -28,12 +28,9 @@
 
       <el-form-item class="code-box">
        <span class="icon-container">
-
-         <i class="el-icon-tickets"></i>
-
+          <Tickets style="width: 1em;height: 1em"/>
         </span>
         <el-input
-
             placeholder="图形验证码"
             v-model="loginForm.captcha_code" class="code-input" maxlength="4">
         </el-input>
@@ -43,6 +40,7 @@
 
       <el-button type="primary" style="width: 100%; margin-bottom: 30px;" :loading="loading"
                  @click="handleLogin"
+                 size="large"
                 >登录</el-button>
 
       <div style="color: red">账户密码随便输</div>
@@ -54,6 +52,8 @@
 </template>
 
 <script setup>
+import {UserFilled,Lock,Tickets} from '@element-plus/icons'
+
 import { ref, onMounted } from 'vue'
 import { validatePassword } from './rules'
 import { getCode } from '@/api/api'
@@ -173,7 +173,7 @@ const getCodeOfRandom = ()=>{
 $bg: #5268bc;
 $dark_gray: #889aa4;
 $light_gray: #eee;
-$cursor: #fff;
+$cursor: #000000;
 $txt_color: #333;
 
 
@@ -202,14 +202,14 @@ $txt_color: #333;
       color: #454545;
     }
 
-    ::v-deep .el-input {
+    ::v-deep .el-input{
       display: inline-block;
       height: 47px;
       width: 85%;
 
       input {
         background: transparent;
-        border: 1px;
+        border-color:transparent;
         -webkit-appearance: none;
         border-radius: 0px;
         padding: 12px 5px 12px 15px;
@@ -217,6 +217,26 @@ $txt_color: #333;
         caret-color: $cursor;
         color: $txt_color;
       }
+      .el-input__wrapper {
+        background: transparent;
+        border-color:transparent;
+        -webkit-appearance: none;
+        border-radius: 0px;
+        padding: 12px 5px 12px 15px;
+        height: 47px;
+        caret-color: $cursor;
+        color: $txt_color;
+      }
+      .el-input__wrapper is-focus{
+        background: transparent;
+        border-color:transparent;
+        -webkit-appearance: none;
+        border-radius: 0px;
+        padding: 12px 5px 12px 15px;
+        height: 47px;
+        caret-color: $cursor;
+        color: $txt_color;
+    }
     }
   }
 
