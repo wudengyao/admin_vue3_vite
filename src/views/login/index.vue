@@ -209,9 +209,7 @@ $txt_color: #333;
 
       input {
         background: transparent;
-        border-color:transparent;
         -webkit-appearance: none;
-        border-radius: 0px;
         padding: 12px 5px 12px 15px;
         height: 47px;
         caret-color: $cursor;
@@ -219,9 +217,7 @@ $txt_color: #333;
       }
       .el-input__wrapper {
         background: transparent;
-        border-color:transparent;
         -webkit-appearance: none;
-        border-radius: 0px;
         padding: 12px 5px 12px 15px;
         height: 47px;
         caret-color: $cursor;
@@ -229,7 +225,6 @@ $txt_color: #333;
       }
       .el-input__wrapper is-focus{
         background: transparent;
-        border-color:transparent;
         -webkit-appearance: none;
         border-radius: 0px;
         padding: 12px 5px 12px 15px;
