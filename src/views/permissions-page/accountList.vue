@@ -79,7 +79,7 @@
 </template>
 <script>
 export default {
-  name: "admintorList",
+  name: "adminList",
 };
 </script>
 <script setup>
