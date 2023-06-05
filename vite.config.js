@@ -3,6 +3,9 @@ import vue from '@vitejs/plugin-vue'
 // import path from 'path-browserify'
 import path from 'path'
 
+import { viteMockServe } from 'vite-plugin-mock'
+
+
 // svg-icon插件
 import { createSvgIconsPlugin } from 'vite-plugin-svg-icons'
 export default defineConfig({
@@ -13,6 +16,12 @@ export default defineConfig({
             iconDirs: [path.resolve('./src/icons/svg')],
             // 执行icon name的格式
             symbolId: 'icon-[name]',
+        }),
+        viteMockServe({
+            supportTs:false,
+            logger: false,
+            mockPath: "./src/mock/",
+
         })
     ],
     base: "./", //打包路径
@@ -29,7 +38,7 @@ export default defineConfig({
         cors: true, // 允许跨域
         proxy: {
             "/api": {
-                target: '接口域名',
+                target: 'http://localhost:8888/',
                 changeOrigin: true,
                 rewrite: (path) => path.replace(/^\/api/, ""),
             },

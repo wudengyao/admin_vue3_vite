@@ -14,7 +14,6 @@ import "@/styles/index.scss"
 import axios from '@/utils/axios'
 app.config.globalProperties.$axios = axios // 使用globalProperties挂载
 
-
 installElementPlus(app)
 installDirective(app)
 

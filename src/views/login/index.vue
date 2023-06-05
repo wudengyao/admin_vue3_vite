@@ -16,7 +16,7 @@
         <span class="icon-container">
           <Lock style="width: 1em;height: 1em"/>
         </span>
-        <el-input placeholder="请输入密码" name="password" :type="passwordType" v-model="loginForm.password" />
+        <el-input placeholder="请输入密码" name="password" :type="passwordType" v-model="loginForm.password"/>
         <span class="show-pwd">
           <svg-icon
               :icon="passwordType === 'password' ? 'eye' : 'eye-open'"
@@ -34,16 +34,17 @@
             placeholder="图形验证码"
             v-model="loginForm.captcha_code" name="captcha_code" class="code-input" maxlength="4">
         </el-input>
-        <div class="code-img" @click="getCodeImg">{{code_net}}</div>
+        <div class="code-img" @click="getCodeImg">{{ code_net }}</div>
       </el-form-item>
 
 
       <el-button type="primary" style="width: 100%; margin-bottom: 30px;" :loading="loading"
                  @click="handleLogin"
                  size="large"
-                >登录</el-button>
+      >登录
+      </el-button>
 
-      <div style="color: red">账户密码随便输</div>
+      <div style="color: red">mock数据,账户密码随便输</div>
 
     </el-form>
 
@@ -52,16 +53,16 @@
 </template>
 
 <script setup>
-import {UserFilled,Lock,Tickets} from '@element-plus/icons'
+import {UserFilled, Lock, Tickets} from '@element-plus/icons'
 
-import { ref, onMounted } from 'vue'
-import { validatePassword,validateCode } from './rules'
-import { getCode } from '@/api/api'
-import { useStore } from 'vuex'
-import { useRouter } from 'vue-router'
+import {ref, onMounted} from 'vue'
+import {validatePassword, validateCode} from './rules'
+import {getCode} from '@/api/api'
+import {useStore} from 'vuex'
+import {useRouter} from 'vue-router'
 import {ElMessage} from "element-plus";
 
-const  code_net = ref('')
+const code_net = ref('')
 
 onMounted(() => {
   getCodeImg()
@@ -149,34 +150,15 @@ const handleLogin = () => {
  * 获取图形验证码
  */
 const getCodeImg = () => {
+  getCode({})
+      .then(data => {
+        let obj = data.bizobj
 
-  loginForm.value.code_key = '43b0a022b1300a92199496ceff9d567f'
-  code_net.value = getCodeOfRandom()
-
-  // getCode({})
-  //   .then(data => {
-  //     let obj = data.bizobj
-  //
-  //     loginForm.value.code_key = obj.code_key
-  //     loginForm.value.captcha_code = obj.code
-  //   })
-  //   .catch(err => {
-  //   })
-}
-
-
-const getCodeOfRandom = ()=>{
-  // 所需随机抽取的样本数组
-  let nums=new Array("q","w","e","r","t","y","u","i","o","p","a","s","d","f","g","h","j","k","l","z","x","c","v","b","n","m","0","1","2","3","4","5","6","7","8","9");
-  // 初始化 拼接字符串
-  let str="";
-  for(let i=0;i<4;i++){
-    //每次生成一个0 - 61 之间的 number 作为随机获取验证码的下标
-    let p=Math.floor(Math.random()*1000)%36;
-    //拼接验证码  随机抽取大小写字母和数字
-    str+=nums[p];
-  }
-  return str;
+        loginForm.value.code_key = obj.code_key
+        code_net.value = obj.code
+      })
+      .catch(err => {
+      })
 }
 
 
@@ -205,7 +187,7 @@ $txt_color: #333;
     overflow: hidden;
     background: white;
     margin-top: 7%;
-    border-radius:4px;
+    border-radius: 4px;
 
 
     ::v-deep .el-form-item {
@@ -215,20 +197,22 @@ $txt_color: #333;
       color: #454545;
     }
 
-    ::v-deep .el-input{
+    ::v-deep .el-input {
       display: inline-block;
       height: 47px;
       width: 85%;
+
       input {
         padding: 12px 5px 12px 15px;
         height: 47px;
         caret-color: $cursor;
         color: $txt_color;
       }
+
       .el-input__wrapper {
         background: none;
         box-shadow: none;
-        width:90%;
+        width: 90%;
         height: 47px;
       }
 
@@ -264,15 +248,16 @@ $txt_color: #333;
     cursor: pointer;
     user-select: none;
   }
-  .code-box{
+
+  .code-box {
     position: relative;
 
     .code-img {
       position: absolute;
-      width:60px;
+      width: 60px;
       right: 0;
       top: 6px;
-      font-size:22px;
+      font-size: 22px;
       background: transparent;
 
     }

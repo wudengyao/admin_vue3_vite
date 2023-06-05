@@ -29,8 +29,10 @@
   "devDependencies": {
     "@types/node": "^18.16.0",
     "@vitejs/plugin-vue": "^4.0.0",
+    "mockjs": "^1.1.0",
     "sass": "^1.62.0",
     "vite": "^4.1.4",
+    "vite-plugin-mock": "^2.9.8",
     "vite-plugin-svg-icons": "^2.0.1"
   }
 }
