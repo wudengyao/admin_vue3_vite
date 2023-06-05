@@ -15,6 +15,7 @@
     <p>10、功能权限处理方案</p>
     <p>11、辅助库选择标准</p>
     <p>12、富文本编辑器处理方案</p>
+    <p>13、keepAlive页面缓存处理方案</p>
     <p style="color: red">最新内容持续更新中...</p>
     <p style="margin-top: 10px;">博客主页：前端小三爷_</p>
     <a href="https://juejin.cn/user/1310273591836957" target="_blank">链接：https://juejin.cn/user/1310273591836957</a>
