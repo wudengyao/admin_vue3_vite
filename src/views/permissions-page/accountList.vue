@@ -22,27 +22,43 @@
       <el-table-column prop="id" label="ID" width="180"></el-table-column>
       <el-table-column prop="account" label="账号" width="180">
       </el-table-column>
-      <el-table-column label="角色" width="100">
+      <el-table-column label="角色" width="180">
         <template #default="{ row }">
           <el-tag type="danger">{{ row.role_name }}</el-tag>
         </template>
       </el-table-column>
-      <el-table-column label="状态" width="100">
+      <el-table-column label="状态" width="180">
         <template #default="{ row }">
           <span>{{ row.is_lock == "1" ? "冻结" : "正常" }}</span>
         </template>
       </el-table-column>
-      <el-table-column prop="date" label="操作时间" width="180">
+      <el-table-column prop="date" label="操作时间" width="280">
       </el-table-column>
       <el-table-column prop="address" label="操作">
         <template #default="{ row }">
+
+          <el-tooltip
+              class="box-item"
+              effect="dark"
+              content="查看"
+              placement="top-start">
+            <el-button type="warning" :icon="Search" circle @click="handleEdit(row, 'see')"/>
+          </el-tooltip>
           <el-tooltip
               class="box-item"
               effect="dark"
               content="修改"
               placement="top-start">
             <el-button type="primary" :icon="Edit" circle @click="handleEdit(row)"
-                       v-auth="'/adminAuth/modifyAdmin'"></el-button>
+                       v-auth="'/adminAuth/modifyAdmin'"/>
+          </el-tooltip>
+
+          <el-tooltip
+              class="box-item"
+              effect="dark"
+              content="删除"
+              placement="top-start">
+            <el-button type="danger" :icon="Delete" circle @click="handleDel(row)"/>
           </el-tooltip>
 
         </template>

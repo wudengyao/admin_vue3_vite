@@ -50,8 +50,6 @@
             <el-button type="danger" :icon="Delete" circle @click="handleDel(row)"
                        v-auth="'/adminAuth/delRole'"/>
           </el-tooltip>
-
-
         </template>
       </el-table-column>
     </el-table>
