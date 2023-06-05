@@ -15,7 +15,6 @@
       </el-form-item>
     </el-form>
 
-    <el-card>
       <el-table :data="tableData"
                 v-loading="loading"
                 element-loading-text="加载中..."
@@ -59,7 +58,6 @@
         :total="total"
       >
       </el-pagination>
-    </el-card>
   </div>
 </template>
 <script>
@@ -81,7 +79,7 @@ onMounted(() => {
 const searchForm = ref({
   account: "",
   page: 1,
-  page_size: 10,
+  page_size: 20,
 });
 
 const tableData = ref([]);
@@ -114,10 +112,11 @@ const getListData = () => {
   loading.value = true
   getAdmintorList(searchForm.value)
     .then(data => {
-      tableData.value = data.bizobj
-      total.value = Number(data.page_info.total_items);
-      loading.value = false
-
+      setTimeout(()=>{
+        tableData.value = data.bizobj
+        total.value = Number(data.page_info.total_items);
+        loading.value = false
+      },1000)
     })
     .catch(err => {
       loading.value = false

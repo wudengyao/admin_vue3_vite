@@ -14,7 +14,6 @@
         </el-button>
       </el-form-item>
     </el-form>
-    <el-card>
       <el-table :data="tableData"
                 v-loading="loading"
                 element-loading-text="加载中..."
@@ -62,7 +61,6 @@
         :total="total"
       >
       </el-pagination>
-    </el-card>
   </div>
 </template>
 <script>
@@ -118,12 +116,14 @@ const handleDel = (row) => {
  */
 const getListData = () => {
   loading.value = true
+
   getRoleList(searchForm.value)
     .then(data => {
-      tableData.value = data.bizobj
-      total.value = Number(data.page_info.total_items);
-      loading.value = false
-
+      setTimeout(()=>{
+        tableData.value = data.bizobj
+        total.value = Number(data.page_info.total_items);
+        loading.value = false
+      },1000)
     })
     .catch(err => {
       loading.value = false
