@@ -6,48 +6,49 @@
       </el-form-item>
       <el-form-item>
         <el-button
-          type="primary"
-          @click="searchEvent"
-          v-auth="'/adminAuth/adminList'"
-          style="margin-left: -16px"
-          >查询
+            type="primary"
+            @click="searchEvent"
+            v-auth="'/adminAuth/adminList'"
+            style="margin-left: -16px"
+        >查询
         </el-button>
       </el-form-item>
     </el-form>
 
-      <el-table :data="tableData"
-                v-loading="loading"
-                element-loading-text="加载中..."
-                border>
-        <el-table-column prop="id" label="ID" width="180"></el-table-column>
-        <el-table-column prop="account" label="账号" width="180">
-        </el-table-column>
-        <el-table-column label="角色" width="100">
-          <template #default="{ row }">
-            <el-tag type="danger" size="mini">{{ row.role_name }}</el-tag>
-          </template>
-        </el-table-column>
-        <el-table-column label="状态" width="100">
-          <template #default="{ row }">
-            <span>{{ row.is_lock == "1" ? "冻结" : "正常" }}</span>
-          </template>
-        </el-table-column>
-        <el-table-column prop="date" label="操作时间" width="180">
-        </el-table-column>
-        <el-table-column prop="address" label="操作">
-          <template #default="{ row }">
-            <el-button
-              type="text"
-              size="small"
-              @click="handleEdit(row)"
-              v-auth="'/adminAuth/modifyAdmin'"
-            >
-              修改
-            </el-button>
-          </template>
-        </el-table-column>
-      </el-table>
-      <el-pagination
+    <el-table :data="tableData"
+              v-loading="loading"
+              element-loading-text="加载中..."
+              border>
+      <el-table-column prop="id" label="ID" width="180"></el-table-column>
+      <el-table-column prop="account" label="账号" width="180">
+      </el-table-column>
+      <el-table-column label="角色" width="100">
+        <template #default="{ row }">
+          <el-tag type="danger">{{ row.role_name }}</el-tag>
+        </template>
+      </el-table-column>
+      <el-table-column label="状态" width="100">
+        <template #default="{ row }">
+          <span>{{ row.is_lock == "1" ? "冻结" : "正常" }}</span>
+        </template>
+      </el-table-column>
+      <el-table-column prop="date" label="操作时间" width="180">
+      </el-table-column>
+      <el-table-column prop="address" label="操作">
+        <template #default="{ row }">
+          <el-tooltip
+              class="box-item"
+              effect="dark"
+              content="修改"
+              placement="top-start">
+            <el-button type="primary" :icon="Edit" circle @click="handleEdit(row)"
+                       v-auth="'/adminAuth/modifyAdmin'"></el-button>
+          </el-tooltip>
+
+        </template>
+      </el-table-column>
+    </el-table>
+    <el-pagination
         class="pagination"
         @size-change="handleSizeChange"
         @current-change="handleCurrentChange"
@@ -56,8 +57,8 @@
         :page-size="searchForm.page_size"
         layout="total, sizes, prev, pager, next, jumper"
         :total="total"
-      >
-      </el-pagination>
+    >
+    </el-pagination>
   </div>
 </template>
 <script>
@@ -66,11 +67,15 @@ export default {
 };
 </script>
 <script setup>
-import { ref, onMounted } from "vue";
-import { getAdmintorList } from "@/api/api";
-import { useStore } from "vuex";
-import { useRouter } from "vue-router";
-
+import {ref, onMounted} from "vue";
+import {getAdmintorList} from "@/api/api";
+import {useStore} from "vuex";
+import {useRouter} from "vue-router";
+import {
+  Delete,
+  Edit,
+  Search
+} from '@element-plus/icons-vue'
 onMounted(() => {
   getListData();
 });
@@ -97,7 +102,6 @@ const handleCurrentChange = (val) => {
 };
 
 const searchEvent = () => {
-  console.log("searchEvent==")
   searchForm.value.page = 1;
   getListData();
 };
@@ -111,17 +115,17 @@ const handleEdit = (row) => {
 const getListData = () => {
   loading.value = true
   getAdmintorList(searchForm.value)
-    .then(data => {
-      setTimeout(()=>{
-        tableData.value = data.bizobj
-        total.value = Number(data.page_info.total_items);
+      .then(data => {
+        setTimeout(() => {
+          tableData.value = data.bizobj
+          total.value = Number(data.page_info.total_items);
+          loading.value = false
+        }, 1000)
+      })
+      .catch(err => {
         loading.value = false
-      },1000)
-    })
-    .catch(err => {
-      loading.value = false
 
-    })
+      })
 };
 </script>
 

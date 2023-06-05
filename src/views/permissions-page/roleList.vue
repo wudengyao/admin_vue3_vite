@@ -6,51 +6,56 @@
       </el-form-item>
       <el-form-item>
         <el-button
-          @click="searchEvent"
-          type="primary"
-          v-auth="'/adminAuth/getRoleList'"
-          style="margin-left: -16px"
-          >查询
+            @click="searchEvent"
+            type="primary"
+            v-auth="'/adminAuth/getRoleList'"
+            style="margin-left: -16px"
+        >查询
         </el-button>
       </el-form-item>
     </el-form>
-      <el-table :data="tableData"
-                v-loading="loading"
-                element-loading-text="加载中..."
-                border>
-        <el-table-column prop="id" label="角色ID" width="180">
-        </el-table-column>
-        <el-table-column prop="name" label="角色名称" width="180">
-        </el-table-column>
-        <el-table-column prop="operator" label="操作信息"></el-table-column>
-        <el-table-column prop="address" label="操作">
-          <template #default="{ row }">
-            <el-button
-              type="text"
-              size="small"
-              @click="handleEdit(row, 'see')"
-              v-auth="'/adminAuth/lookRole'"
-              >查看
-            </el-button>
-            <el-button
-              type="text"
-              size="small"
-              @click="handleEdit(row)"
-              v-auth="'/adminAuth/saveRole'"
-              >修改
-            </el-button>
-            <el-button
-              style="color: #e98f8c"
-              type="text"
-              size="small"
-              @click="handleDel(row)"
-              v-auth="'/adminAuth/delRole'"
-              >刪除
-            </el-button>
-          </template>
-        </el-table-column>
-      </el-table>
-      <el-pagination
+    <el-table :data="tableData"
+              v-loading="loading"
+              element-loading-text="加载中..."
+              border>
+      <el-table-column prop="id" label="角色ID" width="180">
+      </el-table-column>
+      <el-table-column prop="name" label="角色名称" width="180">
+      </el-table-column>
+      <el-table-column prop="operator" label="操作信息"></el-table-column>
+      <el-table-column prop="address" label="操作">
+        <template #default="{ row }">
+          <el-tooltip
+              class="box-item"
+              effect="dark"
+              content="查看"
+              placement="top-start">
+            <el-button type="warning" :icon="Search" circle @click="handleEdit(row, 'see')"
+                       v-auth="'/adminAuth/lookRole'"/>
+          </el-tooltip>
+          <el-tooltip
+              class="box-item"
+              effect="dark"
+              content="修改"
+              placement="top-start">
+            <el-button type="primary" :icon="Edit" circle @click="handleEdit(row)"
+                       v-auth="'/adminAuth/saveRole'"/>
+          </el-tooltip>
+
+          <el-tooltip
+              class="box-item"
+              effect="dark"
+              content="删除"
+              placement="top-start">
+            <el-button type="danger" :icon="Delete" circle @click="handleDel(row)"
+                       v-auth="'/adminAuth/delRole'"/>
+          </el-tooltip>
+
+
+        </template>
+      </el-table-column>
+    </el-table>
+    <el-pagination
         class="pagination"
         @size-change="handleSizeChange"
         @current-change="handleCurrentChange"
@@ -59,8 +64,8 @@
         :page-size="searchForm.page_size"
         layout="total, sizes, prev, pager, next, jumper"
         :total="total"
-      >
-      </el-pagination>
+    >
+    </el-pagination>
   </div>
 </template>
 <script>
@@ -69,10 +74,16 @@ export default {
 };
 </script>
 <script setup>
-import { ref, onMounted } from "vue";
-import { getRoleList } from "@/api/api";
-import { useStore } from "vuex";
-import { useRouter } from "vue-router";
+import {ref, onMounted} from "vue";
+import {getRoleList} from "@/api/api";
+import {useStore} from "vuex";
+import {useRouter} from "vue-router";
+import {
+  Delete,
+  Edit,
+  Search
+
+} from '@element-plus/icons-vue'
 
 onMounted(() => {
   getListData();
@@ -118,17 +129,17 @@ const getListData = () => {
   loading.value = true
 
   getRoleList(searchForm.value)
-    .then(data => {
-      setTimeout(()=>{
-        tableData.value = data.bizobj
-        total.value = Number(data.page_info.total_items);
+      .then(data => {
+        setTimeout(() => {
+          tableData.value = data.bizobj
+          total.value = Number(data.page_info.total_items);
+          loading.value = false
+        }, 1000)
+      })
+      .catch(err => {
         loading.value = false
-      },1000)
-    })
-    .catch(err => {
-      loading.value = false
 
-    })
+      })
 };
 </script>
 
