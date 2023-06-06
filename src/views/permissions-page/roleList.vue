@@ -14,56 +14,59 @@
         </el-button>
       </el-form-item>
     </el-form>
-    <el-table :data="tableData"
-              v-loading="loading"
-              element-loading-text="加载中..."
-              border>
-      <el-table-column prop="id" label="角色ID" width="180">
-      </el-table-column>
-      <el-table-column prop="name" label="角色名称" width="180">
-      </el-table-column>
-      <el-table-column prop="operator" label="操作信息"></el-table-column>
-      <el-table-column prop="address" label="操作">
-        <template #default="{ row }">
-          <el-tooltip
-              class="box-item"
-              effect="dark"
-              content="查看"
-              placement="top-start">
-            <el-button type="warning" :icon="Search" circle @click="handleEdit(row, 'see')"
-                       v-auth="'/adminAuth/lookRole'"/>
-          </el-tooltip>
-          <el-tooltip
-              class="box-item"
-              effect="dark"
-              content="修改"
-              placement="top-start">
-            <el-button type="primary" :icon="Edit" circle @click="handleEdit(row)"
-                       v-auth="'/adminAuth/saveRole'"/>
-          </el-tooltip>
+    <el-card>
+      <el-table :data="tableData"
+                v-loading="loading"
+                element-loading-text="加载中..."
+                border>
+        <el-table-column prop="id" label="角色ID" width="180">
+        </el-table-column>
+        <el-table-column prop="name" label="角色名称" width="180">
+        </el-table-column>
+        <el-table-column prop="operator" label="操作信息"></el-table-column>
+        <el-table-column prop="address" label="操作">
+          <template #default="{ row }">
+            <el-tooltip
+                class="box-item"
+                effect="dark"
+                content="查看"
+                placement="top-start">
+              <el-button type="warning" :icon="Search" circle @click="handleEdit(row, 'see')"
+                         v-auth="'/adminAuth/lookRole'"/>
+            </el-tooltip>
+            <el-tooltip
+                class="box-item"
+                effect="dark"
+                content="修改"
+                placement="top-start">
+              <el-button type="primary" :icon="Edit" circle @click="handleEdit(row)"
+                         v-auth="'/adminAuth/saveRole'"/>
+            </el-tooltip>
 
-          <el-tooltip
-              class="box-item"
-              effect="dark"
-              content="删除"
-              placement="top-start">
-            <el-button type="danger" :icon="Delete" circle @click="handleDel(row)"
-                       v-auth="'/adminAuth/delRole'"/>
-          </el-tooltip>
-        </template>
-      </el-table-column>
-    </el-table>
-    <el-pagination
-        class="pagination"
-        @size-change="handleSizeChange"
-        @current-change="handleCurrentChange"
-        :current-page="searchForm.page"
-        :page-sizes="[10, 20, 30, 50, 100]"
-        :page-size="searchForm.page_size"
-        layout="total, sizes, prev, pager, next, jumper"
-        :total="total"
-    >
-    </el-pagination>
+            <el-tooltip
+                class="box-item"
+                effect="dark"
+                content="删除"
+                placement="top-start">
+              <el-button type="danger" :icon="Delete" circle @click="handleDel(row)"
+                         v-auth="'/adminAuth/delRole'"/>
+            </el-tooltip>
+          </template>
+        </el-table-column>
+      </el-table>
+      <el-pagination
+          class="pagination"
+          @size-change="handleSizeChange"
+          @current-change="handleCurrentChange"
+          :current-page="searchForm.page"
+          :page-sizes="[10, 20, 30, 50, 100]"
+          :page-size="searchForm.page_size"
+          layout="total, sizes, prev, pager, next, jumper"
+          :total="total"
+      >
+      </el-pagination>
+    </el-card>
+
   </div>
 </template>
 <script>
@@ -154,7 +157,8 @@ const getListData = () => {
 
   .pagination {
     margin-top: 20px;
-    text-align: end;
+    display: flex;
+    justify-content: end;
   }
 }
 </style>

@@ -14,67 +14,71 @@
         </el-button>
       </el-form-item>
     </el-form>
+    <el-card>
+      <el-table :data="tableData"
+                v-loading="loading"
+                element-loading-text="加载中..."
+                border>
+        <el-table-column prop="id" label="ID" width="180"></el-table-column>
+        <el-table-column prop="account" label="账号" width="180">
+        </el-table-column>
+        <el-table-column label="角色" width="180">
+          <template #default="{ row }">
+            <el-tag type="danger">{{ row.role_name }}</el-tag>
+          </template>
+        </el-table-column>
+        <el-table-column label="状态" width="180">
+          <template #default="{ row }">
+            <span>{{ row.is_lock == "1" ? "冻结" : "正常" }}</span>
+          </template>
+        </el-table-column>
+        <el-table-column prop="date" label="操作时间" width="280">
+        </el-table-column>
 
-    <el-table :data="tableData"
-              v-loading="loading"
-              element-loading-text="加载中..."
-              border>
-      <el-table-column prop="id" label="ID" width="180"></el-table-column>
-      <el-table-column prop="account" label="账号" width="180">
-      </el-table-column>
-      <el-table-column label="角色" width="180">
-        <template #default="{ row }">
-          <el-tag type="danger">{{ row.role_name }}</el-tag>
-        </template>
-      </el-table-column>
-      <el-table-column label="状态" width="180">
-        <template #default="{ row }">
-          <span>{{ row.is_lock == "1" ? "冻结" : "正常" }}</span>
-        </template>
-      </el-table-column>
-      <el-table-column prop="date" label="操作时间" width="280">
-      </el-table-column>
-      <el-table-column prop="address" label="操作">
-        <template #default="{ row }">
 
-          <el-tooltip
-              class="box-item"
-              effect="dark"
-              content="查看"
-              placement="top-start">
-            <el-button type="warning" :icon="Search" circle @click="handleEdit(row, 'see')"/>
-          </el-tooltip>
-          <el-tooltip
-              class="box-item"
-              effect="dark"
-              content="修改"
-              placement="top-start">
-            <el-button type="primary" :icon="Edit" circle @click="handleEdit(row)"
-                       v-auth="'/adminAuth/modifyAdmin'"/>
-          </el-tooltip>
+        <el-table-column prop="address" fixed="right" label="操作">
+          <template #default="{ row }">
 
-          <el-tooltip
-              class="box-item"
-              effect="dark"
-              content="删除"
-              placement="top-start">
-            <el-button type="danger" :icon="Delete" circle @click="handleDel(row)"/>
-          </el-tooltip>
+            <el-tooltip
+                class="box-item"
+                effect="dark"
+                content="查看"
+                placement="top-start">
+              <el-button type="warning" :icon="Search" circle @click="handleEdit(row, 'see')"/>
+            </el-tooltip>
+            <el-tooltip
+                class="box-item"
+                effect="dark"
+                content="修改"
+                placement="top-start">
+              <el-button type="primary" :icon="Edit" circle @click="handleEdit(row)"
+                         v-auth="'/adminAuth/modifyAdmin'"/>
+            </el-tooltip>
 
-        </template>
-      </el-table-column>
-    </el-table>
-    <el-pagination
-        class="pagination"
-        @size-change="handleSizeChange"
-        @current-change="handleCurrentChange"
-        :current-page="searchForm.page"
-        :page-sizes="[10, 20, 30, 50, 100]"
-        :page-size="searchForm.page_size"
-        layout="total, sizes, prev, pager, next, jumper"
-        :total="total"
-    >
-    </el-pagination>
+            <el-tooltip
+                class="box-item"
+                effect="dark"
+                content="删除"
+                placement="top-start">
+              <el-button type="danger" :icon="Delete" circle @click="handleDel(row)"/>
+            </el-tooltip>
+
+          </template>
+        </el-table-column>
+      </el-table>
+      <el-pagination
+          class="pagination"
+          @size-change="handleSizeChange"
+          @current-change="handleCurrentChange"
+          :current-page="searchForm.page"
+          :page-sizes="[10, 20, 30, 50, 100]"
+          :page-size="searchForm.page_size"
+          layout="total, sizes, prev, pager, next, jumper"
+          :total="total"
+      >
+      </el-pagination>
+    </el-card>
+
   </div>
 </template>
 <script>
@@ -92,6 +96,7 @@ import {
   Edit,
   Search
 } from '@element-plus/icons-vue'
+
 onMounted(() => {
   getListData();
 });
@@ -158,7 +163,8 @@ const getListData = () => {
 
   .pagination {
     margin-top: 20px;
-    text-align: end;
+    display: flex;
+    justify-content: end;
   }
 }
 </style>

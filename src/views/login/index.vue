@@ -130,12 +130,14 @@ const handleLogin = () => {
       ElMessage.error("验证码错误！")
       return;
     }
+    loading.value = true
     store.dispatch('user/login', loginForm.value)
         .then(() => {
-          loading.value = false
-          // TODO: 登录后操作
-          router.push('/')
-
+          setTimeout(() => {
+            loading.value = false
+            // TODO: 登录后操作
+            router.push('/')
+          }, 500)
         })
         .catch(err => {
           getCodeImg()
