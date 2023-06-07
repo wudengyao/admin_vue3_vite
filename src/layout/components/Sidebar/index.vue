@@ -3,7 +3,6 @@
     <div class="logo-container">
       <el-avatar
         :size="logoHeight"
-        shape="square"
         src="https://osstest.eetop.com/bewt365/578d0d88e7ad2f9ae99f10eee8e08d9c.jpg"
       />
       <h1 class="logo-title" v-if="$store.getters.sidebarOpened">
