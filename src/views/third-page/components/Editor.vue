@@ -14,13 +14,13 @@ import { useStore } from 'vuex'
 import { publicUploadFile} from "@/api/api";
 
 const props = defineProps({
-  title: {
-    required: true,
-    type: String
-  },
-  detail: {
-    type: Object
-  }
+  // title: {
+  //   required: true,
+  //   type: String
+  // },
+  // detail: {
+  //   type: Object
+  // }
 })
 
 const emits = defineEmits(['onSuccess'])

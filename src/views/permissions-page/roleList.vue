@@ -2,7 +2,7 @@
   <div class="home-box">
     <el-form :inline="true" :model="searchForm">
       <el-form-item label="角色名称">
-        <el-input v-model="searchForm.name" placeholder="角色名称"></el-input>
+        <el-input v-model="searchForm.name" placeholder="角色名称"  v-focus></el-input>
       </el-form-item>
       <el-form-item>
         <el-button
@@ -86,6 +86,11 @@ import {
 
 } from '@element-plus/icons-vue'
 
+
+// 在模板中启用 v-focus
+// const vFocus = {
+//   mounted: (el) => el.focus()
+// }
 onMounted(() => {
   getListData();
 });
