@@ -78,7 +78,6 @@
       border: none;
       height: 100%;
       width: 100% !important;
-      background-color: #1f2d3d!important;
     }
 
     .el-sub-menu:last-child {
@@ -107,6 +106,7 @@
     & .el-sub-menu .el-menu-item {
       min-width: $sideBarWidth !important;
 
+      background-color: $subMenuBg !important;
 
     }
   }

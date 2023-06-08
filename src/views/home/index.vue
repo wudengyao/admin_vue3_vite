@@ -67,7 +67,10 @@
         </el-row>
 
        <!--图表-->
-        <div id="main"></div>
+        <div style="display: flex;flex: 1;width: 100%">
+          <div id="main"></div>
+
+        </div>
 
       </el-container>
 
