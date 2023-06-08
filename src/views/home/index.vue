@@ -1,15 +1,15 @@
 <template>
-  <div class="fdr">
+  <el-container class="fdr">
     <el-timeline>
       <el-timeline-item center placement="top">
         <el-card>
-          <h2>一个极简的后台基础模板，企业级！开箱即用！</h2>
+          <h3>一个极简的后台基础模板，企业级！开箱即用！</h3>
           <div style="margin-top: 10px">项目技术栈：Vue3 + JavaScript + Vite4 + Element-plus2.3.5</div>
         </el-card>
       </el-timeline-item>
       <el-timeline-item placement="top">
         <el-card>
-          <h2>项目主要技术方案：</h2>
+          <h3>项目主要技术方案：</h3>
           <div v-for="item in list">
             <div style="padding: 8px 0">{{ item }}</div>
           </div>
@@ -23,13 +23,13 @@
       </el-timeline-item>
 
     </el-timeline>
-    <div class="fdc">
+    <el-container class="fdc">
       <div class="fdr" style="padding: 5px;height: 200px">
         <el-card shadow="hover" class="box-card c1">
           <template #header>
-            <h2 class="t1">Vue</h2>
+            <h3 class="t1">Vue</h3>
           </template>
-          <el-progress type="dashboard" :percentage="51.6" status="success">
+          <el-progress	width="100"	 type="dashboard" :percentage="51.6" status="success">
             <template #default="{ percentage }">
               <span class="percentage-value">{{ percentage }}%</span>
             </template>
@@ -38,9 +38,9 @@
 
         <el-card shadow="hover" class="box-card c2">
           <template #header>
-            <h2 class="t2">JavaScript</h2>
+            <h3 class="t2">JS</h3>
           </template>
-          <el-progress type="dashboard" :percentage="40.7">
+          <el-progress width="100" type="dashboard" :percentage="40.7">
             <template #default="{ percentage }">
               <span class="percentage-value">{{ percentage }}%</span>
             </template>
@@ -48,9 +48,9 @@
         </el-card>
         <el-card shadow="hover" class="box-card c3">
           <template #header>
-            <h2 class="t3">SCSS</h2>
+            <h3 class="t3">SCSS</h3>
           </template>
-          <el-progress type="dashboard" :percentage="7.4" status="exception">
+          <el-progress width="100" type="dashboard" :percentage="7.4" status="exception">
             <template #default="{ percentage }">
               <span class="percentage-value">{{ percentage }}%</span>
             </template>
@@ -59,9 +59,9 @@
 
         <el-card shadow="hover" class="box-card c4">
           <template #header>
-            <h2 class="t4">HTML</h2>
+            <h3 class="t4">HTML</h3>
           </template>
-          <el-progress type="dashboard" :percentage="0.3" status="warning">
+          <el-progress width="100" type="dashboard" :percentage="0.3" status="warning">
             <template #default="{ percentage }">
               <span class="percentage-value">{{ percentage }}%</span>
             </template>
@@ -72,10 +72,10 @@
       <div id="main"></div>
 
 
-    </div>
+    </el-container>
 
 
-  </div>
+  </el-container>
 
 </template>
 
@@ -238,9 +238,10 @@ p {
 
 .box-card {
   margin: 5px;
-  height: 150px;
+  height: 10rem;
   display: flex;
   flex-direction: row;
+  width: 30rem;
 
 
 
@@ -274,24 +275,31 @@ p {
 
 }
 .t1{
-  color:$success
+  color:$success;
+  width: 1rem;
 }
 .t2{
-  color:$primary
+  color:$primary;
+  width: 1rem;
+
 
 }
 .t3{
-  color:$danger
+  color:$danger;
+  width: 1rem;
+
 
 }
 .t4{
-  color:$warning
+  color:$warning;
+  width: 1rem;
+
 
 }
 
 
 #main {
-  min-width: 200px;
-  min-height: 600px;
+  min-height:40rem;
+  min-width: 45rem;
 }
 </style>
