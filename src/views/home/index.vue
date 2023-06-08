@@ -3,13 +3,13 @@
     <el-col :span="6">
       <el-timeline>
         <el-timeline-item center placement="top">
-          <el-card>
+          <el-card class="c4">
             <h3>一个极简的后台基础模板，企业级！开箱即用！</h3>
             <div style="margin-top: 10px">项目技术栈：Vue3 + JavaScript + Vite4 + Element-plus2.3.5</div>
           </el-card>
         </el-timeline-item>
         <el-timeline-item placement="top">
-          <el-card>
+          <el-card class="c4">
             <h3>项目主要技术方案：</h3>
             <div v-for="item in list">
               <div style="padding: 8px 0">{{ item }}</div>
@@ -41,35 +41,34 @@
             </el-card>
           </el-col>
           <el-col :span="8">
-          <el-card shadow="hover" class="box-card c2">
-            <template #header>
-              <h3 class="t2">JavaScript</h3>
-            </template>
-            <el-progress type="dashboard" :percentage="40.7">
-              <template #default="{ percentage }">
-                <span class="percentage-value t2">{{ percentage }}%</span>
+            <el-card shadow="hover" class="box-card c2">
+              <template #header>
+                <h3 class="t2">JavaScript</h3>
               </template>
-            </el-progress>
-          </el-card>
+              <el-progress type="dashboard" :percentage="40.7">
+                <template #default="{ percentage }">
+                  <span class="percentage-value t2">{{ percentage }}%</span>
+                </template>
+              </el-progress>
+            </el-card>
           </el-col>
           <el-col :span="8">
-
-          <el-card shadow="hover" class="box-card c3">
-            <template #header>
-              <h3 class="t3">HTML+CSS</h3>
-            </template>
-            <el-progress type="dashboard" :percentage="7.7" status="warning">
-              <template #default="{ percentage }">
-                <span class="percentage-value t3">{{ percentage }}%</span>
+            <el-card shadow="hover" class="box-card c3">
+              <template #header>
+                <h3 class="t3">HTML+CSS</h3>
               </template>
-            </el-progress>
-          </el-card>
+              <el-progress type="dashboard" :percentage="7.7" status="warning">
+                <template #default="{ percentage }">
+                  <span class="percentage-value t3">{{ percentage }}%</span>
+                </template>
+              </el-progress>
+            </el-card>
           </el-col>
-
         </el-row>
 
-        <div :class="chart_width" id="main"></div>
-
+       <!--图表-->
+        <div id="main"        :class="[$store.getters.sidebarOpened ? 'openSidebar' : 'hideSidebar']">
+          ></div>
 
       </el-container>
 
@@ -82,11 +81,23 @@
 
 <script setup>
 import {getPermission} from '@/api/api'
-import {ref, onMounted, computed} from 'vue'
+import {ref, onMounted, computed ,watch} from 'vue'
 import * as echarts from 'echarts';
 import {useStore} from 'vuex'
-
 const store = useStore()
+
+const sidebarOpened = computed(() =>
+    store.getters.sidebarOpened ? 'hamburger-opened' : 'hamburger-closed'
+)
+let chartDom = null
+let myChart = null
+watch(sidebarOpened, val => {
+ console.log("sidebarOpened = ",sidebarOpened.value)
+  setTimeout(() => {
+    myChart.resize();
+  }, 100)
+})
+
 
 const list = ref([
   '1、接口模块封装方案',
@@ -109,15 +120,11 @@ onMounted(() => {
   initChart()
 
 });
-const chart_width = computed(() =>
-    store.getters.sidebarOpened ? 'chart-width-opened' : 'chart-width-closed'
-)
 
 const initChart = () => {
-  var chartDom = document.getElementById('main');
-  var myChart = echarts.init(chartDom);
-  var option;
-
+   chartDom = document.getElementById('main');
+   myChart = echarts.init(chartDom);
+  let option;
   option = {
     tooltip: {
       trigger: 'axis',
@@ -130,9 +137,9 @@ const initChart = () => {
     },
     toolbox: {
       feature: {
-        magicType: {show: true, type: ['line', 'bar']},
-        restore: {show: true},
-        saveAsImage: {show: true}
+        magicType: { show: true, type: ['line', 'bar'] },
+        restore: { show: true },
+        saveAsImage: { show: true }
       }
     },
     legend: {
@@ -207,16 +214,9 @@ const initChart = () => {
       }
     ]
   };
-
   option && myChart.setOption(option);
-  // window.addEventListener('resize', () => {
-  //   setTimeout(() => {
-  //     myChart.resize();
-  //   },100)
-  // })
 
 }
-
 
 </script>
 
@@ -238,9 +238,8 @@ p {
 }
 
 
-
 .box-card {
-  margin: 10px 0;
+  margin-bottom: 13px;
   height: 10rem;
   display: flex;
   flex-direction: row;
@@ -262,6 +261,16 @@ p {
 .c3 {
   -webkit-box-shadow: 3px 3px 10px $warning;
   box-shadow: 3px 3px 10px $warning;
+}
+
+.c4 {
+  -webkit-box-shadow: 3px 3px 10px #909399;
+  box-shadow: 3px 3px 10px #909399;
+}
+
+.c5 {
+  -webkit-box-shadow: 3px 3px 10px $danger;
+  box-shadow: 3px 3px 10px $danger;
 }
 
 .fdr {
@@ -297,15 +306,12 @@ p {
 #main {
   min-height: 40rem;
   width: 100%;
-  display: flex;
-  flex: 1;
-}
 
-//.chart-width-closed{
-//  width: 100%;
-//}
-//.chart-width-opened{
-//  width: calc(100% - #{$sideBarWidth});
-//
-//}
+}
+.openSidebar{
+  width: 75rem !important;
+}
+.hideSidebar{
+  width: 85rem !important;
+}
 </style>
