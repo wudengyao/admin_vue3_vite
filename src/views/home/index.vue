@@ -67,8 +67,7 @@
         </el-row>
 
        <!--图表-->
-        <div id="main"        :class="[$store.getters.sidebarOpened ? 'openSidebar' : 'hideSidebar']">
-          ></div>
+        <div id="main"></div>
 
       </el-container>
 
@@ -86,17 +85,14 @@ import * as echarts from 'echarts';
 import {useStore} from 'vuex'
 const store = useStore()
 
-const sidebarOpened = computed(() =>
-    store.getters.sidebarOpened ? 'hamburger-opened' : 'hamburger-closed'
-)
-let chartDom = null
-let myChart = null
-watch(sidebarOpened, val => {
- console.log("sidebarOpened = ",sidebarOpened.value)
-  setTimeout(() => {
-    myChart.resize();
-  }, 100)
-})
+// const sidebarOpened = computed(() =>
+//     store.getters.sidebarOpened ? 'hamburger-opened' : 'hamburger-closed'
+// )
+//
+// watch(sidebarOpened, val => {
+//  console.log("sidebarOpened = ",sidebarOpened.value)
+//
+// })
 
 
 const list = ref([
@@ -122,8 +118,8 @@ onMounted(() => {
 });
 
 const initChart = () => {
-   chartDom = document.getElementById('main');
-   myChart = echarts.init(chartDom);
+  let chartDom = document.getElementById('main');
+  let myChart = echarts.init(chartDom);
   let option;
   option = {
     tooltip: {
@@ -305,13 +301,8 @@ p {
 
 #main {
   min-height: 40rem;
-  //width: 100%;
+  width: 100%;
 
 }
-.openSidebar{
-  width: calc(130vh) !important;
-}
-.hideSidebar{
-  width: calc(145vh) !important;
-}
+
 </style>
