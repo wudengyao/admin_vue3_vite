@@ -241,7 +241,7 @@ p {
   height: 10rem;
   display: flex;
   flex-direction: row;
-  width: 30rem;
+  width: 25rem;
 
 
 
