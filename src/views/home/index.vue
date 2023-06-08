@@ -242,6 +242,7 @@ p {
   display: flex;
   flex-direction: row;
   width: 25rem;
+  justify-content: space-between;
 
 
 
