@@ -1,6 +1,6 @@
 <template>
-  <el-row :gutter="8" class="fdr">
-    <el-col :span="7">
+  <el-row :gutter="20" class="fdr">
+    <el-col :span="6">
       <el-timeline>
         <el-timeline-item center placement="top">
           <el-card>
@@ -25,10 +25,10 @@
 
       </el-timeline>
     </el-col>
-    <el-col :span="17">
+    <el-col :span="18">
 
       <el-container class="fdc">
-        <el-row :gutter="10" class="fdr">
+        <el-row :gutter="20" class="fdr">
           <el-col :span="8">
             <el-card shadow="hover" class="box-card c1">
               <template #header>
@@ -58,7 +58,7 @@
 
           <el-card shadow="hover" class="box-card c3">
             <template #header>
-              <h3 class="t3">HTML+SCSS</h3>
+              <h3 class="t3">HTML+CSS</h3>
             </template>
             <el-progress type="dashboard" :percentage="7.7" status="warning">
               <template #default="{ percentage }">
@@ -239,20 +239,10 @@ p {
   color: #333333;
 }
 
-.demo-progress {
-  .el-progress--line {
-    margin-bottom: 15px;
-    width: 350px;
-  }
-
-  .el-progress--circle {
-    margin-right: 15px;
-  }
-}
 
 
 .box-card {
-  margin: 5px;
+  margin: 10px 0;
   height: 10rem;
   display: flex;
   flex-direction: row;
