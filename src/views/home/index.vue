@@ -305,13 +305,13 @@ p {
 
 #main {
   min-height: 40rem;
-  width: 100%;
+  //width: 100%;
 
 }
 .openSidebar{
-  width: 75rem !important;
+  width: calc(130vh) !important;
 }
 .hideSidebar{
-  width: 85rem !important;
+  width: calc(145vh) !important;
 }
 </style>
