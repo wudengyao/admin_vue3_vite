@@ -38,7 +38,7 @@ export var publicRoutes = [
                 name: 'home',
                 component: () => import('@/views/home/index'),
                 meta: {title: '首页', affix: true},//affix=true,tagViews右侧没有关闭按钮
-                hidden: true,//不显示在侧边栏
+                hidden: false,//不显示在侧边栏
             },
             {
                 path: '/404',

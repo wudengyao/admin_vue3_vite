@@ -1,78 +1,94 @@
 <template>
-  <el-container class="fdr">
-    <el-timeline>
-      <el-timeline-item center placement="top">
-        <el-card>
-          <h3>一个极简的后台基础模板，企业级！开箱即用！</h3>
-          <div style="margin-top: 10px">项目技术栈：Vue3 + JavaScript + Vite4 + Element-plus2.3.5</div>
-        </el-card>
-      </el-timeline-item>
-      <el-timeline-item placement="top">
-        <el-card>
-          <h3>项目主要技术方案：</h3>
-          <div v-for="item in list">
-            <div style="padding: 8px 0">{{ item }}</div>
-          </div>
-        </el-card>
-      </el-timeline-item>
+  <el-row :gutter="8" class="fdr">
+    <el-col :span="7">
+      <el-timeline>
+        <el-timeline-item center placement="top">
+          <el-card>
+            <h3>一个极简的后台基础模板，企业级！开箱即用！</h3>
+            <div style="margin-top: 10px">项目技术栈：Vue3 + JavaScript + Vite4 + Element-plus2.3.5</div>
+          </el-card>
+        </el-timeline-item>
+        <el-timeline-item placement="top">
+          <el-card>
+            <h3>项目主要技术方案：</h3>
+            <div v-for="item in list">
+              <div style="padding: 8px 0">{{ item }}</div>
+            </div>
+          </el-card>
+        </el-timeline-item>
 
-      <el-timeline-item center placement="top">
-        <el-link style="font-size: 20px" type="danger" href="https://juejin.cn/user/1310273591836957" target="_blank">
-          博客主页：前端小三爷_
-        </el-link>
-      </el-timeline-item>
+        <el-timeline-item center placement="top">
+          <el-link style="font-size: 20px" type="danger" href="https://juejin.cn/user/1310273591836957" target="_blank">
+            博客主页：前端小三爷_
+          </el-link>
+        </el-timeline-item>
 
-    </el-timeline>
-    <el-container class="fdc">
-      <div class="fdr" style="padding: 5px;height: 200px">
-        <el-card shadow="hover" class="box-card c1">
-          <template #header>
-            <h3 class="t1">Vue</h3>
-          </template>
-          <el-progress type="dashboard" :percentage="51.6" status="success">
-            <template #default="{ percentage }">
-              <span class="percentage-value t1">{{ percentage }}%</span>
+      </el-timeline>
+    </el-col>
+    <el-col :span="17">
+
+      <el-container class="fdc">
+        <el-row :gutter="10" class="fdr">
+          <el-col :span="8">
+            <el-card shadow="hover" class="box-card c1">
+              <template #header>
+                <h3 class="t1">Vue</h3>
+              </template>
+              <el-progress type="dashboard" :percentage="51.6" status="success">
+                <template #default="{ percentage }">
+                  <span class="percentage-value t1">{{ percentage }}%</span>
+                </template>
+              </el-progress>
+            </el-card>
+          </el-col>
+          <el-col :span="8">
+
+          <el-card shadow="hover" class="box-card c2">
+            <template #header>
+              <h3 class="t2">JavaScript</h3>
             </template>
-          </el-progress>
-        </el-card>
+            <el-progress type="dashboard" :percentage="40.7">
+              <template #default="{ percentage }">
+                <span class="percentage-value t2">{{ percentage }}%</span>
+              </template>
+            </el-progress>
+          </el-card>
+          </el-col>
+          <el-col :span="8">
 
-        <el-card shadow="hover" class="box-card c2">
-          <template #header>
-            <h3 class="t2">JavaScript</h3>
-          </template>
-          <el-progress type="dashboard" :percentage="40.7" >
-            <template #default="{ percentage }">
-              <span class="percentage-value t2">{{ percentage }}%</span>
+          <el-card shadow="hover" class="box-card c3">
+            <template #header>
+              <h3 class="t3">HTML+SCSS</h3>
             </template>
-          </el-progress>
-        </el-card>
+            <el-progress type="dashboard" :percentage="7.7" status="warning">
+              <template #default="{ percentage }">
+                <span class="percentage-value t3">{{ percentage }}%</span>
+              </template>
+            </el-progress>
+          </el-card>
+          </el-col>
 
-        <el-card shadow="hover" class="box-card c3">
-          <template #header>
-            <h3 class="t3">HTML + SCSS</h3>
-          </template>
-          <el-progress type="dashboard" :percentage="7.7" status="warning">
-            <template #default="{ percentage }">
-              <span class="percentage-value t3">{{ percentage }}%</span>
-            </template>
-          </el-progress>
-        </el-card>
-      </div>
+        </el-row>
 
-      <div id="main"></div>
+        <div :class="chart_width" id="main"></div>
 
 
-    </el-container>
+      </el-container>
+
+    </el-col>
 
 
-  </el-container>
+  </el-row>
 
 </template>
 
 <script setup>
 import {getPermission} from '@/api/api'
-import {ref, onMounted } from 'vue'
+import {ref, onMounted, computed} from 'vue'
 import * as echarts from 'echarts';
+import {useStore} from 'vuex'
+
+const store = useStore()
 
 const list = ref([
   '1、接口模块封装方案',
@@ -95,9 +111,11 @@ onMounted(() => {
   initChart()
 
 });
+const chart_width = computed(() =>
+    store.getters.sidebarOpened ? 'chart-width-opened' : 'chart-width-closed'
+)
 
-
-const initChart = ()=>{
+const initChart = () => {
   var chartDom = document.getElementById('main');
   var myChart = echarts.init(chartDom);
   var option;
@@ -114,9 +132,9 @@ const initChart = ()=>{
     },
     toolbox: {
       feature: {
-        magicType: { show: true, type: ['line', 'bar'] },
-        restore: { show: true },
-        saveAsImage: { show: true }
+        magicType: {show: true, type: ['line', 'bar']},
+        restore: {show: true},
+        saveAsImage: {show: true}
       }
     },
     legend: {
@@ -193,15 +211,21 @@ const initChart = ()=>{
   };
 
   option && myChart.setOption(option);
+  // window.addEventListener('resize', () => {
+  //   setTimeout(() => {
+  //     myChart.resize();
+  //   },100)
+  // })
+
 }
-
-
-
 
 
 </script>
 
 <style lang="scss" scoped>
+@import '@/styles/mixin.scss';
+@import '@/styles/variables.module.scss';
+
 $success: #67c23a;
 $warning: #e6a23c;
 $danger: #f56c6c;
@@ -220,6 +244,7 @@ p {
     margin-bottom: 15px;
     width: 350px;
   }
+
   .el-progress--circle {
     margin-right: 15px;
   }
@@ -231,48 +256,50 @@ p {
   height: 10rem;
   display: flex;
   flex-direction: row;
-  width: 25rem;
   justify-content: space-between;
 
 
-
 }
 
-.c1{
+.c1 {
   -webkit-box-shadow: 3px 3px 10px $success;
   box-shadow: 3px 3px 10px $success;
 }
-.c2{
-  -webkit-box-shadow: 3px 3px 10px ;
+
+.c2 {
+  -webkit-box-shadow: 3px 3px 10px;
   box-shadow: 3px 3px 10px $primary;
 }
-.c3{
+
+.c3 {
   -webkit-box-shadow: 3px 3px 10px $warning;
   box-shadow: 3px 3px 10px $warning;
 }
 
 .fdr {
   display: flex;
-  flex-direction: row
+  flex-direction: row;
 }
 
 .fdc {
   display: flex;
   flex-direction: column;
-
 }
-.t1{
-  color:$success;
+
+.t1 {
+  color: $success;
   width: 1rem;
 }
-.t2{
-  color:$primary;
+
+.t2 {
+  color: $primary;
   width: 1rem;
 
 
 }
-.t3{
-  color:$warning;
+
+.t3 {
+  color: $warning;
   width: 1rem;
 
 
@@ -280,7 +307,17 @@ p {
 
 
 #main {
-  min-height:40rem;
-  min-width: 45rem;
+  min-height: 40rem;
+  width: 100%;
+  display: flex;
+  flex: 1;
 }
+
+//.chart-width-closed{
+//  width: 100%;
+//}
+//.chart-width-opened{
+//  width: calc(100% - #{$sideBarWidth});
+//
+//}
 </style>

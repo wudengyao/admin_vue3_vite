@@ -23,8 +23,8 @@
         </el-table-column>
         <el-table-column prop="name" label="角色名称" width="180">
         </el-table-column>
-        <el-table-column prop="operator" label="操作信息"></el-table-column>
-        <el-table-column prop="address" label="操作">
+        <el-table-column prop="operator" label="操作信息" min-width="160"></el-table-column>
+        <el-table-column prop="address"  label="操作" min-width="160">
           <template #default="{ row }">
             <el-tooltip
                 class="box-item"

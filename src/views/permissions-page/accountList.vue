@@ -36,7 +36,7 @@
         </el-table-column>
 
 
-        <el-table-column prop="address" fixed="right" label="操作">
+        <el-table-column prop="address"  label="操作" min-width="160">
           <template #default="{ row }">
 
             <el-tooltip
