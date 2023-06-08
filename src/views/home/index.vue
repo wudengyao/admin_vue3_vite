@@ -26,7 +26,6 @@
       </el-timeline>
     </el-col>
     <el-col :span="18">
-
       <el-container class="fdc">
         <el-row :gutter="20" class="fdr">
           <el-col :span="8">
@@ -42,7 +41,6 @@
             </el-card>
           </el-col>
           <el-col :span="8">
-
           <el-card shadow="hover" class="box-card c2">
             <template #header>
               <h3 class="t2">JavaScript</h3>
