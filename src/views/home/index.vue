@@ -29,41 +29,31 @@
           <template #header>
             <h3 class="t1">Vue</h3>
           </template>
-          <el-progress	width="100"	 type="dashboard" :percentage="51.6" status="success">
+          <el-progress type="dashboard" :percentage="51.6" status="success">
             <template #default="{ percentage }">
-              <span class="percentage-value">{{ percentage }}%</span>
+              <span class="percentage-value t1">{{ percentage }}%</span>
             </template>
           </el-progress>
         </el-card>
 
         <el-card shadow="hover" class="box-card c2">
           <template #header>
-            <h3 class="t2">JS</h3>
+            <h3 class="t2">JavaScript</h3>
           </template>
-          <el-progress width="100" type="dashboard" :percentage="40.7">
+          <el-progress type="dashboard" :percentage="40.7" >
             <template #default="{ percentage }">
-              <span class="percentage-value">{{ percentage }}%</span>
-            </template>
-          </el-progress>
-        </el-card>
-        <el-card shadow="hover" class="box-card c3">
-          <template #header>
-            <h3 class="t3">SCSS</h3>
-          </template>
-          <el-progress width="100" type="dashboard" :percentage="7.4" status="exception">
-            <template #default="{ percentage }">
-              <span class="percentage-value">{{ percentage }}%</span>
+              <span class="percentage-value t2">{{ percentage }}%</span>
             </template>
           </el-progress>
         </el-card>
 
-        <el-card shadow="hover" class="box-card c4">
+        <el-card shadow="hover" class="box-card c3">
           <template #header>
-            <h3 class="t4">HTML</h3>
+            <h3 class="t3">HTML + SCSS</h3>
           </template>
-          <el-progress width="100" type="dashboard" :percentage="0.3" status="warning">
+          <el-progress type="dashboard" :percentage="7.7" status="warning">
             <template #default="{ percentage }">
-              <span class="percentage-value">{{ percentage }}%</span>
+              <span class="percentage-value t3">{{ percentage }}%</span>
             </template>
           </el-progress>
         </el-card>
@@ -257,10 +247,6 @@ p {
   box-shadow: 3px 3px 10px $primary;
 }
 .c3{
-  -webkit-box-shadow: 3px 3px 10px ;
-  box-shadow: 3px 3px 10px $danger;
-}
-.c4{
   -webkit-box-shadow: 3px 3px 10px $warning;
   box-shadow: 3px 3px 10px $warning;
 }
@@ -286,12 +272,6 @@ p {
 
 }
 .t3{
-  color:$danger;
-  width: 1rem;
-
-
-}
-.t4{
   color:$warning;
   width: 1rem;
 
