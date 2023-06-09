@@ -58,7 +58,7 @@ export default {
 };
 </script>
 <script setup>
-import DistributePermission from './components/DistributePermission.vue'
+import DistributePermission from './components/distributePermission.vue'
 
 import {ref, onMounted} from "vue";
 import {getRoleList} from "@/api/api";
