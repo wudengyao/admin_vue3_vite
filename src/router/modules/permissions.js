@@ -24,6 +24,14 @@ export default{
       component: () => import('@/views/permissions-page/accountList.vue'),
       name: 'adminList',
       meta: { title: '账号管理',icon:'personnel'}
+    },
+    {
+      path: '/account/detail',
+      component: () => import('@/views/permissions-page/accountDetail.vue'),
+      name: 'accountDetail',
+      meta: { title: '账号详情',icon:'personnel'},
+      hidden: true,//true不显示在侧边栏
+
     }
 
   ]

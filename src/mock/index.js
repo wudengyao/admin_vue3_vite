@@ -42,7 +42,7 @@ export default [
           sys_token: 'd33a7fdf547d2a086a96f4d38253cbc9',
           admin_nick_name: '前端小三爷',
           admin_id: '1',
-          avatar:"https://osstest.eetop.com/bewt365/578d0d88e7ad2f9ae99f10eee8e08d9c.jpg"
+          avatar: "https://osstest.eetop.com/bewt365/578d0d88e7ad2f9ae99f10eee8e08d9c.jpg"
         }
       };
     },
@@ -122,14 +122,20 @@ export default [
                     "type": "3",
                     "url": "/adminAuth/modifyAdmin"
                   }
-
-
                 ]
+              },
+              {
+                "id": "1-3",
+                "name": "账号详情",
+                "parent_id": "1",
+                "type": "2",
+                "url": "/account/detail",
+
               }
             ]
           },
           {
-            id:'2',
+            id: '2',
             "name": "三方库管理",
             "parent_id": "0",
             "type": "1",
@@ -171,7 +177,7 @@ export default [
             ]
           },
           {
-            id:'3',
+            id: '3',
             "name": "音频可视化",
             "parent_id": "0",
             "type": "1",
@@ -214,56 +220,56 @@ export default [
             "id": "1",
             "account": "admin",
             "date": "2023-03-27 13:58:15",
-            avatar:"https://res.lgdsunday.club/default-avatar.jpeg",
+            avatar: "https://res.lgdsunday.club/default-avatar.jpeg",
             "role_name": "主管"
           },
           {
             "id": "2",
             "account": "前端小三爷",
             "date": "2023-01-27 13:58:15",
-            avatar:"https://osstest.eetop.com/bewt365/578d0d88e7ad2f9ae99f10eee8e08d9c.jpg",
+            avatar: "https://osstest.eetop.com/bewt365/578d0d88e7ad2f9ae99f10eee8e08d9c.jpg",
             "role_name": "主管"
           },
           {
             "id": "3",
             "account": "张三",
             "date": "2022-02-27 13:58:15",
-            avatar:"https://res.lgdsunday.club/zhang-san.jpg",
+            avatar: "https://res.lgdsunday.club/zhang-san.jpg",
             "role_name": "普通员工"
           },
           {
             "id": "4",
             "account": "李四",
             "date": "2022-02-27 13:58:15",
-            avatar:"https://res.lgdsunday.club/default-avatar.jpeg",
+            avatar: "https://res.lgdsunday.club/default-avatar.jpeg",
             "role_name": "普通员工"
           },
           {
             "id": "7",
             "account": "王五",
             "date": "2022-02-27 13:58:15",
-            avatar:"https://res.lgdsunday.club/default-avatar.jpeg",
+            avatar: "https://res.lgdsunday.club/default-avatar.jpeg",
             "role_name": "普通员工"
           },
           {
             "id": "8",
             "account": "吴亦凡",
             "date": "2022-02-27 13:58:15",
-            avatar:"https://res.lgdsunday.club/default-avatar.jpeg",
+            avatar: "https://res.lgdsunday.club/default-avatar.jpeg",
             "role_name": "普通员工"
           },
           {
             "id": "9",
             "account": "吴一帆",
             "date": "2022-02-27 13:58:15",
-            avatar:"https://res.lgdsunday.club/default-avatar.jpeg",
+            avatar: "https://res.lgdsunday.club/default-avatar.jpeg",
             "role_name": "普通员工"
           },
           {
             "id": "10",
             "account": "张三丰",
             "date": "2022-02-27 13:58:15",
-            avatar:"https://res.lgdsunday.club/default-avatar.jpeg",
+            avatar: "https://res.lgdsunday.club/default-avatar.jpeg",
             "role_name": "普通员工"
           }
         ],

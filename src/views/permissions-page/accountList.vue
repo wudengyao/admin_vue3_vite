@@ -61,7 +61,7 @@
             <el-button
                 type="primary"
                 size="small"
-                @click="onShowClick(row._id)">查看
+                @click="onShowClick(row)">查看
             </el-button>
             <el-button
                 type="info"
@@ -172,8 +172,14 @@ const getRoleData = async () => {
 /**
  * 查看按钮点击事件
  */
-const onShowClick = id => {
-  router.push(`/user/info/${id}`)
+const onShowClick = (row) => {
+  router.push({
+    path: '/account/detail',
+    query: row
+  })
+  // router.push(`/account/detail/${row}`)
+
+
 }
 
 
