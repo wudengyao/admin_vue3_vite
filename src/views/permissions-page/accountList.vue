@@ -4,6 +4,18 @@
       <el-form-item label="账号">
         <el-input v-model="searchForm.account" placeholder="账号"></el-input>
       </el-form-item>
+      <el-form-item label="角色">
+
+        <el-select v-model="searchForm.role" placeholder="角色">
+          <el-option
+              v-for="item in roleList"
+              :key="item.id"
+              :label="item.name"
+              :value="item.id"
+          />
+        </el-select>
+      </el-form-item>
+
       <el-form-item>
         <el-button
             type="primary"
@@ -95,7 +107,7 @@ export default {
 import RolesDialog from './components/roles.vue'
 
 import {ref, onMounted, watch} from "vue";
-import {getAdmintorList} from "@/api/api";
+import {getAdmintorList, getRoleList} from "@/api/api";
 import {useStore} from "vuex";
 import {useRouter} from "vue-router";
 import {
@@ -104,11 +116,13 @@ import {
   Search
 } from '@element-plus/icons-vue'
 import {ElMessageBox, ElMessage} from 'element-plus'
+
 const router = useRouter()
 
 //数据源
 const searchForm = ref({
   account: "",
+  role: '',
   page: 1,
   page_size: 20,
 });
@@ -116,9 +130,11 @@ const searchForm = ref({
 const tableData = ref([]);
 const total = ref(0);
 const loading = ref(false)
+const roleList = ref([]);
 
 onMounted(() => {
   getListData();
+  getRoleData()
 });
 
 /**
@@ -140,7 +156,19 @@ const getListData = async () => {
       })
 };
 
+/**
+ * 获取角色列表
+ */
+const getRoleData = async () => {
+  await getRoleList()
+      .then(data => {
+        roleList.value = data.bizobj
 
+      })
+      .catch(err => {
+
+      })
+};
 /**
  * 查看按钮点击事件
  */
@@ -190,6 +218,7 @@ const handleCurrentChange = (val) => {
 };
 
 const searchEvent = () => {
+  console.log(searchForm.value)
   searchForm.value.page = 1;
   getListData();
 };
