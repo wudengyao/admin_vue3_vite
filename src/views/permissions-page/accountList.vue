@@ -56,7 +56,7 @@
         </el-table-column>
 
 
-        <el-table-column prop="address" label="操作" min-width="160">
+        <el-table-column prop="address" label="操作" min-width="280">
           <template #default="{ row }">
             <el-button
                 type="primary"
