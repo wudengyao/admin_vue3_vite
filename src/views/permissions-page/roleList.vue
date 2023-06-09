@@ -1,73 +1,56 @@
 <template>
-  <div class="home-box">
-    <el-form :inline="true" :model="searchForm">
-      <el-form-item label="角色名称">
-        <el-input v-model="searchForm.name" placeholder="角色名称"  v-focus></el-input>
-      </el-form-item>
-      <el-form-item>
-        <el-button
-            @click="searchEvent"
-            type="primary"
-            v-auth="'/adminAuth/getRoleList'"
-            style="margin-left: -16px"
-        >查询
-        </el-button>
-      </el-form-item>
-    </el-form>
-    <el-card>
-      <el-table :data="tableData"
-                v-loading="loading"
-                element-loading-text="加载中..."
-                border>
-        <el-table-column prop="id" label="角色ID" width="180">
-        </el-table-column>
-        <el-table-column prop="name" label="角色名称" width="180">
-        </el-table-column>
-        <el-table-column prop="operator" label="操作信息" min-width="160"></el-table-column>
-        <el-table-column prop="address"  label="操作" min-width="160">
-          <template #default="{ row }">
-            <el-tooltip
-                class="box-item"
-                effect="dark"
-                content="查看"
-                placement="top-start">
-              <el-button type="warning" :icon="Search" circle @click="handleEdit(row, 'see')"
-                         v-auth="'/adminAuth/lookRole'"/>
-            </el-tooltip>
-            <el-tooltip
-                class="box-item"
-                effect="dark"
-                content="修改"
-                placement="top-start">
-              <el-button type="primary" :icon="Edit" circle @click="handleEdit(row)"
-                         v-auth="'/adminAuth/saveRole'"/>
-            </el-tooltip>
+    <div class="home-box">
+      <el-form :inline="true" :model="searchForm">
+        <el-form-item label="角色名称">
+          <el-input v-model="searchForm.name" placeholder="角色名称"></el-input>
+        </el-form-item>
+        <el-form-item>
+          <el-button
+              @click="searchEvent"
+              type="primary"
+              v-auth="'/adminAuth/getRoleList'"
+              style="margin-left: -16px"
+          >查询
+          </el-button>
+        </el-form-item>
+      </el-form>
+      <el-card>
+        <el-table :data="tableData"
+                  v-loading="loading"
+                  element-loading-text="加载中..."
+                  border>
+          <el-table-column prop="id" label="角色ID" width="180">
+          </el-table-column>
+          <el-table-column prop="name" label="角色名称" width="180">
+          </el-table-column>
+          <el-table-column prop="operator" label="操作信息" min-width="160"></el-table-column>
+          <el-table-column prop="address" label="操作" min-width="160">
+            <template #default="{ row }">
+              <el-button
+                  type="primary"
+                  size="small"
+                  @click="handleEdit(row)">配置权限</el-button>
+            </template>
+          </el-table-column>
+        </el-table>
+        <el-pagination
+            class="pagination"
+            @size-change="handleSizeChange"
+            @current-change="handleCurrentChange"
+            :current-page="searchForm.page"
+            :page-sizes="[10, 20, 30, 50, 100]"
+            :page-size="searchForm.page_size"
+            layout="total, sizes, prev, pager, next, jumper"
+            :total="total">
+        </el-pagination>
+      </el-card>
 
-            <el-tooltip
-                class="box-item"
-                effect="dark"
-                content="删除"
-                placement="top-start">
-              <el-button type="danger" :icon="Delete" circle @click="handleDel(row)"
-                         v-auth="'/adminAuth/delRole'"/>
-            </el-tooltip>
-          </template>
-        </el-table-column>
-      </el-table>
-      <el-pagination
-          class="pagination"
-          @size-change="handleSizeChange"
-          @current-change="handleCurrentChange"
-          :current-page="searchForm.page"
-          :page-sizes="[10, 20, 30, 50, 100]"
-          :page-size="searchForm.page_size"
-          layout="total, sizes, prev, pager, next, jumper"
-          :total="total"
-      >
-      </el-pagination>
-    </el-card>
+      <distribute-permission
+          v-model="distributePermissionVisible"
+          :roleId="selectRoleId">
+      </distribute-permission>
+    </div>
 
-  </div>
 </template>
 <script>
 export default {
@@ -75,6 +58,8 @@ export default {
 };
 </script>
 <script setup>
+import DistributePermission from './components/DistributePermission.vue'
+
 import {ref, onMounted} from "vue";
 import {getRoleList} from "@/api/api";
 import {useStore} from "vuex";
@@ -87,10 +72,6 @@ import {
 } from '@element-plus/icons-vue'
 
 
-// 在模板中启用 v-focus
-// const vFocus = {
-//   mounted: (el) => el.focus()
-// }
 onMounted(() => {
   getListData();
 });
@@ -105,6 +86,35 @@ const searchForm = ref({
 const tableData = ref([]);
 const total = ref(0);
 const loading = ref(false)
+/**
+ * 获取角色列表
+ */
+const getListData = async () => {
+  loading.value = true
+
+  await getRoleList(searchForm.value)
+      .then(data => {
+        setTimeout(() => {
+          tableData.value = data.bizobj
+          total.value = Number(data.page_info.total_items);
+          loading.value = false
+        }, 1000)
+      })
+      .catch(err => {
+        loading.value = false
+
+      })
+};
+
+/**
+ * 分配权限
+ */
+const distributePermissionVisible = ref(false)
+const selectRoleId = ref('')
+const handleEdit = row => {
+  selectRoleId.value = row.id
+  distributePermissionVisible.value = true
+}
 
 const handleSizeChange = (val) => {
   searchForm.value.page_size = val;
@@ -120,33 +130,7 @@ const searchEvent = () => {
   getListData();
 };
 
-const handleEdit = (row) => {
-  console.log(row);
-};
 
-const handleDel = (row) => {
-  console.log(row);
-};
-
-/**
- * 获取角色列表
- */
-const getListData = () => {
-  loading.value = true
-
-  getRoleList(searchForm.value)
-      .then(data => {
-        setTimeout(() => {
-          tableData.value = data.bizobj
-          total.value = Number(data.page_info.total_items);
-          loading.value = false
-        }, 1000)
-      })
-      .catch(err => {
-        loading.value = false
-
-      })
-};
 </script>
 
 <style lang="scss" scoped>

@@ -27,6 +27,14 @@
             <el-tag type="danger">{{ row.role_name }}</el-tag>
           </template>
         </el-table-column>
+        <el-table-column label="头像" align="center">
+          <template #default="{ row }">
+            <el-image
+                class="avatar"
+                :src="row.avatar"
+            ></el-image>
+          </template>
+        </el-table-column>
         <el-table-column label="状态" width="180">
           <template #default="{ row }">
             <span>{{ row.is_lock == "1" ? "冻结" : "正常" }}</span>
@@ -36,32 +44,23 @@
         </el-table-column>
 
 
-        <el-table-column prop="address"  label="操作" min-width="160">
+        <el-table-column prop="address" label="操作" min-width="160">
           <template #default="{ row }">
-
-            <el-tooltip
-                class="box-item"
-                effect="dark"
-                content="查看"
-                placement="top-start">
-              <el-button type="warning" :icon="Search" circle @click="handleEdit(row, 'see')"/>
-            </el-tooltip>
-            <el-tooltip
-                class="box-item"
-                effect="dark"
-                content="修改"
-                placement="top-start">
-              <el-button type="primary" :icon="Edit" circle @click="handleEdit(row)"
-                         v-auth="'/adminAuth/modifyAdmin'"/>
-            </el-tooltip>
-
-            <el-tooltip
-                class="box-item"
-                effect="dark"
-                content="删除"
-                placement="top-start">
-              <el-button type="danger" :icon="Delete" circle @click="handleDel(row)"/>
-            </el-tooltip>
+            <el-button
+                type="primary"
+                size="small"
+                @click="onShowClick(row._id)">查看
+            </el-button>
+            <el-button
+                type="info"
+                size="small"
+                @click="onShowRoleClick(row)">角色
+            </el-button>
+            <el-button
+                type="danger"
+                size="small"
+                @click="onRemoveClick(row)">删除
+            </el-button>
 
           </template>
         </el-table-column>
@@ -79,6 +78,12 @@
       </el-pagination>
     </el-card>
 
+    <roles-dialog
+        v-model="roleDialogVisible"
+        :userId="selectUserId"
+        @updateRole="getListData"
+    ></roles-dialog>
+
   </div>
 </template>
 <script>
@@ -87,7 +92,9 @@ export default {
 };
 </script>
 <script setup>
-import {ref, onMounted} from "vue";
+import RolesDialog from './components/roles.vue'
+
+import {ref, onMounted, watch} from "vue";
 import {getAdmintorList} from "@/api/api";
 import {useStore} from "vuex";
 import {useRouter} from "vue-router";
@@ -96,10 +103,8 @@ import {
   Edit,
   Search
 } from '@element-plus/icons-vue'
-
-onMounted(() => {
-  getListData();
-});
+import {ElMessageBox, ElMessage} from 'element-plus'
+const router = useRouter()
 
 //数据源
 const searchForm = ref({
@@ -112,6 +117,68 @@ const tableData = ref([]);
 const total = ref(0);
 const loading = ref(false)
 
+onMounted(() => {
+  getListData();
+});
+
+/**
+ * 获取账号列表
+ */
+const getListData = async () => {
+  loading.value = true
+  await getAdmintorList(searchForm.value)
+      .then(data => {
+        setTimeout(() => {
+          tableData.value = data.bizobj
+          total.value = Number(data.page_info.total_items);
+          loading.value = false
+        }, 1000)
+      })
+      .catch(err => {
+        loading.value = false
+
+      })
+};
+
+
+/**
+ * 查看按钮点击事件
+ */
+const onShowClick = id => {
+  router.push(`/user/info/${id}`)
+}
+
+
+/**
+ * 删除按钮点击事件
+ */
+const onRemoveClick = row => {
+  ElMessageBox.confirm(
+      "确定要删除" + row.account + "吗",
+      {type: 'warning'}
+  ).then(async () => {
+    // await deleteUser(row._id)
+    ElMessage.success("删除成功")
+    // 重新渲染数据
+    await getListData()
+  })
+}
+
+/**
+ * 查看角色的点击事件
+ */
+const selectUserId = ref('')
+const roleDialogVisible = ref(false)
+const onShowRoleClick = row => {
+  //真实环境应该获取用户id，但这里mock数据我们直接使用角色名字去匹配
+  selectUserId.value = row.role_name
+  roleDialogVisible.value = true
+}
+
+// 保证每次打开重新获取用户角色数据
+watch(roleDialogVisible, val => {
+  if (!val) selectUserId.value = ''
+})
 
 const handleSizeChange = (val) => {
   searchForm.value.page_size = val;
@@ -126,28 +193,6 @@ const searchEvent = () => {
   searchForm.value.page = 1;
   getListData();
 };
-
-const handleEdit = (row) => {
-  console.log(row);
-};
-/**
- * 获取账号列表
- */
-const getListData = () => {
-  loading.value = true
-  getAdmintorList(searchForm.value)
-      .then(data => {
-        setTimeout(() => {
-          tableData.value = data.bizobj
-          total.value = Number(data.page_info.total_items);
-          loading.value = false
-        }, 1000)
-      })
-      .catch(err => {
-        loading.value = false
-
-      })
-};
 </script>
 
 <style lang="scss" scoped>
@@ -159,6 +204,12 @@ const getListData = () => {
 
   ::v-deep .el-tag {
     margin-right: 6px;
+  }
+
+  ::v-deep .avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
   }
 
   .pagination {

@@ -10,6 +10,10 @@
       <!-- 登录账号信息 -->
       <el-dropdown class="avatar-container" trigger="click">
         <div class="avatar-wrapper">
+          <el-image
+              class="avatar"
+              :src="$store.getters.userInfo.avatar"
+          ></el-image>
           <div>{{ $store.getters.userInfo.admin_nick_name }}</div>
           <CaretBottom style="width: 1em; height: 1em; margin-left: 4px;"/>
 
@@ -107,7 +111,12 @@ const logout = () => {
     }
   }
 
-
+  ::v-deep .avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 5px;
+  }
 }
 </style>
 
