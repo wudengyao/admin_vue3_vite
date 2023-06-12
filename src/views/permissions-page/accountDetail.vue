@@ -11,7 +11,7 @@
           <div class="header">
             <!-- 头部渲染表格 -->
             <el-descriptions :column="2" border>
-              <el-descriptions-item label="姓名">{{detailInfo.account}}</el-descriptions-item>
+              <el-descriptions-item label="用户ID">{{userInfo.account}}</el-descriptions-item>
               <el-descriptions-item label="性别">
                  男
                 </el-descriptions-item>
@@ -22,9 +22,9 @@
                   182xxxxxx77
                 </el-descriptions-item>
               <el-descriptions-item label="居住地">浙江省杭州市上城区xxx</el-descriptions-item>
-              <el-descriptions-item label="入职时间">{{detailInfo.date}}</el-descriptions-item>
+              <el-descriptions-item label="入职时间">{{userInfo.date}}</el-descriptions-item>
               <el-descriptions-item label="备注" :span="2">
-                <el-tag  size="small">{{detailInfo.role_name}}</el-tag>
+                <el-tag  size="small">{{userInfo.role_name}}</el-tag>
               </el-descriptions-item>
               <el-descriptions-item
                   label="联系地址"
@@ -35,7 +35,7 @@
             <!-- 头像渲染 -->
             <el-image
                 class="avatar"
-                :src="detailInfo.avatar"
+                :src="userInfo.avatar"
             ></el-image>
           </div>
           <div class="body">
@@ -70,12 +70,11 @@ export default {
 </script>
 <script setup>
 import { useRoute } from 'vue-router'
-import {ref, onMounted, watch} from "vue";
+import {ref, onMounted, watch,defineProps} from "vue";
 const route = useRoute()
 
-const detailInfo = ref({})
-console.log(route.query)
-detailInfo.value = route.query
+const userInfo = ref({})
+
 
 // 打印相关
 const printLoading = ref(false)
@@ -93,7 +92,19 @@ const printObj = {
     printLoading.value = false
   }
 }
+watch(
+    () => route.query.id,
+    val => {
+      if (val) {
+        userInfo.value =route.query
+        console.log("watch= ",route.query)
+      }
+    },  //第一次进来也出发
+    {
+      immediate: true
+    }
 
+)
 </script>
 <style lang="scss" scoped>
 .print-box {

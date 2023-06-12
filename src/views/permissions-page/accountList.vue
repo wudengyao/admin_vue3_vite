@@ -172,16 +172,13 @@ const getRoleData = async () => {
 /**
  * 查看按钮点击事件
  */
-const onShowClick = (row) => {
+const onShowClick = row => {
   router.push({
     path: '/account/detail',
     query: row
   })
 
-
 }
-
-
 /**
  * 删除按钮点击事件
  */
