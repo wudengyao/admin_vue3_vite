@@ -3,12 +3,11 @@
 
 ## 项目技术栈：Vue3 + JavaScript + Vite4 + Element-plus2.3.5
 
-![1686129966134](https://github.com/wudengyao/admin_vue3_vite/assets/9073383/1723b1d1-ad21-4a2b-a941-994aa54223ed)
+![image](https://github.com/wudengyao/admin_vue3_vite/assets/9073383/01cc0469-3a92-4f1b-970e-01bcb51fc576)
 ![image](https://github.com/wudengyao/admin_vue3_vite/assets/9073383/b14733b1-af44-4e0c-a6fb-fc3bdd996c66)
 ![image](https://github.com/wudengyao/admin_vue3_vite/assets/9073383/39d23687-ab7b-4752-aeae-7246b8d3e7e1)
 ![image](https://github.com/wudengyao/admin_vue3_vite/assets/9073383/4606d851-a799-492c-9985-fccd155efbf4)
-![image](https://github.com/wudengyao/admin_vue3_vite/assets/9073383/9c26a9b5-1274-4716-9607-c7d339bd2821)
-
+![image](https://github.com/wudengyao/admin_vue3_vite/assets/9073383/5ce8b75f-fb20-4291-92c9-d6def3b24906)
 
 ## 简介
 对于后台系统而言，相信只要是前端开发的工程师，那么就不陌生了。
