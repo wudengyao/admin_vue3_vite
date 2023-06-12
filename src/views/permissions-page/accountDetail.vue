@@ -99,11 +99,10 @@ watch(
         userInfo.value =route.query
         console.log("watch= ",route.query)
       }
-    },  //第一次进来也出发
+    },  //第一次进来也触发
     {
       immediate: true
     }
-
 )
 </script>
 <style lang="scss" scoped>
