@@ -19,12 +19,21 @@
             width="280">
         </el-table-column>
 
+        <el-table-column
+            prop="hidden"
+            label="是否显示在菜单列表"
+            width="280">
+          <template #default="{ row }">
+            <el-tag v-if="row.hidden" type="danger">否</el-tag>
+            <el-tag v-else  type="success">是</el-tag>
+          </template>
+        </el-table-column>
+
         <el-table-column prop="buttonList" label="所在页面的按钮权限" min-width="280">
           <template #default="{ row }">
             <el-tag
                 class="remark"
                 size="small"
-                type="danger"
                 v-for="(item, index) in row.buttonList"
                 :key="index">{{ item.name }}</el-tag>
           </template>

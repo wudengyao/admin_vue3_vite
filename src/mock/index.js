@@ -138,6 +138,7 @@ export default [
                 "parent_id": "1",
                 "type": "2",
                 "url": "/account/detail",
+                "hidden":true
 
               }
             ]
