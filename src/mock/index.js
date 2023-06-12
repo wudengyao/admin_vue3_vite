@@ -80,24 +80,10 @@ export default [
                   },
                   {
                     "id": "1-1-2",
-                    "name": "查看",
+                    "name": "配置权限",
                     "parent_id": "2",
                     "type": "3",
-                    "url": "/adminAuth/lookRole"
-                  },
-                  {
-                    "id": "1-1-3",
-                    "name": "修改",
-                    "parent_id": "2",
-                    "type": "3",
-                    "url": "/adminAuth/saveRole"
-                  },
-                  {
-                    "id": "1-1-4",
-                    "name": "删除",
-                    "parent_id": "2",
-                    "type": "3",
-                    "url": "/adminAuth/delRole"
+                    "url": "/adminAuth/setting"
                   }
                 ]
               },
@@ -113,14 +99,28 @@ export default [
                     "name": "查询",
                     "parent_id": "1-2",
                     "type": "3",
-                    "url": "/adminAuth/adminList"
+                    "url": "/adminAuth/list"
                   },
                   {
                     "id": "1-2-2",
-                    "name": "修改",
+                    "name": "查看",
                     "parent_id": "1-2",
                     "type": "3",
-                    "url": "/adminAuth/modifyAdmin"
+                    "url": "/adminAuth/look"
+                  },
+                  {
+                    "id": "1-2-3",
+                    "name": "角色",
+                    "parent_id": "1-2",
+                    "type": "3",
+                    "url": "/adminAuth/role"
+                  },
+                  {
+                    "id": "1-2-4",
+                    "name": "删除",
+                    "parent_id": "1-2",
+                    "type": "3",
+                    "url": "/adminAuth/del"
                   }
                 ]
               },

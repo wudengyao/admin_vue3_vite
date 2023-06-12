@@ -20,7 +20,7 @@
         <el-button
             type="primary"
             @click="searchEvent"
-            v-auth="'/adminAuth/adminList'"
+            v-auth="'/adminAuth/list'"
             style="margin-left: -16px"
         >查询
         </el-button>
@@ -61,16 +61,21 @@
             <el-button
                 type="primary"
                 size="small"
+                v-auth="'/adminAuth/look'"
                 @click="onShowClick(row)">查看
             </el-button>
             <el-button
                 type="info"
                 size="small"
+                v-auth="'/adminAuth/role'"
+
                 @click="onShowRoleClick(row)">角色
             </el-button>
             <el-button
                 type="danger"
                 size="small"
+                v-auth="'/adminAuth/del'"
+
                 @click="onRemoveClick(row)">删除
             </el-button>
 

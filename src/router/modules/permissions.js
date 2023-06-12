@@ -29,7 +29,7 @@ export default{
       path: '/adminAuth/permissionList',
       component: () => import('@/views/permissions-page/permissionList.vue'),
       name: 'permissionList',
-      meta: { title: '权限列表',icon:'personnel'}
+      meta: { title: '权限列表',icon:'permission'}
     },
     {
       path: '/account/detail',

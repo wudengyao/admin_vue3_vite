@@ -35,6 +35,7 @@
               <el-button
                   type="primary"
                   size="small"
+                  v-auth="'/adminAuth/setting'"
                   @click="handleEdit(row)">配置权限</el-button>
             </template>
           </el-table-column>
