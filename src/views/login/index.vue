@@ -9,14 +9,14 @@
         <span class="icon-container">
           <UserFilled style="width: 1em;height: 1em"/>
         </span>
-        <el-input placeholder="请输入用户名" name="username" type="text" v-model="loginForm.username"/>
+        <el-input placeholder="请输入用户名" name="username" type="text" v-model="loginForm.username" @keyup.enter.native="handleLogin"/>
       </el-form-item>
 
       <el-form-item prop="password">
         <span class="icon-container">
           <Lock style="width: 1em;height: 1em"/>
         </span>
-        <el-input placeholder="请输入密码" name="password" :type="passwordType" v-model="loginForm.password"/>
+        <el-input placeholder="请输入密码" name="password" :type="passwordType" v-model="loginForm.password" @keyup.enter.native="handleLogin"/>
         <span class="show-pwd">
           <svg-icon
               :icon="passwordType === 'password' ? 'eye' : 'eye-open'"
@@ -32,14 +32,14 @@
         </span>
         <el-input
             placeholder="图形验证码"
-            v-model="loginForm.captcha_code" name="captcha_code" class="code-input" maxlength="4">
+            v-model="loginForm.captcha_code" name="captcha_code" class="code-input" maxlength="4" @keyup.enter.native="handleLogin">
         </el-input>
         <div class="code-img" @click="getCodeImg">{{ code_net }}</div>
       </el-form-item>
 
 
       <el-button type="primary" style="width: 100%; margin-bottom: 30px;" :loading="loading"
-                 @click="handleLogin"
+                 @click.native.prevent="handleLogin"
                  size="large"
       >登录
       </el-button>

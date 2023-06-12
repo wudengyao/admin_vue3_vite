@@ -66,7 +66,7 @@ export default [
             "secondMenuList": [
               {
                 "id": "1-1",
-                "name": "角色管理",
+                "name": "角色列表",
                 "parent_id": "1",
                 "type": "2",
                 "url": "/adminAuth/getRoleList",
@@ -103,7 +103,7 @@ export default [
               },
               {
                 "id": "1-2",
-                "name": "账号管理",
+                "name": "账号列表",
                 "parent_id": "1",
                 "type": "2",
                 "url": "/adminAuth/adminList",
@@ -126,6 +126,14 @@ export default [
               },
               {
                 "id": "1-3",
+                "name": "权限列表",
+                "parent_id": "1",
+                "type": "2",
+                "url": "/adminAuth/permissionList",
+
+              },
+              {
+                "id": "1-4",
                 "name": "账号详情",
                 "parent_id": "1",
                 "type": "2",

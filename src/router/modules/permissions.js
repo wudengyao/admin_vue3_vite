@@ -17,13 +17,19 @@ export default{
       path: '/adminAuth/getRoleList',
       component: () => import('@/views/permissions-page/roleList.vue'),
       name: 'getRoleList',
-      meta: { title: '角色管理',icon:'role'}
+      meta: { title: '角色列表',icon:'role'}
     },
     {
       path: '/adminAuth/adminList',
       component: () => import('@/views/permissions-page/accountList.vue'),
       name: 'adminList',
-      meta: { title: '账号管理',icon:'personnel'}
+      meta: { title: '账号列表',icon:'personnel'}
+    },
+    {
+      path: '/adminAuth/permissionList',
+      component: () => import('@/views/permissions-page/permissionList.vue'),
+      name: 'permissionList',
+      meta: { title: '权限列表',icon:'personnel'}
     },
     {
       path: '/account/detail',
