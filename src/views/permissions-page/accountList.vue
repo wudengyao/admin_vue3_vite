@@ -177,7 +177,6 @@ const onShowClick = (row) => {
     path: '/account/detail',
     query: row
   })
-  // router.push(`/account/detail/${row}`)
 
 
 }

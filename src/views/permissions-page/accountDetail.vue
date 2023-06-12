@@ -1,7 +1,7 @@
 <template>
     <div class="user-info-container">
       <el-card class="print-box">
-        <el-button type="primary">打印</el-button>
+        <el-button type="primary" v-print="printObj" :loading="printLoading">打印</el-button>
       </el-card>
       <el-card>
         <div id="userInfoBox" class="user-info-box">
@@ -76,6 +76,23 @@ const route = useRoute()
 const detailInfo = ref({})
 console.log(route.query)
 detailInfo.value = route.query
+
+// 打印相关
+const printLoading = ref(false)
+const printObj = {
+  // 打印区域
+  id: 'userInfoBox',
+  // 打印标题
+  popTitle: 'admin-vue3-vite',
+  // 打印前
+  beforeOpenCallback(vue) {
+    printLoading.value = true
+  },
+  // 执行打印
+  openCallback(vue) {
+    printLoading.value = false
+  }
+}
 
 </script>
 <style lang="scss" scoped>

@@ -1,11 +1,10 @@
 import permission from './permission'
+import print from 'vue3-print-nb'
 
 export default app => {
+  app.use(print)
   app.directive('auth', permission)
 
-  // 使 v-focus 在所有组件中都可用
-  app.directive('focus', {
-    mounted: (el) => el.focus()
-  })
+
 
 }

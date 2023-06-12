@@ -16,10 +16,11 @@ app.config.globalProperties.$axios = axios // 使用globalProperties挂载
 
 installElementPlus(app)
 installDirective(app)
+// filter
+import installFilter from '@/filters'
+installFilter(app)
 
 // 将自动注册所有组件为全局组件
-
-
 import svgIcon from "@/components/SvgIcon/index.vue";
 import 'virtual:svg-icons-register'  // 新增
 
