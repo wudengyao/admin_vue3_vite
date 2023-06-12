@@ -54,13 +54,7 @@ export default {
 <script setup>
 import {getPermission} from "@/api/api";
 import { ref } from 'vue'
-/**
- * 权限分级：
- * 1. 一级权限为页面权限
- *  permissionMark 对应 路由名称
- * 2. 二级权限为功能权限
- *  permissionMark 对应 功能权限表
- */
+
 // 所有权限
 const allPermission = ref([])
 const getPermissionListData = async () => {
