@@ -7,6 +7,7 @@
 ![image](https://github.com/wudengyao/admin_vue3_vite/assets/9073383/b14733b1-af44-4e0c-a6fb-fc3bdd996c66)
 ![image](https://github.com/wudengyao/admin_vue3_vite/assets/9073383/39d23687-ab7b-4752-aeae-7246b8d3e7e1)
 ![image](https://github.com/wudengyao/admin_vue3_vite/assets/9073383/4606d851-a799-492c-9985-fccd155efbf4)
+![image](https://github.com/wudengyao/admin_vue3_vite/assets/9073383/9c26a9b5-1274-4716-9607-c7d339bd2821)
 
 
 ## 简介
