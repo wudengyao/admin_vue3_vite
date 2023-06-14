@@ -21,21 +21,14 @@
             <el-button
                 type="primary"
                 plain
+                disabled
                 icon="Plus"
             >新增</el-button>
-          </el-col>
-
-          <el-col :span="1.5">
-            <el-button
-                type="info"
-                plain
-                icon="Upload"
-                @click="handleImport"
-            >导入</el-button>
           </el-col>
           <el-col :span="1.5">
             <el-button
                 type="warning"
+                disabled
                 plain
                 icon="Download">导出</el-button>
           </el-col>

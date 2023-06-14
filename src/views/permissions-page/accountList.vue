@@ -33,6 +33,7 @@
               type="primary"
               plain
               icon="Plus"
+              disabled
           >新增
           </el-button>
         </el-col>
@@ -50,6 +51,7 @@
           <el-button
               type="warning"
               plain
+              disabled
               icon="Download">导出
           </el-button>
         </el-col>
