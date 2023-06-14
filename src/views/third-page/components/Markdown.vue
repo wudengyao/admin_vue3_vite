@@ -14,13 +14,9 @@ import '@toast-ui/editor/dist/toastui-editor.css'
 import { onMounted, defineProps, defineEmits, watch } from 'vue'
 import { useStore } from 'vuex'
 const props = defineProps({
-  // title: {
-  //   required: true,
-  //   type: String
-  // },
-  // detail: {
-  //   type: Object
-  // }
+  detail: {
+    type: String
+  }
 })
 
 const emits = defineEmits(['onSuccess'])
@@ -33,6 +29,8 @@ let el
 onMounted(() => {
   el = document.querySelector('#markdown-box')
   initEditor()
+  mkEditor.setHTML(props.detail)
+
 })
 
 const store = useStore()
@@ -52,12 +50,12 @@ const initEditor = () => {
 watch(
   () => props.detail,
   val => {
-    if (val && val.content) {
-      mkEditor.setHTML(val.content)
+    if (val) {
+      mkEditor.setHTML(val)
     }
   },
   {
-    immediate: true
+    immediate: false
   }
 )
 

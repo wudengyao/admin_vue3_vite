@@ -18,9 +18,9 @@ const props = defineProps({
   //   required: true,
   //   type: String
   // },
-  // detail: {
-  //   type: Object
-  // }
+  detail: {
+    type: String
+  }
 })
 
 const emits = defineEmits(['onSuccess'])
@@ -34,6 +34,8 @@ let el
 onMounted(() => {
   el = document.querySelector('#editor-box')
   initEditor()
+  editor.txt.html(props.detail)
+
 })
 
 const initEditor = () => {
@@ -108,13 +110,11 @@ const initEditor = () => {
 watch(
   () => props.detail,
   val => {
-    if (val && val.content) {
-      editor.txt.html(val.content)
+    if (val) {
+      editor.txt.html(val)
     }
   },
-  {
-    immediate: true
-  }
+
 )
 
 const onSubmitClick = async () => {
