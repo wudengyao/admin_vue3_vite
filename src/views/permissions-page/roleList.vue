@@ -1,6 +1,6 @@
 <template>
     <div class="home-box">
-      <el-form :inline="true" :model="searchForm">
+      <el-form :inline="true" :model="searchForm" v-show="showSearch">
         <el-form-item label="角色名称">
           <el-input v-model="searchForm.name" placeholder="角色名称"></el-input>
         </el-form-item>
@@ -12,8 +12,36 @@
               style="margin-left: -16px"
           >查询
           </el-button>
+
         </el-form-item>
       </el-form>
+      <div class="c-toolbar">
+        <el-row :gutter="10" >
+          <el-col :span="1.5">
+            <el-button
+                type="primary"
+                plain
+                icon="Plus"
+            >新增</el-button>
+          </el-col>
+
+          <el-col :span="1.5">
+            <el-button
+                type="info"
+                plain
+                icon="Upload"
+                @click="handleImport"
+            >导入</el-button>
+          </el-col>
+          <el-col :span="1.5">
+            <el-button
+                type="warning"
+                plain
+                icon="Download">导出</el-button>
+          </el-col>
+        </el-row>
+        <right-toolbar v-model:showSearch="showSearch" @queryTable="getListData"></right-toolbar>
+      </div>
       <el-card>
         <el-table :data="tableData"
                   v-loading="loading"
@@ -56,6 +84,8 @@
           v-model="distributePermissionVisible"
           :roleId="selectRoleId">
       </distribute-permission>
+
+
     </div>
 
 </template>
@@ -67,17 +97,12 @@ export default {
 <script setup>
 import DistributePermission from './components/distributePermission.vue'
 
-import {ref, onMounted} from "vue";
+import {ref, onMounted,reactive} from "vue";
 import {getRoleList} from "@/api/api";
 import {useStore} from "vuex";
 import {useRouter} from "vue-router";
-import {
-  Delete,
-  Edit,
-  Search
 
-} from '@element-plus/icons-vue'
-
+const showSearch = ref(true);
 
 onMounted(() => {
   getListData();
@@ -156,5 +181,6 @@ const searchEvent = () => {
     display: flex;
     justify-content: end;
   }
+
 }
 </style>
