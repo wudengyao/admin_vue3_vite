@@ -1,6 +1,6 @@
 <template>
   <div class="home-box">
-    <el-form :inline="true" :model="searchForm"  v-show="showSearch">
+    <el-form :inline="true" :model="searchForm" v-show="showSearch">
       <el-form-item label="账号">
         <el-input v-model="searchForm.account" placeholder="账号"></el-input>
       </el-form-item>
@@ -27,13 +27,14 @@
       </el-form-item>
     </el-form>
     <div class="c-toolbar">
-      <el-row :gutter="10" >
+      <el-row :gutter="10">
         <el-col :span="1.5">
           <el-button
               type="primary"
               plain
               icon="Plus"
-          >新增</el-button>
+          >新增
+          </el-button>
         </el-col>
 
         <el-col :span="1.5">
@@ -42,13 +43,15 @@
               plain
               icon="Upload"
               @click="handleImport"
-          >导入</el-button>
+          >导入
+          </el-button>
         </el-col>
         <el-col :span="1.5">
           <el-button
               type="warning"
               plain
-              icon="Download">导出</el-button>
+              icon="Download">导出
+          </el-button>
         </el-col>
       </el-row>
       <right-toolbar v-model:showSearch="showSearch" @queryTable="getListData"></right-toolbar>
@@ -130,38 +133,13 @@
 
 
     <!-- 用户导入对话框 -->
-    <el-dialog :title="upload.title" v-model="upload.open" width="400px" append-to-body>
-      <el-upload
-          ref="uploadRef"
-          :limit="1"
-          accept=".xlsx, .xls"
-          :headers="upload.headers"
-          :action="upload.url + '?updateSupport=' + upload.updateSupport"
-          :disabled="upload.isUploading"
-          :on-progress="handleFileUploadProgress"
-          :on-success="handleFileSuccess"
-          :auto-upload="false"
-          drag
-      >
-        <el-icon class="el-icon--upload"><upload-filled /></el-icon>
-        <div class="el-upload__text">将文件拖到此处，或<em>点击上传</em></div>
-        <template #tip>
-          <div class="el-upload__tip text-center">
-            <div class="el-upload__tip">
-              <el-checkbox v-model="upload.updateSupport" />是否更新已经存在的用户数据
-            </div>
-            <span>仅允许导入xls、xlsx格式文件。</span>
-            <el-link type="primary" :underline="false" style="font-size:12px;vertical-align: baseline;" @click="importTemplate">下载模板</el-link>
-          </div>
-        </template>
-      </el-upload>
-      <template #footer>
-        <div class="dialog-footer">
-          <el-button type="primary" @click="submitFileForm">确 定</el-button>
-          <el-button @click="upload.open = false">取 消</el-button>
-        </div>
-      </template>
-    </el-dialog>
+    <UploadExcel
+        v-model="upload.open"
+        :title="upload.upLoadTitle"
+        :url="switchServerUrl()+ '/public/uploadFile'"
+        @onSuccess="onSuccess"
+        @onDownTemplate="onDownTemplate">
+    </UploadExcel>
 
   </div>
 </template>
@@ -172,37 +150,20 @@ export default {
 </script>
 <script setup>
 import RolesDialog from './components/roles.vue'
+import UploadExcel from '@/components/UploadExcel'
 
 import {ref, onMounted, watch, reactive} from "vue";
 import {getAdmintorList, getRoleList} from "@/api/api";
 import {useStore} from "vuex";
 import {useRouter} from "vue-router";
-import {
-  Delete,
-  Edit,
-  Search
-} from '@element-plus/icons-vue'
 import {ElMessageBox, ElMessage} from 'element-plus'
+import {switchServerUrl} from "@/utils/index";
 
+const store = useStore()
 const router = useRouter()
+
 const showSearch = ref(true);
 
-
-/*** 用户导入参数 */
-const upload = reactive({
-  // 是否显示弹出层（用户导入）
-  open: false,
-  // 弹出层标题（用户导入）
-  title: "",
-  // 是否禁用上传
-  isUploading: false,
-  // 是否更新已经存在的用户数据
-  updateSupport: 0,
-  // 设置上传的请求头部
-  // headers: { Authorization: "Bearer " + getToken() },
-  // 上传的地址
-  url: import.meta.env.VITE_APP_BASE_API + "/system/user/importData"
-});
 
 //数据源
 const searchForm = ref({
@@ -309,6 +270,31 @@ const searchEvent = () => {
   searchForm.value.page = 1;
   getListData();
 };
+
+
+/*** 用户导入参数 */
+const upload = ref({
+  // 是否显示弹出层（用户导入）
+  open: false,
+  // 弹出层标题（用户导入）
+  upLoadTitle: "账号导入",
+});
+
+/** 导入按钮操作 */
+function handleImport() {
+  upload.value.open = true;
+};
+/** 文件上传成功处理 */
+const onSuccess = (response, file, fileList) => {
+  upload.value.open = false;
+  getListData();
+
+};
+const onDownTemplate = () => {
+  ElMessage.error("演示模式")
+}
+
+
 </script>
 
 <style lang="scss" scoped>
