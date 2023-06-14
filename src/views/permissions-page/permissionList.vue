@@ -17,6 +17,14 @@
             prop="url"
             label="权限标志"
             width="280">
+          <template #default="{ row }">
+            <div style="display: flex;align-items: center;justify-content: space-between;">
+              <div>{{row.url}}</div>
+              <el-link :underline="false" :icon="CopyDocument" v-copyText="row.url" v-copyText:callback="copyTextSuccess" type="warning">复制</el-link>
+            </div>
+
+
+          </template>
         </el-table-column>
 
         <el-table-column
@@ -54,6 +62,8 @@ export default {
 <script setup>
 import {getPermission} from "@/api/api";
 import { ref } from 'vue'
+import {ElMessage} from "element-plus";
+import {CopyDocument} from '@element-plus/icons'
 
 // 所有权限
 const allPermission = ref([])
@@ -62,6 +72,11 @@ const getPermissionListData = async () => {
   allPermission.value = obj.bizobj
 }
 getPermissionListData()
+/** 复制代码成功 */
+const copyTextSuccess = () => {
+  ElMessage.success("复制成功")
+
+}
 </script>
 <style lang="scss" scoped>
 .remark {

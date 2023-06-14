@@ -11,11 +11,9 @@
       ref="treeRef"
       :data="allPermission"
       show-checkbox
-      check-strictly
       node-key="id"
       default-expand-all
-      :props="defaultProps"
-    >
+      :props="defaultProps">
     </el-tree>
 
     <template #footer>
