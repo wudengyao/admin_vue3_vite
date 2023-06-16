@@ -27,12 +27,12 @@
       </el-form-item>
     </el-form>
 
-      <right-toolbar
-          v-model:showSearch="showSearch"
-          @queryTable="getListData"
-          @onImportClick="handleImport"
-          @onOutClick="onDownTemplate"
-          @onAddClick="onDownTemplate"></right-toolbar>
+    <right-toolbar
+        v-model:showSearch="showSearch"
+        @queryTable="getListData"
+        @onImportClick="handleImport"
+        @onOutClick="onDownTemplate"
+        @onAddClick="onDownTemplate"></right-toolbar>
     <el-card>
       <el-table :data="tableData"
                 v-loading="loading"
@@ -89,20 +89,20 @@
           </template>
         </el-table-column>
       </el-table>
-      <el-pagination
-          class="pagination"
-          @size-change="handleSizeChange"
-          @current-change="handleCurrentChange"
-          :current-page="searchForm.page"
-          :page-sizes="[10, 20, 30, 50, 100]"
-          :page-size="searchForm.page_size"
-          layout="total, sizes, prev, pager, next, jumper"
+
+
+      <!--分页组件-->
+      <pagination
+          v-show="total > 0"
           :total="total"
-      >
-      </el-pagination>
+          v-model:page="searchForm.page"
+          v-model:limit="searchForm.page_size"
+          @pagination="getListData"
+      />
+
     </el-card>
 
-<!--    角色组件-->
+    <!--角色组件-->
     <roles-dialog
         v-model="roleDialogVisible"
         :userId="selectUserId"
@@ -233,14 +233,6 @@ watch(roleDialogVisible, val => {
   if (!val) selectUserId.value = ''
 })
 
-const handleSizeChange = (val) => {
-  searchForm.value.page_size = val;
-  getListData();
-};
-const handleCurrentChange = (val) => {
-  searchForm.value.page = val;
-  getListData();
-};
 
 const searchEvent = () => {
   console.log(searchForm.value)
@@ -291,10 +283,5 @@ const onDownTemplate = () => {
     border-radius: 50%;
   }
 
-  .pagination {
-    margin-top: 20px;
-    display: flex;
-    justify-content: end;
-  }
 }
 </style>

@@ -26,8 +26,13 @@ installFilter(app)
 
 // 自定义表格工具组件
 import RightToolbar from '@/components/RightToolbar'
+// 分页组件
+import Pagination from '@/components/Pagination'
+
 // 全局组件挂载
 app.component('RightToolbar', RightToolbar)
+app.component('Pagination', Pagination)
+
 
 // 将自动注册所有组件为全局组件
 import svgIcon from "@/components/SvgIcon/index.vue";

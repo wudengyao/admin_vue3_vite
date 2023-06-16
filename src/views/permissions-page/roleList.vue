@@ -46,16 +46,15 @@
           </template>
         </el-table-column>
       </el-table>
-      <el-pagination
-          class="pagination"
-          @size-change="handleSizeChange"
-          @current-change="handleCurrentChange"
-          :current-page="searchForm.page"
-          :page-sizes="[10, 20, 30, 50, 100]"
-          :page-size="searchForm.page_size"
-          layout="total, sizes, prev, pager, next, jumper"
-          :total="total">
-      </el-pagination>
+
+
+      <pagination
+          v-show="total > 0"
+          :total="total"
+          v-model:page="searchForm.page"
+          v-model:limit="searchForm.page_size"
+          @pagination="getListData"
+      />
     </el-card>
 
     <distribute-permission
@@ -126,15 +125,6 @@ const handleEdit = row => {
   selectRoleId.value = row.id
   distributePermissionVisible.value = true
 }
-
-const handleSizeChange = (val) => {
-  searchForm.value.page_size = val;
-  getListData();
-};
-const handleCurrentChange = (val) => {
-  searchForm.value.page = val;
-  getListData();
-};
 
 const searchEvent = () => {
   searchForm.value.page = 1;
