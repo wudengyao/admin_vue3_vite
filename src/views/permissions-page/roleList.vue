@@ -92,7 +92,7 @@ onMounted(() => {
 
 //数据源
 const searchForm = ref({
-  id:'',
+  id:0,
   name: "",
   page: 1,
   page_size: 10,
