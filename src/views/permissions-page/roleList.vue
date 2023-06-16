@@ -1,9 +1,13 @@
 <template>
   <div class="home-box">
     <el-form :inline="true" :model="searchForm" v-show="showSearch">
+      <el-form-item label="角色ID" prop="id">
+        <el-input-number v-model="searchForm.id" controls-position="right" :min="0" />
+      </el-form-item>
       <el-form-item label="角色名称">
         <el-input v-model="searchForm.name" placeholder="角色名称"></el-input>
       </el-form-item>
+
       <el-form-item>
         <el-button
             @click="searchEvent"
@@ -88,6 +92,7 @@ onMounted(() => {
 
 //数据源
 const searchForm = ref({
+  id:'',
   name: "",
   page: 1,
   page_size: 10,

@@ -1,6 +1,9 @@
 <template>
   <div class="home-box">
     <el-form :inline="true" :model="searchForm" v-show="showSearch">
+      <el-form-item label="账号ID" prop="id">
+        <el-input-number v-model="searchForm.id" controls-position="right" :min="0" />
+      </el-form-item>
       <el-form-item label="账号">
         <el-input v-model="searchForm.account" placeholder="账号"></el-input>
       </el-form-item>
@@ -144,6 +147,7 @@ const showSearch = ref(true);
 
 //数据源
 const searchForm = ref({
+  id:0,
   account: "",
   role: '',
   page: 1,
