@@ -5,11 +5,11 @@
         <el-input-number v-model="searchForm.id" controls-position="right" :min="0" />
       </el-form-item>
       <el-form-item label="账号">
-        <el-input v-model="searchForm.account" placeholder="账号"></el-input>
+        <el-input v-model="searchForm.account" placeholder="账号"  clearable></el-input>
       </el-form-item>
       <el-form-item label="角色">
 
-        <el-select v-model="searchForm.role" placeholder="角色">
+        <el-select v-model="searchForm.role" placeholder="角色" clearable>
           <el-option
               v-for="item in roleList"
               :key="item.id"

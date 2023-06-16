@@ -5,7 +5,7 @@
         <el-input-number v-model="searchForm.id" controls-position="right" :min="0" />
       </el-form-item>
       <el-form-item label="角色名称">
-        <el-input v-model="searchForm.name" placeholder="角色名称"></el-input>
+        <el-input v-model="searchForm.name" placeholder="角色名称" clearable></el-input>
       </el-form-item>
 
       <el-form-item>
