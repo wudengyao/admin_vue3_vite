@@ -102,12 +102,12 @@
       </el-pagination>
     </el-card>
 
+<!--    角色组件-->
     <roles-dialog
         v-model="roleDialogVisible"
         :userId="selectUserId"
-        @updateRole="getListData"
-    ></roles-dialog>
-
+        @updateRole="getListData">
+    </roles-dialog>
 
     <!-- 用户导入对话框 -->
     <UploadExcel
