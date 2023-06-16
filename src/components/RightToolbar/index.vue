@@ -1,25 +1,61 @@
 <template>
-  <div class="top-right-btn" :style="style">
-    <el-row>
-      <el-tooltip class="item" effect="dark" :content="showSearch ? '隐藏搜索' : '显示搜索'" placement="top" v-if="search">
-        <el-button circle icon="Search" @click="toggleSearch()" />
-      </el-tooltip>
-      <el-tooltip class="item" effect="dark" content="刷新" placement="top">
-        <el-button circle icon="Refresh" @click="refresh()" />
-      </el-tooltip>
-      <el-tooltip class="item" effect="dark" content="显隐列" placement="top" v-if="columns">
-        <el-button circle icon="Menu" @click="showColumn()" />
-      </el-tooltip>
+  <div class="c-toolbar">
+
+    <el-row :gutter="10">
+      <el-col :span="1.5" v-if="haveAdd">
+        <el-button
+            type="primary"
+            plain
+            icon="Plus"
+            @click="handleAdd"
+
+        >新增
+        </el-button>
+      </el-col>
+
+      <el-col :span="1.5" v-if="haveImport">
+        <el-button
+            type="info"
+            plain
+            icon="Upload"
+            @click="handleImport"
+        >导入
+        </el-button>
+      </el-col>
+      <el-col :span="1.5"  v-if="haveOut">
+        <el-button
+            type="warning"
+            plain
+            icon="Download"
+            @click="handleOut"
+        >导出
+        </el-button>
+      </el-col>
     </el-row>
-    <el-dialog :title="title" v-model="open" append-to-body>
-      <el-transfer
-        :titles="['显示', '隐藏']"
-        v-model="value"
-        :data="columns"
-        @change="dataChange"
-      ></el-transfer>
-    </el-dialog>
+
+    <div class="top-right-btn" :style="style">
+      <el-row>
+        <el-tooltip class="item" effect="dark" :content="showSearch ? '隐藏搜索' : '显示搜索'" placement="top" v-if="search">
+          <el-button circle icon="Search" @click="toggleSearch()"/>
+        </el-tooltip>
+        <el-tooltip class="item" effect="dark" content="刷新" placement="top">
+          <el-button circle icon="Refresh" @click="refresh()"/>
+        </el-tooltip>
+        <el-tooltip class="item" effect="dark" content="显隐列" placement="top" v-if="columns">
+          <el-button circle icon="Menu" @click="showColumn()"/>
+        </el-tooltip>
+      </el-row>
+      <el-dialog :title="title" v-model="open" append-to-body>
+        <el-transfer
+            :titles="['显示', '隐藏']"
+            v-model="value"
+            :data="columns"
+            @change="dataChange"
+        ></el-transfer>
+      </el-dialog>
+    </div>
   </div>
+
 </template>
 
 <script setup>
@@ -42,9 +78,21 @@ const props = defineProps({
     type: Number,
     default: 10,
   },
+  haveAdd:{
+    type: Boolean,
+    default: true,
+  },
+  haveImport:{
+    type: Boolean,
+    default: true,
+  },
+  haveOut:{
+    type: Boolean,
+    default: true,
+  }
 })
 
-const emits = defineEmits(['update:showSearch', 'queryTable']);
+const emits = defineEmits(['update:showSearch', 'queryTable',"onImportClick","onOutClick","onAddClick"]);
 
 // 显隐数据
 const value = ref([]);
@@ -90,14 +138,35 @@ for (let item in props.columns) {
     value.value.push(parseInt(item));
   }
 }
+const handleAdd = (()=>{
+  emits("onAddClick");
+
+})
+const handleImport = (()=>{
+  emits("onImportClick");
+
+})
+const handleOut = (()=>{
+  emits("onOutClick");
+
+})
 </script>
 
 <style lang='scss' scoped>
+
+
+.c-toolbar {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
 :deep(.el-transfer__button) {
   border-radius: 50%;
   display: block;
   margin-left: 0px;
 }
+
 :deep(.el-transfer__button:first-child) {
   margin-bottom: 10px;
 }

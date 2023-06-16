@@ -26,38 +26,13 @@
         </el-button>
       </el-form-item>
     </el-form>
-    <div class="c-toolbar">
-      <el-row :gutter="10">
-        <el-col :span="1.5">
-          <el-button
-              type="primary"
-              plain
-              icon="Plus"
-              disabled
-          >新增
-          </el-button>
-        </el-col>
 
-        <el-col :span="1.5">
-          <el-button
-              type="info"
-              plain
-              icon="Upload"
-              @click="handleImport"
-          >导入
-          </el-button>
-        </el-col>
-        <el-col :span="1.5">
-          <el-button
-              type="warning"
-              plain
-              disabled
-              icon="Download">导出
-          </el-button>
-        </el-col>
-      </el-row>
-      <right-toolbar v-model:showSearch="showSearch" @queryTable="getListData"></right-toolbar>
-    </div>
+      <right-toolbar
+          v-model:showSearch="showSearch"
+          @queryTable="getListData"
+          @onImportClick="handleImport"
+          @onOutClick="onDownTemplate"
+          @onAddClick="onDownTemplate"></right-toolbar>
     <el-card>
       <el-table :data="tableData"
                 v-loading="loading"
