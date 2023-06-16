@@ -7,6 +7,16 @@
       <el-form-item label="角色名称">
         <el-input v-model="searchForm.name" placeholder="角色名称" clearable></el-input>
       </el-form-item>
+      <el-form-item label="操作时间" style="width: 308px;">
+        <el-date-picker
+            v-model="searchForm.date"
+            value-format="YYYY-MM-DD"
+            type="daterange"
+            range-separator="-"
+            start-placeholder="开始日期"
+            end-placeholder="结束日期"
+        ></el-date-picker>
+      </el-form-item>
 
       <el-form-item>
         <el-button
@@ -94,6 +104,7 @@ onMounted(() => {
 const searchForm = ref({
   id:0,
   name: "",
+  date:'',
   page: 1,
   page_size: 10,
 });

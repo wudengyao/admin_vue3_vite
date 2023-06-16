@@ -19,6 +19,17 @@
         </el-select>
       </el-form-item>
 
+      <el-form-item label="操作时间" style="width: 308px;">
+        <el-date-picker
+            v-model="searchForm.date"
+            value-format="YYYY-MM-DD"
+            type="daterange"
+            range-separator="-"
+            start-placeholder="开始日期"
+            end-placeholder="结束日期"
+        ></el-date-picker>
+      </el-form-item>
+
       <el-form-item>
         <el-button
             type="primary"
@@ -150,6 +161,7 @@ const searchForm = ref({
   id:0,
   account: "",
   role: '',
+  date:'',
   page: 1,
   page_size: 20,
 });
