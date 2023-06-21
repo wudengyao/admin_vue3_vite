@@ -40,11 +40,11 @@
 
       <el-button type="primary" style="width: 100%; margin-bottom: 30px;" :loading="loading"
                  @click.native.prevent="handleLogin"
-                 size="large"
-      >登录
+                 size="large">
+        <span v-if="!loading">登 录</span>
+        <span v-else>登 录 中...</span>
       </el-button>
 
-      <div style="color: red">mock数据,账户密码随便输</div>
 
     </el-form>
 
