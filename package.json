@@ -28,7 +28,8 @@
     "vue3-print-nb": "^0.1.4",
     "vuex": "^4.0.2",
     "wangeditor": "^4.7.6",
-    "wavesurfer.js": "^6.6.3"
+    "wavesurfer.js": "^6.6.3",
+    "vue-cropper": "1.0.3"
   },
   "devDependencies": {
     "@types/node": "^18.16.0",

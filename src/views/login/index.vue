@@ -9,7 +9,7 @@
         <span class="icon-container">
           <UserFilled style="width: 1em;height: 1em"/>
         </span>
-        <el-input placeholder="请输入用户名" name="username" type="text" v-model="loginForm.username" @keyup.enter.native="handleLogin"/>
+        <el-input  placeholder="请输入用户名" name="username" type="text" v-model="loginForm.username" @keyup.enter.native="handleLogin"/>
       </el-form-item>
 
       <el-form-item prop="password">
@@ -40,14 +40,17 @@
 
       <el-button type="primary" style="width: 100%; margin-bottom: 30px;" :loading="loading"
                  @click.native.prevent="handleLogin"
-                 size="large"
-      >登录
+                 size="large">
+        <span v-if="!loading">登 录</span>
+        <span v-else>登 录 中...</span>
       </el-button>
 
-      <div style="color: red">mock数据,账户密码随便输</div>
 
     </el-form>
-
+    <!--  底部  -->
+    <div class="el-login-footer">
+      <span>项目搭建博客地址：https://juejin.cn/user/1310273591836957</span>
+    </div>
 
   </div>
 </template>
@@ -175,23 +178,21 @@ $txt_color: #333;
 
 
 .login-container {
-  min-height: 100%;
-  width: 100%;
-  background-color: $bg;
-  overflow: hidden;
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background-image: url("../../assets/login-background.jpeg");
+  background-size: cover;
   .login-form {
     position: relative;
-    width: 520px;
+    width: 420px;
     max-width: 100%;
     padding: 35px;
     margin: 0 auto;
     overflow: hidden;
     background: white;
-    margin-top: 7%;
-    border-radius: 4px;
-
-
+    margin-top: 3%;
     ::v-deep .el-form-item {
       border: 1px solid rgba(255, 255, 255, 0.1);
       background: rgba(0, 0, 0, 0.1);
@@ -263,6 +264,18 @@ $txt_color: #333;
       background: transparent;
 
     }
+  }
+  .el-login-footer {
+    height: 40px;
+    line-height: 40px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    font-family: Arial;
+    font-size: 12px;
+    letter-spacing: 1px;
   }
 }
 </style>
