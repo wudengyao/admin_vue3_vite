@@ -3,7 +3,8 @@
        :class="[$store.getters.sidebarOpened ? 'openSidebar' : 'hideSidebar']">
     <!-- 左侧 menu -->
     <sidebar
-      class="sidebar-container"
+        id="guide-sidebar"
+        class="sidebar-container"
       :style="{ backgroundColor: variables.menuBg }"
 
     />

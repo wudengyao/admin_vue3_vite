@@ -278,8 +278,6 @@ const onSuccess = (response, file, fileList) => {
 const onDownTemplate = () => {
   ElMessage.error("演示模式")
 }
-
-
 </script>
 
 <style lang="scss" scoped>

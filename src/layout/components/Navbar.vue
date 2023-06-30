@@ -3,8 +3,10 @@
     <!--菜单栏伸缩组件-->
     <hamburger class="hamburger-container"/>
     <!--面包屑组件-->
-    <breadcrumb class="breadcrumb-container"/>
+    <breadcrumb id="guide-breadcrumb" class="breadcrumb-container"/>
     <div class="right-menu">
+      <!-- 引导组件-->
+      <guide class="right-menu-item hover-effect" />
       <!--全屏组件-->
       <screenfull class="right-menu-item hover-effect"/>
       <!-- 登录账号信息 -->
@@ -12,8 +14,7 @@
         <div class="avatar-wrapper">
           <el-image
               class="avatar"
-              :src="$store.getters.userInfo.avatar"
-          ></el-image>
+              :src="$store.getters.userInfo.avatar"></el-image>
           <div>{{ $store.getters.userInfo.admin_nick_name }}</div>
           <CaretBottom style="width: 1em; height: 1em; margin-left: 4px;"/>
 
@@ -40,6 +41,7 @@ import {useStore} from 'vuex'
 import Hamburger from '@/components/Hamburger'
 import Breadcrumb from '@/components/Breadcrumb'
 import Screenfull from '@/components/Screenfull'
+import Guide from '@/components/Guide'
 
 const store = useStore()
 
