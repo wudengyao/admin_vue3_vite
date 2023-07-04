@@ -18,7 +18,7 @@ export const generateRoutes = (routes, basePath = '/', prefixTitle = []) => {
     }
     // 动态路由不允许被搜索
     // 匹配动态路由的正则
-    //不显示在左侧菜单栏的理由也要过滤掉
+    // 不显示在左侧菜单栏的路由要过滤掉
     const re = /.*\/:.*/
     if (
         route.meta &&
