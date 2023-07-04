@@ -120,7 +120,10 @@ watch(visible, val => {
   } else {
     document.body.removeEventListener('click', closeMenu)
   }
-})
+},
+    {
+      immediate: true
+    })
 
 
 </script>

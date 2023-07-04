@@ -19,17 +19,18 @@
     "echarts": "^5.4.2",
     "element-plus": "^2.3.5",
     "fast-glob": "^3.2.12",
+    "fuse.js": "^6.4.6",
     "moment": "^2.29.4",
     "path-browserify": "^1.0.1",
     "sass-loader": "^13.2.2",
     "screenfull": "^5.1.0",
     "vue": "^3.2.8",
+    "vue-cropper": "1.0.3",
     "vue-router": "^4.0.11",
     "vue3-print-nb": "^0.1.4",
     "vuex": "^4.0.2",
     "wangeditor": "^4.7.6",
-    "wavesurfer.js": "^6.6.3",
-    "vue-cropper": "1.0.3"
+    "wavesurfer.js": "^6.6.3"
   },
   "devDependencies": {
     "@types/node": "^18.16.0",

@@ -7,6 +7,8 @@
     <div class="right-menu">
       <!-- 引导组件-->
       <guide class="right-menu-item hover-effect" />
+      <!--页面搜索组件-->
+      <header-search class="right-menu-item hover-effect"></header-search>
       <!--全屏组件-->
       <screenfull class="right-menu-item hover-effect"/>
       <!-- 登录账号信息 -->
@@ -42,6 +44,7 @@ import Hamburger from '@/components/Hamburger'
 import Breadcrumb from '@/components/Breadcrumb'
 import Screenfull from '@/components/Screenfull'
 import Guide from '@/components/Guide'
+import HeaderSearch from '@/components/HeaderSearch'
 
 const store = useStore()
 

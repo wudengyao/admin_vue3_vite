@@ -1460,6 +1460,11 @@
   "resolved" "https://registry.npmjs.org/function-bind/-/function-bind-1.1.1.tgz"
   "version" "1.1.1"
 
+"fuse.js@^6.4.6":
+  "integrity" "sha512-/gYxR/0VpXmWSfZOIPS3rWwU8SHgsRTwWuXhyb2O6s7aRuVtHtxCkR33bNYu3wyLyNx/Wpv0vU7FZy8Vj53VNw=="
+  "resolved" "https://registry.npmjs.org/fuse.js/-/fuse.js-6.4.6.tgz"
+  "version" "6.4.6"
+
 "get-value@^2.0.3", "get-value@^2.0.6":
   "integrity" "sha512-Ln0UQDlxH1BapMu3GPtf7CuYNwRZf2gwCuPqbyG6pB8WfmFpzqcy4xtAaAMUhnNqjMKTiCPZG2oMT3YSx8U2NA=="
   "resolved" "https://registry.npmjs.org/get-value/-/get-value-2.0.6.tgz"
@@ -2885,6 +2890,11 @@
     "rollup" "^3.18.0"
   optionalDependencies:
     "fsevents" "~2.3.2"
+
+"vue-cropper@1.0.3":
+  "integrity" "sha512-yDrZkE4H5vOiMA9WQHE+6rmXrZ1S9TMZasEPAZPKg/2I/nySHL4ECD1lNxt7+ofTPKT+9+2sQkCwagPqEqiqJg=="
+  "resolved" "https://registry.npmjs.org/vue-cropper/-/vue-cropper-1.0.3.tgz"
+  "version" "1.0.3"
 
 "vue-demi@*":
   "integrity" "sha512-o9NUVpl/YlsGJ7t+xuqJKx8EBGf1quRhCiT6D/J0pfwmk9zUwYkC7yrF4SZCe6fETvSM3UNL2edcbYrSyc4QHA=="
