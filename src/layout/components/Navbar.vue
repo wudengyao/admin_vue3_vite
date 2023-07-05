@@ -5,6 +5,10 @@
     <!--面包屑组件-->
     <breadcrumb class="breadcrumb-container"/>
     <div class="right-menu">
+      <!-- 引导组件-->
+      <guide class="right-menu-item hover-effect" />
+      <!--页面搜索组件-->
+      <header-search class="right-menu-item hover-effect"></header-search>
       <!--全屏组件-->
       <screenfull class="right-menu-item hover-effect"/>
       <!-- 登录账号信息 -->
