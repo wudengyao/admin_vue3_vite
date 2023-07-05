@@ -107,6 +107,8 @@ import {useStore} from 'vuex'
 import Hamburger from '@/components/Hamburger'
 import Breadcrumb from '@/components/Breadcrumb'
 import Screenfull from '@/components/Screenfull'
+import Guide from '@/components/Guide'
+import HeaderSearch from '@/components/HeaderSearch'
 import {ElMessage} from "element-plus";
 
 const store = useStore()
