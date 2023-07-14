@@ -26,7 +26,7 @@
       </el-timeline>
     </el-col>
     <el-col :span="18">
-      <el-container class="fdc">
+      <el-container class="fdc" style="margin-top: 10px">
         <el-row :gutter="20" class="fdr">
           <el-col :span="8">
             <el-card shadow="hover" class="box-card c1">
