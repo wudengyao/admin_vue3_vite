@@ -210,6 +210,24 @@ export default [
               }
 
             ]
+          },
+          {
+            id: '4',
+            "name": "CSS动画",
+            "parent_id": "0",
+            "type": "1",
+            "url": "/cssAnimation/shootingStar",
+            "secondMenuList": [
+              {
+                "id": "3-1",
+                "name": "流星雨",
+                "parent_id": "3",
+                "type": "2",
+                "url": "/cssAnimation/shootingStar"
+
+              }
+
+            ]
           }
         ]
       };

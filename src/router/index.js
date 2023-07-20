@@ -9,6 +9,7 @@ import layout from '@/layout'
 import permissions from './modules/permissions'
 import third from './modules/third'
 import audio from './modules/audio'
+import cssAnimation from './modules/cssAnimation'
 
 
 /**
@@ -17,7 +18,8 @@ import audio from './modules/audio'
 export var privateRoutes = [
     permissions,
     third,
-    audio
+    audio,
+    cssAnimation
 ]
 /**
  * 公开路由表
