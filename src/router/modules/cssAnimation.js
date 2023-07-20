@@ -17,7 +17,13 @@ export default{
       path: '/cssAnimation/shootingStar',
       component: () => import('@/views/css-animation/shootingStar.vue'),
       name: 'shootingStar',
-      meta: { title: '流星雨',icon:'article-create'}
+      meta: { title: '流星雨',icon:'star'}
+    },
+    {
+      path: '/cssAnimation/jumpBlock',
+      component: () => import('@/views/css-animation/jumpBlock.vue'),
+      name: 'jumpBlock',
+      meta: { title: '能跳动的icon',icon:'chart'}
     },
 
   ]

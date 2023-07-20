@@ -219,11 +219,19 @@ export default [
             "url": "/cssAnimation/shootingStar",
             "secondMenuList": [
               {
-                "id": "3-1",
+                "id": "4-1",
                 "name": "流星雨",
                 "parent_id": "3",
                 "type": "2",
                 "url": "/cssAnimation/shootingStar"
+
+              },
+              {
+                "id": "4-2",
+                "name": "能跳动的icon",
+                "parent_id": "3",
+                "type": "2",
+                "url": "/cssAnimation/jumpBlock"
 
               }
 
