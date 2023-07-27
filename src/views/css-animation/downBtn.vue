@@ -17,12 +17,12 @@
               p-id="3251"
           ></path>
         </svg>
-        <span class="upload__filename">Document.pdf</span>
+        <span class="upload__filename">前端面试题.pdf</span>
       </div>
       <button class="upload__button">
-        <div class="upload__button__text">Upload</div>
+        <div class="upload__button__text">下载</div>
       </button>
-      <div class="upload__hint">Uploading...</div>
+      <div class="upload__hint">下载中...</div>
       <div class="upload__progress">
         <svg
             width="16"
