@@ -34,7 +34,7 @@
         >
           <polyline points="1 5.5 5 9.5 12 1.5"></polyline>
         </svg>
-        Completed
+        下载完成
       </div>
     </div>
 
