@@ -241,6 +241,38 @@ export default [
                 "type": "2",
                 "url": "/cssAnimation/downBtn"
 
+              },
+              {
+                "id": "4-4",
+                "name": "以视频为背景的文字",
+                "parent_id": "3",
+                "type": "2",
+                "url": "/cssAnimation/videoMaskText"
+
+              },
+              {
+                "id": "4-5",
+                "name": "发光的hover按钮",
+                "parent_id": "3",
+                "type": "2",
+                "url": "/cssAnimation/hoverShiningBtn"
+
+              },
+              {
+                "id": "4-6",
+                "name": "翻卡片动画",
+                "parent_id": "3",
+                "type": "2",
+                "url": "/cssAnimation/filpCard"
+
+              },
+              {
+                "id": "4-7",
+                "name": "hover文字填充效果",
+                "parent_id": "3",
+                "type": "2",
+                "url": "/cssAnimation/hoverFillText"
+
               }
 
             ]
