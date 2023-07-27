@@ -233,6 +233,14 @@ export default [
                 "type": "2",
                 "url": "/cssAnimation/jumpBlock"
 
+              },
+              {
+                "id": "4-3",
+                "name": "奇怪的下载按钮",
+                "parent_id": "3",
+                "type": "2",
+                "url": "/cssAnimation/downBtn"
+
               }
 
             ]

@@ -25,6 +25,12 @@ export default{
       name: 'jumpBlock',
       meta: { title: '能跳动的icon',icon:'chart'}
     },
+    {
+      path: '/cssAnimation/downBtn',
+      component: () => import('@/views/css-animation/downBtn.vue'),
+      name: 'downBtn',
+      meta: { title: '奇怪的下载按钮',icon:'chart'}
+    },
 
   ]
 }
