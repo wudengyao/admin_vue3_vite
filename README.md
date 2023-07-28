@@ -8,6 +8,7 @@
 ![image](https://github.com/wudengyao/admin_vue3_vite/assets/9073383/39d23687-ab7b-4752-aeae-7246b8d3e7e1)
 ![image](https://github.com/wudengyao/admin_vue3_vite/assets/9073383/4606d851-a799-492c-9985-fccd155efbf4)
 ![image](https://github.com/wudengyao/admin_vue3_vite/assets/9073383/5ce8b75f-fb20-4291-92c9-d6def3b24906)
+![image](https://github.com/wudengyao/admin_vue3_vite/assets/9073383/2e34dd6a-325b-491a-a3cf-46c34896562d)
 
 ## 简介
 对于后台系统而言，相信只要是前端开发的工程师，那么就不陌生了。
@@ -34,7 +35,7 @@
 - 富文本编辑器处理方案
 - keepAlive页面缓存处理方案
 - 多种企业级别组件的封装
-
+- 多种有趣的CSS动画效果
 
 ## 最新内容持续更新中...
 
