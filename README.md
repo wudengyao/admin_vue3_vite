@@ -2,7 +2,7 @@
 ## 一个极简的后台基础模板，企业级！开箱即用！
 
 ## 项目技术栈：Vue3 + JavaScript + Vite4 + Element-plus2.3.5
-
+![image](https://github.com/wudengyao/admin_vue3_vite/assets/9073383/a206b4c9-c25d-4a5b-b6a1-bded7276a9c6)
 ![image](https://github.com/wudengyao/admin_vue3_vite/assets/9073383/01cc0469-3a92-4f1b-970e-01bcb51fc576)
 ![image](https://github.com/wudengyao/admin_vue3_vite/assets/9073383/b14733b1-af44-4e0c-a6fb-fc3bdd996c66)
 ![image](https://github.com/wudengyao/admin_vue3_vite/assets/9073383/39d23687-ab7b-4752-aeae-7246b8d3e7e1)
