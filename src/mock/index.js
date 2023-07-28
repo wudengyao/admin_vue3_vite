@@ -273,6 +273,57 @@ export default [
                 "type": "2",
                 "url": "/cssAnimation/hoverFillText"
 
+              },
+              {
+                "id": "4-8",
+                "name": "图片无缝滚动切换",
+                "parent_id": "3",
+                "type": "2",
+                "url": "/cssAnimation/slidePic"
+
+              },
+              {
+                "id": "4-9",
+                "name": "ios动态气泡壁纸",
+                "parent_id": "3",
+                "type": "2",
+                "url": "/cssAnimation/bubbleFloat"
+
+              },
+              {
+                "id": "4-10",
+                "name": "水波纹loading效果",
+                "parent_id": "3",
+                "type": "2",
+                "url": "/cssAnimation/waveloading"
+              },
+              {
+                "id": "4-11",
+                "name": "全屏菜单动画",
+                "parent_id": "3",
+                "type": "2",
+                "url": "/cssAnimation/fullscreenMenu"
+              },
+              {
+                "id": "4-12",
+                "name": "hover菜单扫描效果",
+                "parent_id": "3",
+                "type": "2",
+                "url": "/cssAnimation/hoverSlideMenu"
+              },
+              {
+                "id": "4-13",
+                "name": "有趣的tab效果",
+                "parent_id": "3",
+                "type": "2",
+                "url": "/cssAnimation/tabs"
+              },
+              {
+                "id": "4-14",
+                "name": "有趣的hover按钮",
+                "parent_id": "3",
+                "type": "2",
+                "url": "/cssAnimation/hoverBorderBtn"
               }
 
             ]

@@ -64,7 +64,8 @@ onMounted(() => {
     upload.classList.add("uploaded-after");
     await sleep(1000);
     upload.className = "upload";
-  });})
+  });
+})
 
 
 
