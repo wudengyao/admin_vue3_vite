@@ -112,15 +112,7 @@ export default {
       component: () => import('@/views/css-animation/tabs.vue'),
       name: 'tabs',
       meta: {title: '有趣的tab效果', icon: 'star'}
-    },
-
-    {
-      path: '/cssAnimation/readText',
-      component: () => import('@/views/css-animation/readText.vue'),
-      name: 'readText',
-      meta: {title: '阅读效果', icon: 'star'},
-
-    },
+    }
   ]
 }
 

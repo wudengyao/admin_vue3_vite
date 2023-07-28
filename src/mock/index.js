@@ -327,7 +327,6 @@ export default [
                 "type": "2",
                 "url": "/cssAnimation/fullscreenMenu"
               },
-
               {
                 "id": "4-13",
                 "name": "有趣的tab效果",
@@ -336,13 +335,6 @@ export default [
                 "url": "/cssAnimation/tabs"
               },
 
-              {
-                "id": "4-15",
-                "name": "文字阅读效果",
-                "parent_id": "3",
-                "type": "2",
-                "url": "/cssAnimation/readText"
-              }
 
 
             ]
