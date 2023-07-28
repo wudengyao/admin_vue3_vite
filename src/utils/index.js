@@ -104,8 +104,10 @@ export  function formatPermissionList(data){
   let list = data;
   let role_arr=[]//菜单权限
   let button_arr=[]//button权限
+  //循环一级列表
   for(let i in list){
     var i_item = list[i].secondMenuList
+    //循环2级列表
     for(let j in i_item){
       var j_item = i_item[j]
       if(j_item.url){
@@ -125,7 +127,19 @@ export  function formatPermissionList(data){
           }
         }
       }
+      var i_item_c =j_item.children
+      //循环3级列表
+      for(let z in i_item_c){
+        var z_item = i_item_c[z]
+        if(z_item.url){
+          role_arr.push({
+            url:z_item.url
+          })
+
+        }
+      }
     }
+
   }
   return {role_arr:role_arr,button_arr:button_arr}
 }

@@ -77,6 +77,7 @@ export default {
                         let info = {
                             roles: role_arr
                         }
+                        console.log(role_arr)
                         this.commit('user/setRoles', role_arr)
                         this.commit('user/setButtons', button_arr)
                         resolve(info)

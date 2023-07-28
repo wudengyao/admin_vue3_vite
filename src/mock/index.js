@@ -219,6 +219,45 @@ export default [
             "url": "/cssAnimation/shootingStar",
             "secondMenuList": [
               {
+                "id": "4-100",
+                "name": "hover动画效果",
+                "parent_id": "3",
+                "type": "2",
+                "url": "/cssAnimation/hover",
+                children:[
+                  {
+                    "id": "4-5",
+                    "name": "会发光的按钮",
+                    "parent_id": "3",
+                    "type": "2",
+                    "url": "/hover/hoverShiningBtn"
+
+                  },
+                  {
+                    "id": "4-7",
+                    "name": "菜单填充效果",
+                    "parent_id": "3",
+                    "type": "2",
+                    "url": "/hover/hoverFillText"
+
+                  },
+                  {
+                    "id": "4-12",
+                    "name": "菜单扫描效果",
+                    "parent_id": "3",
+                    "type": "2",
+                    "url": "/hover/hoverSlideMenu"
+                  },
+                  {
+                    "id": "4-14",
+                    "name": "border流动按钮",
+                    "parent_id": "3",
+                    "type": "2",
+                    "url": "/hover/hoverBorderBtn"
+                  },
+                ]
+              },
+              {
                 "id": "4-1",
                 "name": "流星雨",
                 "parent_id": "3",
@@ -251,27 +290,11 @@ export default [
 
               },
               {
-                "id": "4-5",
-                "name": "发光的hover按钮",
-                "parent_id": "3",
-                "type": "2",
-                "url": "/cssAnimation/hoverShiningBtn"
-
-              },
-              {
                 "id": "4-6",
                 "name": "翻卡片动画",
                 "parent_id": "3",
                 "type": "2",
                 "url": "/cssAnimation/filpCard"
-
-              },
-              {
-                "id": "4-7",
-                "name": "hover文字填充效果",
-                "parent_id": "3",
-                "type": "2",
-                "url": "/cssAnimation/hoverFillText"
 
               },
               {
@@ -304,13 +327,7 @@ export default [
                 "type": "2",
                 "url": "/cssAnimation/fullscreenMenu"
               },
-              {
-                "id": "4-12",
-                "name": "hover菜单扫描效果",
-                "parent_id": "3",
-                "type": "2",
-                "url": "/cssAnimation/hoverSlideMenu"
-              },
+
               {
                 "id": "4-13",
                 "name": "有趣的tab效果",
@@ -318,13 +335,15 @@ export default [
                 "type": "2",
                 "url": "/cssAnimation/tabs"
               },
+
               {
-                "id": "4-14",
-                "name": "有趣的hover按钮",
+                "id": "4-15",
+                "name": "文字阅读效果",
                 "parent_id": "3",
                 "type": "2",
-                "url": "/cssAnimation/hoverBorderBtn"
+                "url": "/cssAnimation/readText"
               }
+
 
             ]
           }

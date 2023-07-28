@@ -13,12 +13,14 @@ export default {
     icon: 'article-ranking'
   },
   children: [
+
     {
       path: '/cssAnimation/shootingStar',
       component: () => import('@/views/css-animation/shootingStar.vue'),
       name: 'shootingStar',
       meta: {title: '流星雨', icon: 'star'}
     },
+
     {
       path: '/cssAnimation/jumpBlock',
       component: () => import('@/views/css-animation/jumpBlock.vue'),
@@ -32,28 +34,48 @@ export default {
       meta: {title: '奇怪的下载按钮', icon: 'star'}
     },
     {
+      path: '/cssAnimation/hover',
+      redirect: '/cssAnimation/hoverShiningBtn',
+      name: 'hover',
+      meta: {title: 'hover动画效果', icon: 'star'},
+      children: [
+        {
+          path: '/hover/hoverShiningBtn',
+          component: () => import('@/views/css-animation/hoverShiningBtn.vue'),
+          name: 'hoverShiningBtn',
+          meta: {title: '会发光的按钮', icon: 'star'}
+        },
+        {
+          path: '/hover/hoverFillText',
+          component: () => import('@/views/css-animation/hoverFillText.vue'),
+          name: 'hoverFillText',
+          meta: {title: '菜单填充效果', icon: 'star'}
+        },
+        {
+          path: '/hover/hoverSlideMenu',
+          component: () => import('@/views/css-animation/hoverSlideMenu.vue'),
+          name: 'hoverSlideMenu',
+          meta: {title: '菜单扫描效果', icon: 'star'}
+        },
+        {
+          path: '/hover/hoverBorderBtn',
+          component: () => import('@/views/css-animation/hoverBorderBtn.vue'),
+          name: 'hoverBorderBtn',
+          meta: {title: 'border流动按钮', icon: 'star'}
+        },
+      ]
+    },
+    {
       path: '/cssAnimation/videoMaskText',
       component: () => import('@/views/css-animation/videoMaskText.vue'),
       name: 'videoMaskText',
       meta: {title: '以视频为背景的文字', icon: 'star'}
     },
     {
-      path: '/cssAnimation/hoverShiningBtn',
-      component: () => import('@/views/css-animation/hoverShiningBtn.vue'),
-      name: 'hoverShiningBtn',
-      meta: {title: '发光的hover按钮', icon: 'star'}
-    },
-    {
       path: '/cssAnimation/filpCard',
       component: () => import('@/views/css-animation/filpCard.vue'),
       name: 'filpCard',
       meta: {title: '翻卡片动画', icon: 'star'}
-    },
-    {
-      path: '/cssAnimation/hoverFillText',
-      component: () => import('@/views/css-animation/hoverFillText.vue'),
-      name: 'hoverFillText',
-      meta: {title: 'hover菜单填充效果', icon: 'star'}
     },
     {
       path: '/cssAnimation/slidePic',
@@ -91,11 +113,13 @@ export default {
       name: 'tabs',
       meta: {title: '有趣的tab效果', icon: 'star'}
     },
+
     {
-      path: '/cssAnimation/hoverBorderBtn',
-      component: () => import('@/views/css-animation/hoverBorderBtn.vue'),
-      name: 'hoverBorderBtn',
-      meta: {title: '有趣的hover按钮', icon: 'star'}
+      path: '/cssAnimation/readText',
+      component: () => import('@/views/css-animation/readText.vue'),
+      name: 'readText',
+      meta: {title: '阅读效果', icon: 'star'},
+
     },
   ]
 }
