@@ -40,6 +40,9 @@
 ## 最新内容持续更新中...
 
 ## 项目讲解及博客主页：前端小三爷_  链接：https://juejin.cn/user/1310273591836957
+## 抖音号：前端小三爷
+![微信图片_20230807160458](https://github.com/wudengyao/admin_vue3_vite/assets/9073383/3a285835-17f7-4aef-82ba-391a9de3ed80)
+
 
 - 依赖安装：yarn
 - 项目运行：npm run dev
