@@ -334,7 +334,13 @@ export default [
                 "type": "2",
                 "url": "/cssAnimation/tabs"
               },
-
+              {
+                "id": "4-14",
+                "name": "时钟效果",
+                "parent_id": "3",
+                "type": "2",
+                "url": "/cssAnimation/clock"
+              },
 
 
             ]

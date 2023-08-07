@@ -112,6 +112,12 @@ export default {
       component: () => import('@/views/css-animation/tabs.vue'),
       name: 'tabs',
       meta: {title: '有趣的tab效果', icon: 'star'}
+    },
+    {
+      path: '/cssAnimation/clock',
+      component: () => import('@/views/css-animation/clock.vue'),
+      name: 'tabs',
+      meta: {title: '时钟效果', icon: 'star'}
     }
   ]
 }
