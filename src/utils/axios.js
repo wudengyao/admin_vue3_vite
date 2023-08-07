@@ -34,9 +34,8 @@ axios.interceptors.response.use(response => {
 })
 
 export default function http(options) {
-
+  //获取不同环境的请求域名
   let server_url = switchServerUrl()
-
 
   let opt = {},
     method = options.method || "post",
@@ -49,7 +48,6 @@ export default function http(options) {
   if (store.getters.token) {
     data.sys_token = store.getters.token
   }
-
   if (method == "get") {
     opt = {
       method: method,
@@ -75,7 +73,6 @@ export default function http(options) {
 
   return new Promise((resolve, reject) => {
     axios(opt).then(res => {
-
       if (res && (res.status === 200 || res.status === 304 || res.status === 400)) {
         var data = res.data;
         if (data.status && data.status.error_code == 0) {
@@ -87,7 +84,6 @@ export default function http(options) {
         } else {
           ElMessage.error(data.status.error_msg || "网络异常，请稍后重试！") // 提示错误信息
           reject(data);
-
         }
       } else {
         ElMessage.error(res || "网络异常，请稍后重试！") // 提示错误信息

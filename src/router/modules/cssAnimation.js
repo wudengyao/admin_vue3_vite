@@ -7,7 +7,7 @@ export default {
   component: Layout,
   redirect: '/cssAnimation/shootingStar',
   alwaysShow: true, // will always show the root menu
-  name: 'audio',
+  name: 'css',
   meta: {
     title: 'CSS动画',
     icon: 'article-ranking'
@@ -37,7 +37,7 @@ export default {
       path: '/cssAnimation/hover',
       redirect: '/cssAnimation/hoverShiningBtn',
       name: 'hover',
-      meta: {title: 'hover动画效果', icon: 'star'},
+      meta: {title: 'hover动画效果', icon: 'example'},
       children: [
         {
           path: '/hover/hoverShiningBtn',
