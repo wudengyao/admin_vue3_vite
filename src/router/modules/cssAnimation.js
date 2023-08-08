@@ -118,6 +118,12 @@ export default {
       component: () => import('@/views/css-animation/clock.vue'),
       name: 'tabs',
       meta: {title: '时钟效果', icon: 'star'}
+    },
+    {
+      path: '/cssAnimation/snowScratch',
+      component: () => import('@/views/css-animation/snowScratch.vue'),
+      name: 'snowScratch',
+      meta: {title: '雪地划痕', icon: 'star'}
     }
   ]
 }

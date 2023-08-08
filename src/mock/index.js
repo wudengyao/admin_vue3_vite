@@ -341,7 +341,13 @@ export default [
                 "type": "2",
                 "url": "/cssAnimation/clock"
               },
-
+              {
+                "id": "4-15",
+                "name": "雪地划痕",
+                "parent_id": "3",
+                "type": "2",
+                "url": "/cssAnimation/snowScratch"
+              },
 
             ]
           }
