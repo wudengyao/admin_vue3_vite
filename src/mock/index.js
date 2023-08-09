@@ -350,7 +350,37 @@ export default [
               },
 
             ]
+          },
+          {
+            id: '5',
+            "name": "vueUse",
+            "parent_id": "0",
+            "type": "1",
+            "url": "/vueUse/elements",
+            "secondMenuList": [
+              {
+                "id": "5-1",
+                "name": "elements",
+                "parent_id": "3",
+                "type": "2",
+                "url": "/vueUse/elements",
+                children:[
+                  {
+                    "id": "5-1-1",
+                    "name": "useDraggable",
+                    "parent_id": "3",
+                    "type": "2",
+                    "url": "/elements/useDraggable"
+
+                  },
+
+                ]
+              },
+
+
+            ]
           }
+
         ]
       };
     },
