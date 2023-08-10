@@ -1,7 +1,9 @@
 <template>
  <div style="position: relative">
-   <div ref="el" :style="style" style="position: fixed;background: #304156;height: 100px;width: 100px;color: white">
-     Drag me! I am at {{x}}, {{y}}
+   <div ref="el" :style="style" style="position: fixed;background: #304156;height: 100px;width: 100px;color: white;padding: 20px;line-height: 22px">
+     拖动我
+     <p>x：{{x}}</p>
+     <p>y：{{y}}</p>
    </div>
  </div>
 </template>

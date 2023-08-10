@@ -25,6 +25,12 @@ export default {
           name: 'useDraggable',
           meta: {title: 'useDraggable', icon: 'star'}
         },
+        {
+          path: '/elements/useDropZone',
+          component: () => import('@/views/vue-use/elements/useDropZone.vue'),
+          name: 'useDropZone',
+          meta: {title: 'useDropZone', icon: 'star'}
+        },
 
       ]
     },

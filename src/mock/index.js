@@ -373,6 +373,14 @@ export default [
                     "url": "/elements/useDraggable"
 
                   },
+                  {
+                    "id": "5-1-2",
+                    "name": "useDropZone",
+                    "parent_id": "3",
+                    "type": "2",
+                    "url": "/elements/useDropZone"
+
+                  },
 
                 ]
               },
