@@ -15,7 +15,7 @@
         <div class="head-container">
           <el-tree
               :data="allPermission"
-              :props="{ label: 'name', children: 'secondMenuList' }"
+              :props="{ label: 'name', children: 'children' }"
               :expand-on-click-node="false"
               :filter-node-method="filterNode"
               ref="authTreeRef"

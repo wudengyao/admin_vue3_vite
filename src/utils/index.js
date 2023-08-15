@@ -106,7 +106,7 @@ export  function formatPermissionList(data){
   let button_arr=[]//button权限
   //循环一级列表
   for(let i in list){
-    var i_item = list[i].secondMenuList
+    var i_item = list[i].children
     //循环2级列表
     for(let j in i_item){
       var j_item = i_item[j]

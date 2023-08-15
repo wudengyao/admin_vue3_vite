@@ -63,7 +63,7 @@ export default [
             "parent_id": "0",
             "type": "1",
             "url": "/adminAuth/getRoleList",
-            "secondMenuList": [
+            "children": [
               {
                 "id": "1-1",
                 "name": "角色列表",
@@ -149,7 +149,7 @@ export default [
             "parent_id": "0",
             "type": "1",
             "url": "/third/editor",
-            "secondMenuList": [
+            "children": [
               {
                 "id": "2-1",
                 "name": "富文本",
@@ -191,7 +191,7 @@ export default [
             "parent_id": "0",
             "type": "1",
             "url": "/audio/canvas",
-            "secondMenuList": [
+            "children": [
               {
                 "id": "3-1",
                 "name": "canvas+audio",
@@ -217,7 +217,7 @@ export default [
             "parent_id": "0",
             "type": "1",
             "url": "/cssAnimation/shootingStar",
-            "secondMenuList": [
+            "children": [
               {
                 "id": "4-100",
                 "name": "hover动画效果",
@@ -357,7 +357,7 @@ export default [
             "parent_id": "0",
             "type": "1",
             "url": "/vueUse/elements",
-            "secondMenuList": [
+            "children": [
               {
                 "id": "5-1",
                 "name": "elements",
