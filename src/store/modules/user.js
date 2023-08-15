@@ -4,6 +4,7 @@ import {TOKEN, USERINFO} from '@/constant'
 import {setTimeStamp} from '@/utils/auth'
 import {formatPermissionList, lowerCase} from '@/utils/index'
 import router, {resetRouter} from '@/router'
+import {ElMessage} from "element-plus";
 
 
 export default {
@@ -71,13 +72,14 @@ export default {
                         let obj = formatPermissionList(data.bizobj)
                         let role_arr = obj.role_arr//菜单权限
                         let button_arr = obj.button_arr//button权限
-                        role_arr.push({url: '/third'})
-                        role_arr.push({url: '/third/editor'})
-                        role_arr.push({url: '/third/markdown'})
+
                         let info = {
                             roles: role_arr
                         }
-                        console.log(role_arr)
+                        if(role_arr.length == 0){
+                            ElMessage.error("您登录的账号暂无权限！") // 提示错误信息
+                            this.dispatch('user/logout')
+                        }
                         this.commit('user/setRoles', role_arr)
                         this.commit('user/setButtons', button_arr)
                         resolve(info)
