@@ -35,7 +35,7 @@
               row-key="id"
               border
               default-expand-all
-              :tree-props="{ children: 'secondMenuList', hasChildren: 'hasChildren' }">
+              :tree-props="{ children: 'children', hasChildren: 'hasChildren' }">
             <el-table-column
                 prop="name"
                 label="权限名称"
