@@ -234,7 +234,7 @@ export default [
               {
                 "id": "4-100",
                 "name": "hover动画效果",
-                "icon":"star",
+                "icon":"home",
                 "parent_id": "3",
                 "type": "2",
                 "url": "/cssAnimation/hover",
