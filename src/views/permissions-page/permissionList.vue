@@ -39,12 +39,12 @@
             <el-table-column
                 prop="name"
                 label="权限名称"
-                width="180">
+                width="200">
             </el-table-column>
             <el-table-column
                 prop="url"
                 label="权限标志"
-                width="280">
+                width="300">
               <template #default="{ row }">
                 <div style="display: flex;align-items: center;justify-content: space-between;">
                   <div>{{ row.url }}</div>
