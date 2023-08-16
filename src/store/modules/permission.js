@@ -4,7 +4,7 @@ import { privateRoutes , publicRoutes  } from '@/router'
 
 /**
  * 检查当前的路由是否有权限
- * @param roles
+ * @param roles 接口数据
  * @param route
  * @returns {boolean}
  */
@@ -23,8 +23,8 @@ function hasPermission(roles, route) {
 
 /**
  * 根据服务端返回的路由数据，筛选过滤本地的路由数据
- * @param routes asyncRoutes 本地写的数据
- * @param roles 接口获取的数据
+ * @param routes 本地的路由数据
+ * @param roles 接口获取的路由数据
  */
 export function filterPrivateRoutes(routes, roles) {
   const res = []

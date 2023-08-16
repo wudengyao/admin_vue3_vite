@@ -63,6 +63,7 @@ export default [
             "parent_id": "0",
             "type": "1",
             "url": "/adminAuth/getRoleList",
+            "icon":"permission",
             "children": [
               {
                 "id": "1-1",
@@ -70,6 +71,8 @@ export default [
                 "parent_id": "1",
                 "type": "2",
                 "url": "/adminAuth/getRoleList",
+                "icon":"permission",
+
                 "buttonList": [
                   {
                     "id": "1-1-1",
@@ -91,6 +94,7 @@ export default [
                 "id": "1-2",
                 "name": "账号列表",
                 "parent_id": "1",
+                "icon":"permission",
                 "type": "2",
                 "url": "/adminAuth/adminList",
                 "buttonList": [
@@ -127,6 +131,7 @@ export default [
               {
                 "id": "1-3",
                 "name": "权限列表",
+                "icon":"permission",
                 "parent_id": "1",
                 "type": "2",
                 "url": "/adminAuth/permissionList",
@@ -135,6 +140,7 @@ export default [
               {
                 "id": "1-4",
                 "name": "账号详情",
+                "icon":"permission",
                 "parent_id": "1",
                 "type": "2",
                 "url": "/account/detail",
@@ -149,6 +155,7 @@ export default [
             "parent_id": "0",
             "type": "1",
             "url": "/third/editor",
+            "icon":"article",
             "children": [
               {
                 "id": "2-1",
@@ -156,6 +163,7 @@ export default [
                 "parent_id": "2",
                 "type": "2",
                 "url": "/third/editor",
+                "icon":"permission",
                 "buttonList": [
                   {
                     "id": "2-1-1",
@@ -172,6 +180,7 @@ export default [
                 "parent_id": "2",
                 "type": "2",
                 "url": "/third/markdown",
+                "icon":"permission",
                 "buttonList": [
                   {
                     "id": "2-2-1",
@@ -188,6 +197,7 @@ export default [
           {
             id: '3',
             "name": "音频可视化",
+            "icon":"role",
             "parent_id": "0",
             "type": "1",
             "url": "/audio/canvas",
@@ -196,6 +206,7 @@ export default [
                 "id": "3-1",
                 "name": "canvas+audio",
                 "parent_id": "3",
+                "icon":"permission",
                 "type": "2",
                 "url": "/audio/canvas"
 
@@ -203,6 +214,7 @@ export default [
               {
                 "id": "3-2",
                 "name": "wavesurfer",
+                "icon":"permission",
                 "parent_id": "3",
                 "type": "2",
                 "url": "/audio/wavesurfer"
@@ -214,6 +226,7 @@ export default [
           {
             id: '4',
             "name": "CSS动画",
+            "icon":"article-ranking",
             "parent_id": "0",
             "type": "1",
             "url": "/cssAnimation/shootingStar",
@@ -221,6 +234,7 @@ export default [
               {
                 "id": "4-100",
                 "name": "hover动画效果",
+                "icon":"star",
                 "parent_id": "3",
                 "type": "2",
                 "url": "/cssAnimation/hover",
@@ -230,7 +244,10 @@ export default [
                     "name": "会发光的按钮",
                     "parent_id": "3",
                     "type": "2",
+                    "icon":"permission",
+
                     "url": "/hover/hoverShiningBtn"
+
 
                   },
                   {
@@ -238,6 +255,8 @@ export default [
                     "name": "菜单填充效果",
                     "parent_id": "3",
                     "type": "2",
+                    "icon":"permission",
+
                     "url": "/hover/hoverFillText"
 
                   },
@@ -246,6 +265,8 @@ export default [
                     "name": "菜单扫描效果",
                     "parent_id": "3",
                     "type": "2",
+                    "icon":"permission",
+
                     "url": "/hover/hoverSlideMenu"
                   },
                   {
@@ -253,6 +274,8 @@ export default [
                     "name": "border流动按钮",
                     "parent_id": "3",
                     "type": "2",
+                    "icon":"permission",
+
                     "url": "/hover/hoverBorderBtn"
                   },
                 ]
@@ -262,6 +285,8 @@ export default [
                 "name": "流星雨",
                 "parent_id": "3",
                 "type": "2",
+                "icon":"permission",
+
                 "url": "/cssAnimation/shootingStar"
 
               },
@@ -269,6 +294,8 @@ export default [
                 "id": "4-2",
                 "name": "能跳动的icon",
                 "parent_id": "3",
+                "icon":"permission",
+
                 "type": "2",
                 "url": "/cssAnimation/jumpBlock"
 
@@ -277,6 +304,8 @@ export default [
                 "id": "4-3",
                 "name": "奇怪的下载按钮",
                 "parent_id": "3",
+                "icon":"permission",
+
                 "type": "2",
                 "url": "/cssAnimation/downBtn"
 
@@ -286,6 +315,8 @@ export default [
                 "name": "以视频为背景的文字",
                 "parent_id": "3",
                 "type": "2",
+                "icon":"permission",
+
                 "url": "/cssAnimation/videoMaskText"
 
               },
@@ -293,6 +324,7 @@ export default [
                 "id": "4-6",
                 "name": "翻卡片动画",
                 "parent_id": "3",
+                "icon":"permission",
                 "type": "2",
                 "url": "/cssAnimation/filpCard"
 
@@ -302,6 +334,8 @@ export default [
                 "name": "图片无缝滚动切换",
                 "parent_id": "3",
                 "type": "2",
+                "icon":"permission",
+
                 "url": "/cssAnimation/slidePic"
 
               },
@@ -310,6 +344,8 @@ export default [
                 "name": "ios动态气泡壁纸",
                 "parent_id": "3",
                 "type": "2",
+                "icon":"permission",
+
                 "url": "/cssAnimation/bubbleFloat"
 
               },
@@ -318,6 +354,8 @@ export default [
                 "name": "水波纹loading效果",
                 "parent_id": "3",
                 "type": "2",
+                "icon":"permission",
+
                 "url": "/cssAnimation/waveloading"
               },
               {
@@ -325,6 +363,7 @@ export default [
                 "name": "全屏菜单动画",
                 "parent_id": "3",
                 "type": "2",
+                "icon":"permission",
                 "url": "/cssAnimation/fullscreenMenu"
               },
               {
@@ -332,6 +371,7 @@ export default [
                 "name": "有趣的tab效果",
                 "parent_id": "3",
                 "type": "2",
+                "icon":"permission",
                 "url": "/cssAnimation/tabs"
               },
               {
@@ -339,6 +379,7 @@ export default [
                 "name": "时钟效果",
                 "parent_id": "3",
                 "type": "2",
+                "icon":"permission",
                 "url": "/cssAnimation/clock"
               },
               {
@@ -346,6 +387,7 @@ export default [
                 "name": "雪地划痕",
                 "parent_id": "3",
                 "type": "2",
+                "icon":"permission",
                 "url": "/cssAnimation/snowScratch"
               },
 
@@ -356,12 +398,15 @@ export default [
             "name": "vueUse",
             "parent_id": "0",
             "type": "1",
+            "icon":"personnel",
+
             "url": "/vueUse/elements",
             "children": [
               {
                 "id": "5-1",
                 "name": "elements",
                 "parent_id": "3",
+                "icon":"permission",
                 "type": "2",
                 "url": "/vueUse/elements",
                 children:[
@@ -370,6 +415,7 @@ export default [
                     "name": "useDraggable",
                     "parent_id": "3",
                     "type": "2",
+                    "icon":"permission",
                     "url": "/elements/useDraggable"
 
                   },
@@ -378,6 +424,7 @@ export default [
                     "name": "useDropZone",
                     "parent_id": "3",
                     "type": "2",
+                    "icon":"permission",
                     "url": "/elements/useDropZone"
 
                   },

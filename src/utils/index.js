@@ -113,11 +113,14 @@ export  function formatPermissionList(data){
       if(j_item.url){
         if(j == 0){
           role_arr.push({
-            url:'/'+list[i].url.split('/')[1]
+            url:'/'+list[i].url.split('/')[1],
+            icon:list[i].icon
           })
         }
         role_arr.push({
-          url:j_item.url
+          url:j_item.url,
+          icon:j_item.icon
+
         })
         //button权限赋值存起来
         var k_item = j_item.buttonList
@@ -133,7 +136,9 @@ export  function formatPermissionList(data){
         var z_item = i_item_c[z]
         if(z_item.url){
           role_arr.push({
-            url:z_item.url
+            url:z_item.url,
+            icon:z_item.icon
+
           })
 
         }
