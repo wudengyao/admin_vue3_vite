@@ -7,7 +7,6 @@
     <div style="background: #304156;height: 100vh"></div>
     <div ref="target" style="background: #001528;height: 100vh"></div>
 
-<!--    <h1 ref="target">Hello world</h1>-->
   </div>
 </template>
 
