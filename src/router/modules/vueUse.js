@@ -31,7 +31,12 @@ export default {
           name: 'useDropZone',
           meta: {title: 'useDropZone', icon: 'star'}
         },
-
+        {
+          path: '/elements/useIntersectionObserver',
+          component: () => import('@/views/vue-use/elements/useIntersectionObserver.vue'),
+          name: 'useIntersectionObserver',
+          meta: {title: 'useIntersectionO', icon: 'star'}
+        },
       ]
     },
     {

@@ -428,7 +428,15 @@ export default [
                     "url": "/elements/useDropZone"
 
                   },
+                  {
+                    "id": "5-1-3",
+                    "name": "useIntersectionObserver",
+                    "parent_id": "3",
+                    "type": "2",
+                    "icon":"permission",
+                    "url": "/elements/useIntersectionObserver"
 
+                  },
                 ]
               },
               {
