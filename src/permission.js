@@ -4,6 +4,7 @@ import store from './store'
 // 白名单
 const whiteList = ['/login']
 
+//递归，将icon替换成服务端的数据
 function filterRoutesIcon(list1, list2) {
   list1.forEach(item1 => {
     list2.forEach(item2 => {
@@ -29,27 +30,15 @@ router.beforeEach(async (to, from, next) => {
       if (!store.getters.hasRoles) {
         const {roles} = await store.dispatch('user/getPermissionData')
         // 处理用户权限，筛选出需要添加的权限
-        // debugger
         const accessRoutes = await store.dispatch('permission/generateRoutes', roles)
         console.log("筛选出需要addRoute的路由",accessRoutes)
         //将左侧菜单的icon改为服务端数据
         filterRoutesIcon(accessRoutes,roles)
-        // for(let i in accessRoutes) {
-        //   var i_item = accessRoutes[i].children
-        //   for (let j in i_item) {
-        //     var j_item = i_item[j]
-        //
-        //   }
-        // }
           // 利用 addRoute 循环添加
         accessRoutes.forEach(item => {
           router.addRoute(item)
         })
-        // router.addRoutes(accessRoutes)
-          // hack method to ensure that addRoutes is complete
-          // set the replace: true, so the navigation will not leave a history record
         next({...to, replace: true})
-
       }
       next()
     }

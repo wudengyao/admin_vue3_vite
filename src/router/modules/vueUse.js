@@ -34,7 +34,22 @@ export default {
 
       ]
     },
+    {
+      path: '/vueUse/component',
+      redirect: '/component/createReusableTemplate',
+      name: 'component',
+      meta: {title: 'component', icon: 'example'},
+      children: [
+        {
+          path: '/component/createReusableTemplate',
+          component: () => import('@/views/vue-use/component/createReusableTemplate.vue'),
+          name: 'createReusableTemplate',
+          meta: {title: 'createReusableT', icon: 'star'}
+        },
 
+
+      ]
+    },
   ]
 }
 

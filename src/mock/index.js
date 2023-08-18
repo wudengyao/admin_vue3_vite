@@ -431,7 +431,26 @@ export default [
 
                 ]
               },
+              {
+                "id": "5-2",
+                "name": "component",
+                "parent_id": "3",
+                "icon":"permission",
+                "type": "2",
+                "url": "/vueUse/component",
+                children:[
+                  {
+                    "id": "5-2-1",
+                    "name": "createReusableTemplate",
+                    "parent_id": "3",
+                    "type": "2",
+                    "icon":"permission",
+                    "url": "/component/createReusableTemplate"
 
+                  }
+
+                ]
+              },
 
             ]
           }

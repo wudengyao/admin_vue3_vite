@@ -72,7 +72,6 @@ export default {
                         let obj = formatPermissionList(data.bizobj)
                         let role_arr = obj.role_arr//菜单权限
                         let button_arr = obj.button_arr//button权限
-
                         let info = {
                             roles: role_arr
                         }
@@ -87,23 +86,6 @@ export default {
                     .catch(err => {
 
                     })
-                //本地模拟数据
-                // console.log("----模拟获取【权限列表】数据,真实数据需要填写constant.js里的接口域名------")
-                // const permissionList =import.meta.glob('@/api/permissionList.json', { eager: true })
-                // let list = permissionList['/src/api/permissionList.json'].default
-                // let obj = formatPermissionList(list)
-                // let role_arr = obj.role_arr//菜单权限
-                // let button_arr = obj.button_arr//button权限
-                // role_arr.push({url: '/third'})
-                // role_arr.push({url: '/third/editor'})
-                // role_arr.push({url: '/third/markdown'})
-                // let info = {
-                //     roles: role_arr
-                // }
-                // this.commit('user/setRoles', role_arr)
-                // this.commit('user/setButtons', button_arr)
-                // resolve(info)
-
             })
         },
         logout() {
