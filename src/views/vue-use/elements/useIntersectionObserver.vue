@@ -19,16 +19,21 @@ export default {
 import { ref } from 'vue'
 import { useIntersectionObserver  } from '@vueuse/core'
 
-
-
+// target表示组件的最外层div元素
 const target = ref(null)
 const targetIsVisible = ref(false)
+// 监听组件是否进入可视区
+const { stop } = useIntersectionObserver(target, ([{ isIntersecting }], observerElement) =>
+    {
+      // 如果target对应的DOM进入可视区，那么该回调函数就触发
+      if (isIntersecting) {
+        // 被监听的DOM进入了可视区:此时调用接口获取数据；停止继续监听
+        stop()
+        targetIsVisible.value = isIntersecting
+        console.log("useElementVisibility==",targetIsVisible.value)
+        //这里可以进性网络请求
+      }
 
-const { stop } = useIntersectionObserver(
-    target,
-    ([{ isIntersecting }], observerElement) => {
-      targetIsVisible.value = isIntersecting
-      console.log("useElementVisibility==",targetIsVisible.value)
 
     },
 )
