@@ -34,12 +34,12 @@ export default defineConfig({
     },
     server: {
         host: '0.0.0.0',
-        port: 8888, // 服务端口号
+        port: 9999, // 服务端口号
         open: true, // 服务启动时是否自动打开浏览器
         cors: true, // 允许跨域
         proxy: {
             "/api": {
-                target: 'http://127.0.0.1:8888/',
+                target: 'http://127.0.0.1:9999/',
                 changeOrigin: true,
                 rewrite: (path) => path.replace(/^\/api/, ""),
             },

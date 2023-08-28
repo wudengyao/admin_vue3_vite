@@ -6,8 +6,10 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy": "gh-pages -d dist"
   },
+  "homepage": "http://wudengyao.github.io/admin_vue3_vite",
   "dependencies": {
     "@element-plus/icons": "^0.0.11",
     "@toast-ui/editor": "^3.0.2",
@@ -21,6 +23,7 @@
     "element-plus": "^2.3.5",
     "fast-glob": "^3.2.12",
     "fuse.js": "^6.4.6",
+    "gh-pages": "^6.0.0",
     "moment": "^2.29.4",
     "path-browserify": "^1.0.1",
     "sass-loader": "^13.2.2",

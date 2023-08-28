@@ -57,11 +57,11 @@ export var publicRoutes = [
         ]
     },
     //测试页面
-    {
-        path: '/test',
-        component: () => import('@/views/test-page/test'),
-
-    },
+    // {
+    //     path: '/test',
+    //     component: () => import('@/views/test-page/test'),
+    //
+    // },
 ]
 
 
