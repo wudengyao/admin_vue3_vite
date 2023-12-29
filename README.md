@@ -41,7 +41,8 @@
 
 ## 项目讲解及博客主页：程序员三千_  链接：https://juejin.cn/user/1310273591836957
 ## 抖音号：程序员三千
-![微信图片_20230807160458](https://github.com/wudengyao/admin_vue3_vite/assets/9073383/3a285835-17f7-4aef-82ba-391a9de3ed80)
+![image](https://github.com/wudengyao/admin_vue3_vite/assets/9073383/d7f87b37-b054-49d1-85e0-1589543dba0c)
+
 
 
 - 依赖安装：yarn
