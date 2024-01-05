@@ -167,7 +167,7 @@ const handleLogin = () => {
 const getCodeImg = () => {
   getCode({})
       .then(data => {
-        let obj = data.bizobj
+        let obj = data.obj
 
         loginForm.value.code_key = obj.code_key
         code_net.value = obj.code

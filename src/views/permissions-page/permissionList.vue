@@ -100,8 +100,8 @@ import {CopyDocument} from '@element-plus/icons'
 // 所有权限
 const allPermission = ref([])
 const getPermissionListData = async () => {
-  const obj = await getPermission()
-  allPermission.value = obj.bizobj
+  const data = await getPermission()
+  allPermission.value = data.obj
 }
 getPermissionListData()
 /** 复制代码成功 */

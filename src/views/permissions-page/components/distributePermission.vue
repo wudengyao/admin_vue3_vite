@@ -47,7 +47,7 @@ const allPermission = ref([])
 const getPermissionList = async () => {
    const data = await getPermission()
 
-  allPermission.value = data.bizobj
+  allPermission.value = data.obj
 
 }
 getPermissionList()

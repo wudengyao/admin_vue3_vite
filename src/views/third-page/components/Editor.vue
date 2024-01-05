@@ -89,7 +89,7 @@ const initEditor = () => {
       // 图片上传接口
       // publicUploadFile(formData)
       //   .then(res => {
-      //         insertImgFn(res.bizobj.src)
+      //         insertImgFn(res.obj.src)
       //   })
       //   .catch(err => {
       //   })

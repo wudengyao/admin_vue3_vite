@@ -184,7 +184,7 @@ const getListData = async () => {
   await getAdmintorList(searchForm.value)
       .then(data => {
         setTimeout(() => {
-          tableData.value = data.bizobj
+          tableData.value = data.obj
           total.value = Number(data.page_info.total_items);
           loading.value = false
         }, 1000)
@@ -201,7 +201,7 @@ const getListData = async () => {
 const getRoleData = async () => {
   await getRoleList()
       .then(data => {
-        roleList.value = data.bizobj
+        roleList.value = data.obj
 
       })
       .catch(err => {

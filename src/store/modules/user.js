@@ -44,8 +44,8 @@ export default {
                     code_key,
                 })
                     .then(data => {
-                        this.commit('user/setToken', data.bizobj.sys_token)
-                        this.commit('user/setUserInfo', data.bizobj)
+                        this.commit('user/setToken', data.obj.sys_token)
+                        this.commit('user/setUserInfo', data.obj)
                         // 保存登录时间
                         setTimeStamp()
                         resolve()
@@ -69,7 +69,7 @@ export default {
             return new Promise((resolve, reject) => {
                 getPermission()
                     .then(data => {
-                        let obj = formatPermissionList(data.bizobj)
+                        let obj = formatPermissionList(data.obj)
                         let role_arr = obj.role_arr//菜单权限
                         let button_arr = obj.button_arr//button权限
                         let info = {

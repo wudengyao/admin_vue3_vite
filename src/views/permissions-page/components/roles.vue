@@ -57,7 +57,7 @@ const allRoleList = ref([])
 // 获取所有角色数据的方法
 const getListData = async () => {
   const data = await getRoleList()
-  allRoleList.value = data.bizobj
+  allRoleList.value = data.objs
   await getUserRoles()
 
 }

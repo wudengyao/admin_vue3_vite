@@ -22,7 +22,7 @@ export default [
           error_code: 0,
           error_msg: 'success'
         },
-        bizobj: {
+        obj: {
           code_key: '6012e9ba65b442d2e5e7fec6e8eabcfd',
           code: getCodeOfRandom()
         }
@@ -38,7 +38,7 @@ export default [
           error_code: 0,
           error_msg: 'success'
         },
-        bizobj: {
+        obj: {
           sys_token: 'd33a7fdf547d2a086a96f4d38253cbc9',
           admin_nick_name: '前端小三爷',
           admin_id: '1',
@@ -56,7 +56,7 @@ export default [
           error_code: 0,
           error_msg: 'success'
         },
-        bizobj: [
+        obj: [
           {
             "id": "1",
             "name": "权限管理",
@@ -476,7 +476,7 @@ export default [
           error_code: 0,
           error_msg: 'success'
         },
-        bizobj: [
+        obj: [
           {
             "id": "1",
             "account": "admin",
@@ -551,7 +551,7 @@ export default [
           error_code: 0,
           error_msg: 'success'
         },
-        bizobj: [
+        obj: [
           {
             "id": "1",
             "name": "主管",
