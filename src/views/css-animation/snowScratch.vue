@@ -1,6 +1,6 @@
 <template>
   <div class="c">
-    <p>前端小三爷</p>
+    <p>程序员三千</p>
     <div class="card">
       <div class="snow"></div>
       <div class="snow"></div>
