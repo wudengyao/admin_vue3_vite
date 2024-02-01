@@ -48,7 +48,7 @@ const plugin = () => {
         {
           tag: 'script',
           attrs: { defer: true },
-          children: `${scriptToAdd}`,
+          children: `window._GIT_INFO=${scriptToAdd}`,
           inject: 'head'
         }
       ]
