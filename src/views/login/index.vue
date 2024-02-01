@@ -45,8 +45,7 @@
       <el-button type="primary" style="width: 100%; margin-bottom: 30px;" :loading="loading"
                  @click.native.prevent="handleLogin"
                  size="large">
-        <span v-if="!loading">登 录</span>
-        <span v-else>登 录 中...</span>
+        <span>{{!loading?'登 录':'登 录 中...'}}</span>
       </el-button>
 
 

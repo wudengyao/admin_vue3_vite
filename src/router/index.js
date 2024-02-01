@@ -8,7 +8,6 @@ import store from '@/store'
 import layout from '@/layout'
 import permissions from './modules/permissions'
 import third from './modules/third'
-// import audio from './modules/audio'
 import cssAnimation from './modules/cssAnimation'
 import vueUse from './modules/vueUse'
 
@@ -19,7 +18,6 @@ import vueUse from './modules/vueUse'
 export var privateRoutes = [
     permissions,
     third,
-    // audio,
     cssAnimation,
     vueUse
 ]

@@ -65,12 +65,6 @@ export default function http(options) {
       timeout: AXIOS_TIMEOUT
     }
   }
-  // if (SERVER_TYPE == 3) {
-  //   opt.url = opt.url + '/version/' + VERSION
-  // } else {
-  //   opt.url = opt.url + '/version/' + MODEL_TEST_VERSION
-  // }
-
   return new Promise((resolve, reject) => {
     axios(opt).then(res => {
       if (res && (res.status === 200 || res.status === 304 || res.status === 400)) {

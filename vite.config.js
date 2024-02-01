@@ -4,6 +4,7 @@ import vue from '@vitejs/plugin-vue'
 import path from 'path'
 
 import { viteMockServe } from 'vite-plugin-mock'
+import getGitInfo from './src/plugins/getGitInfo.js';
 
 
 // svg-icon插件
@@ -23,7 +24,9 @@ export default defineConfig({
             enable:false,
             mockPath: "./src/mock/",
 
-        })
+        }),
+        getGitInfo()
+
     ],
     base: "./", //打包路径
     resolve: {
