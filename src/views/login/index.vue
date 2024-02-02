@@ -41,7 +41,7 @@
 					maxlength="4" @keyup.enter.native="handleLogin"
 				>
 				</el-input>
-				<div class="code-img" @click="getCodeImg">{{code_net}}</div>
+				<div class="code-img" @click="getCodeImg">{{codeNet}}</div>
 			</el-form-item>
 
 			<el-button
@@ -212,7 +212,7 @@ for (let i = 0; i < 1000; i++) {
 	snow.value.push(i);
 }
 
-const code_net = ref("");
+const codeNet = ref("");
 
 onMounted(() => {
 	getCodeImg();
@@ -276,7 +276,7 @@ const handleLogin = () => {
 	loginFromRef.value.validate(valid => {
 		if (!valid) return;
 		console.log(loginForm.value);
-		if (loginForm.value.captcha_code != code_net.value) {
+		if (loginForm.value.captcha_code !== codeNet.value) {
 			ElMessage.error("验证码错误！");
 			return;
 		}
@@ -289,7 +289,7 @@ const handleLogin = () => {
 					router.push("/");
 				}, 500);
 			})
-			.catch(err => {
+			.catch(() => {
 				getCodeImg();
 				loading.value = false;
 			});
@@ -304,9 +304,9 @@ const getCodeImg = () => {
 			const obj = data.obj;
 
 			loginForm.value.code_key = obj.code_key;
-			code_net.value = obj.code;
+			codeNet.value = obj.code;
 		})
-		.catch(err => {
+		.catch(() => {
 		});
 };
 
