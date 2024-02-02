@@ -51,8 +51,11 @@
     "vite-plugin-svg-icons": "^2.0.1"
   },
   "config": {
-		"commitizen": {
-			"path": "node_modules/cz-customizable"
-		}
+    "commitizen": { 
+    "path": "node_modules/cz-customizable"
+  },
+  "cz-customizable": {
+    "config": ".cz-config.cjs"
+  }
 	}
 }
