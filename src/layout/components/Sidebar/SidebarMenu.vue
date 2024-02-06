@@ -1,13 +1,12 @@
 <template>
 	<!-- 一级 menu 菜单 -->
 	<el-menu
-		:collapse="!$store.getters.sidebarOpened"
 		:default-active="activeMenu"
-		:unique-opened="true"
+		:collapse="!$store.getters.sidebarOpened"
 		:background-color="$store.getters.cssVar.menuBg"
 		:text-color="$store.getters.cssVar.menuText"
 		:active-text-color="$store.getters.cssVar.menuActiveText"
-		:unique-opened="false"
+		:unique-opened="true"
 		router
 	>
 		<sidebar-item
@@ -17,22 +16,29 @@
 		></sidebar-item>
 	</el-menu>
 </template>
+
+<style lang="scss" scoped></style>
+
 <script setup>
 import { computed } from "vue";
+import SidebarItem from "./SidebarItem";
 import { useRouter, useRoute } from "vue-router";
 import { filterRouters, generateMenus } from "@/utils/route";
-import SidebarItem from "./SidebarItem";
 
+// 计算路由表结构
 const router = useRouter();
 const routes = computed(() => {
 	const filterRoutes = filterRouters(router.getRoutes());
 	return generateMenus(filterRoutes);
 });
-console.log("routes111==", routes);
+
 // 计算高亮 menu 的方法
 const route = useRoute();
 const activeMenu = computed(() => {
-	const { path } = route;
+	const { meta, path } = route;
+	if (meta.activeMenu) {
+	  return meta.activeMenu;
+	}
 	return path;
 });
 </script>
