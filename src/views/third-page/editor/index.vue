@@ -6,12 +6,6 @@
 		></editor>
 	</div>
 </template>
-
-<style lang="scss" scoped>
-.container {
-}
-</style>
-
 <script setup>
 import Editor from "../components/Editor.vue";
 import { ref } from "vue";
