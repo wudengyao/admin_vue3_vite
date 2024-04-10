@@ -3,7 +3,7 @@
 
 ## 1、[在线体验地址](http://3thousand.top/admin)
 ## 2、[项目讲解及博客](https://juejin.cn/user/1310273591836957) 
-## 3、[配套企业级微信小程序开发框架 ](https://haohuo.jinritemai.com/ecommerce/trade/detail/index.html?id=3673977559881744710&origin_type=604)
+## 3、[从0打造企业级微信小程序 ](https://haohuo.jinritemai.com/ecommerce/trade/detail/index.html?id=3673977559881744710&origin_type=604)
 ## 4、全网同名：程序员三千 （抖音、公众号、视频号、掘金）
 
 ## 项目技术栈：Vue3 + JavaScript + Vite4 + Element-plus2.3.5
