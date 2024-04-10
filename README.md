@@ -1,9 +1,9 @@
 
 ## 一个极简的后台基础模板，企业级！开箱即用！
 
-## 1、在线体验地址：http://3thousand.top/admin
-## 2、项目讲解及博客主页：程序员三千_  链接：https://juejin.cn/user/1310273591836957
-## 3、配套企业级微信小程序开发框架：https://haohuo.jinritemai.com/ecommerce/trade/detail/index.html?id=3673977559881744710&origin_type=604
+## 1、[在线体验地址](http://3thousand.top/admin)
+## 2、项目讲解及博客主页：[程序员三千](https://juejin.cn/user/1310273591836957) 
+## 3、[配套企业级微信小程序开发框架 ](https://haohuo.jinritemai.com/ecommerce/trade/detail/index.html?id=3673977559881744710&origin_type=604)
 ## 4、全网同名：程序员三千 （抖音、公众号、视频号、掘金）
 
 ## 项目技术栈：Vue3 + JavaScript + Vite4 + Element-plus2.3.5
