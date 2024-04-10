@@ -2,6 +2,9 @@
 ## 一个极简的后台基础模板，企业级！开箱即用！
 
 ## 在线体验地址：http://3thousand.top/admin
+## 项目讲解及博客主页：程序员三千_  链接：https://juejin.cn/user/1310273591836957
+## 配套企业级微信小程序开发框架：https://haohuo.jinritemai.com/ecommerce/trade/detail/index.html?id=3673977559881744710&origin_type=604
+## 全网同名：程序员三千 （抖音、公众号、视频号、掘金）
 
 ## 项目技术栈：Vue3 + JavaScript + Vite4 + Element-plus2.3.5
 ![image](https://github.com/wudengyao/admin_vue3_vite/assets/9073383/a206b4c9-c25d-4a5b-b6a1-bded7276a9c6)
@@ -40,11 +43,6 @@
 - 多种有趣的CSS动画效果
 
 ## 最新内容持续更新中...
-
-## 项目讲解及博客主页：程序员三千_  链接：https://juejin.cn/user/1310273591836957
-## 抖音号：程序员三千
-![image](https://github.com/wudengyao/admin_vue3_vite/assets/9073383/d7f87b37-b054-49d1-85e0-1589543dba0c)
-
 
 
 - 依赖安装：yarn
