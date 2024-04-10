@@ -1,6 +1,8 @@
 
 ## 一个极简的后台基础模板，企业级！开箱即用！
 
+## 在线体验地址：http://3thousand.top/admin
+
 ## 项目技术栈：Vue3 + JavaScript + Vite4 + Element-plus2.3.5
 ![image](https://github.com/wudengyao/admin_vue3_vite/assets/9073383/a206b4c9-c25d-4a5b-b6a1-bded7276a9c6)
 ![image](https://github.com/wudengyao/admin_vue3_vite/assets/9073383/01cc0469-3a92-4f1b-970e-01bcb51fc576)
