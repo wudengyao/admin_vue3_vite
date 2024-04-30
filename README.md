@@ -2,9 +2,9 @@
 ## 一个极简的后台基础模板，企业级！开箱即用！
 
 ## 1、[在线体验地址](http://3thousand.top/admin)
-## 2、[项目框架从0搭建教程](https://haohuo.jinritemai.com/ecommerce/trade/detail/index.html?id=3673977559881744710&origin_type=604)
-## 3、[配套微信小程序教程](https://haohuo.jinritemai.com/ecommerce/trade/detail/index.html?id=3673977559881744710&origin_type=604)
-## 4、[配套Java后端教程](https://haohuo.jinritemai.com/ecommerce/trade/detail/index.html?id=3673977559881744710&origin_type=604)
+## 2、[《项目框架从0搭建教程》](https://haohuo.jinritemai.com/ecommerce/trade/detail/index.html?id=3673977559881744710&origin_type=604)
+## 3、[《配套微信小程序教程》](https://haohuo.jinritemai.com/ecommerce/trade/detail/index.html?id=3673977559881744710&origin_type=604)
+## 4、[《配套Java后端教程》](https://haohuo.jinritemai.com/ecommerce/trade/detail/index.html?id=3673977559881744710&origin_type=604)
 ## 5、全网同名：程序员三千 （抖音、b站、视频号）
 
 ## 项目技术栈：Vue3 + JavaScript + Vite4 + Element-plus2.3.5
