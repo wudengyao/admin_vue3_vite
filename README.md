@@ -4,6 +4,7 @@
 ## 1、[在线体验地址](http://3thousand.top/admin)
 ## 2、[《企业级项目框架从0搭建教程》](https://haohuo.jinritemai.com/ecommerce/trade/detail/index.html?id=3673977559881744710&origin_type=604)
 <img width="1400" alt="image" src="https://github.com/wudengyao/admin_vue3_vite/assets/9073383/b80caf80-7ed7-46c3-9e09-e36476f1bf69">
+
 ## 3、[《配套 企业级微信小程序教程 与java后端教程》](https://haohuo.jinritemai.com/ecommerce/trade/detail/index.html?id=3673977559881744710&origin_type=604)
 <img width="1401" alt="image" src="https://github.com/wudengyao/admin_vue3_vite/assets/9073383/76d1b67d-2f35-47ff-801f-22c0e3be0d18">
 
