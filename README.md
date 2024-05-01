@@ -2,10 +2,13 @@
 ## 一个极简的后台基础模板，企业级！开箱即用！
 
 ## 1、[在线体验地址](http://3thousand.top/admin)
-## 2、[《项目框架从0搭建教程》](https://haohuo.jinritemai.com/ecommerce/trade/detail/index.html?id=3673977559881744710&origin_type=604)
-## 3、[《配套微信小程序教程》](https://haohuo.jinritemai.com/ecommerce/trade/detail/index.html?id=3673977559881744710&origin_type=604)
-## 4、[《配套Java后端教程》](https://haohuo.jinritemai.com/ecommerce/trade/detail/index.html?id=3673977559881744710&origin_type=604)
-## 5、全网同名：程序员三千 （抖音、b站、视频号）
+## 2、[《企业级项目框架从0搭建教程》](https://haohuo.jinritemai.com/ecommerce/trade/detail/index.html?id=3673977559881744710&origin_type=604)
+<img width="1400" alt="image" src="https://github.com/wudengyao/admin_vue3_vite/assets/9073383/b80caf80-7ed7-46c3-9e09-e36476f1bf69">
+## 3、[《配套 企业级微信小程序教程 与 java后端教程》](https://haohuo.jinritemai.com/ecommerce/trade/detail/index.html?id=3673977559881744710&origin_type=604)
+<img width="1401" alt="image" src="https://github.com/wudengyao/admin_vue3_vite/assets/9073383/76d1b67d-2f35-47ff-801f-22c0e3be0d18">
+
+
+## 4、全网同名：程序员三千 （抖音、b站、视频号）
 
 ## 项目技术栈：Vue3 + JavaScript + Vite4 + Element-plus2.3.5
 ![image](https://github.com/wudengyao/admin_vue3_vite/assets/9073383/a206b4c9-c25d-4a5b-b6a1-bded7276a9c6)
