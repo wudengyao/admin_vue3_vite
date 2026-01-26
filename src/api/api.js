@@ -2,7 +2,7 @@ import axios from "@/utils/axios";
 import moment from "moment";
 
 /**
- * 登录
+ * 登录接口
  */
 export function login(params) {
 	return axios({
