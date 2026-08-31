@@ -221,13 +221,13 @@
 
 </style>
 <script>
+export default {
+	name: "tabs"
+};
 </script>
 
 <script setup>
 import { ref, onMounted } from "vue";
-export default {
-	name: "tabs"
-};
 
 onMounted(() => {
 	const tabLinks = document.querySelectorAll(".tabs__link");

@@ -1,0 +1,1979 @@
+[
+  {
+    "id": "TC001",
+    "title": "Log in and reach the home page",
+    "description": "A user can read the displayed captcha, submit valid credentials, and arrive on the home page after authentication.",
+    "category": "角色列表",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /login"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the username field with {{LOGIN_USER}}"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the password field with {{LOGIN_PASSWORD}}"
+      },
+      {
+        "type": "action",
+        "description": "Read the displayed captcha and fill in the captcha field with the matching value"
+      },
+      {
+        "type": "action",
+        "description": "Submit the login form"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the user lands on the home page"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the authenticated application shell is displayed"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC002",
+    "title": "Save updated role permissions",
+    "description": "A user can select permission nodes for a role and save the changes back to the role table.",
+    "category": "角色列表",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /login"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the username field with {{LOGIN_USER}}"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the password field with {{LOGIN_PASSWORD}}"
+      },
+      {
+        "type": "action",
+        "description": "Read the displayed captcha and fill in the captcha field with the matching value"
+      },
+      {
+        "type": "action",
+        "description": "Submit the login form"
+      },
+      {
+        "type": "action",
+        "description": "Navigate to /adminAuth/getRoleList"
+      },
+      {
+        "type": "action",
+        "description": "Open the permission assignment dialog for a role"
+      },
+      {
+        "type": "action",
+        "description": "Select a permission node in the tree"
+      },
+      {
+        "type": "action",
+        "description": "Save the permission selection"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the dialog closes and the role table is visible"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the updated permission selection is reflected in the role management view"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC003",
+    "title": "Assign permissions to a role and save changes",
+    "description": "Verify an admin can open the role list, edit a role's permission tree, and save the updated permissions.",
+    "category": "布局与导航",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /login"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the username field with {{LOGIN_USER}}"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the password field with {{LOGIN_PASSWORD}}"
+      },
+      {
+        "type": "action",
+        "description": "Read the displayed captcha value and fill it into the captcha field"
+      },
+      {
+        "type": "action",
+        "description": "Submit the login form"
+      },
+      {
+        "type": "action",
+        "description": "Open the role list page from the sidebar"
+      },
+      {
+        "type": "action",
+        "description": "Open the permission editor for a role"
+      },
+      {
+        "type": "action",
+        "description": "Select a permission in the tree"
+      },
+      {
+        "type": "action",
+        "description": "Save the role permissions"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify a success confirmation is visible"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC004",
+    "title": "Assign a role to an account",
+    "description": "Verify an admin can change an account's role from the account list and save the assignment.",
+    "category": "布局与导航",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /login"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the username field with {{LOGIN_USER}}"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the password field with {{LOGIN_PASSWORD}}"
+      },
+      {
+        "type": "action",
+        "description": "Read the displayed captcha value and fill it into the captcha field"
+      },
+      {
+        "type": "action",
+        "description": "Submit the login form"
+      },
+      {
+        "type": "action",
+        "description": "Open the account list page from the sidebar"
+      },
+      {
+        "type": "action",
+        "description": "Open the role assignment dialog for an account"
+      },
+      {
+        "type": "action",
+        "description": "Select a role for the account"
+      },
+      {
+        "type": "action",
+        "description": "Save the role assignment"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify a success confirmation is visible"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC005",
+    "title": "Delete an account after confirmation",
+    "description": "A user can start deleting an account, confirm the action, and see the account removed from the list.",
+    "category": "账号列表",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /login"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the username field with {{LOGIN_USER}}"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the password field with {{LOGIN_PASSWORD}}"
+      },
+      {
+        "type": "action",
+        "description": "Read the displayed captcha and fill in the captcha field with the matching value"
+      },
+      {
+        "type": "action",
+        "description": "Submit the login form"
+      },
+      {
+        "type": "action",
+        "description": "Navigate to /adminAuth/adminList"
+      },
+      {
+        "type": "action",
+        "description": "Start deleting an account"
+      },
+      {
+        "type": "action",
+        "description": "Confirm the deletion"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the account no longer appears in the table"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the account list remains visible"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC006",
+    "title": "Open the permission assignment dialog for a role",
+    "description": "An operator can open a role's permission assignment dialog from the role list and see the permission tree for editing.",
+    "category": "角色列表",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /login"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the username field with {{LOGIN_USER}}"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the password field with {{LOGIN_PASSWORD}}"
+      },
+      {
+        "type": "action",
+        "description": "Read the displayed captcha and fill in the captcha field with the matching value"
+      },
+      {
+        "type": "action",
+        "description": "Submit the login form"
+      },
+      {
+        "type": "action",
+        "description": "Navigate to /adminAuth/getRoleList"
+      },
+      {
+        "type": "action",
+        "description": "Open the permission assignment dialog for a role"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the permission tree is displayed"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the permission assignment dialog is displayed"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC007",
+    "title": "Open a page from the sidebar",
+    "description": "Verify a signed-in user can use the sidebar to open another admin page and see it load in the main content area.",
+    "category": "布局与导航",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /login"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the username field with {{LOGIN_USER}}"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the password field with {{LOGIN_PASSWORD}}"
+      },
+      {
+        "type": "action",
+        "description": "Read the displayed captcha value and fill it into the captcha field"
+      },
+      {
+        "type": "action",
+        "description": "Submit the login form"
+      },
+      {
+        "type": "action",
+        "description": "Open a page from the sidebar"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the selected page is displayed in the content area"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC008",
+    "title": "View an account, assign a role, and return to the list",
+    "description": "Verifies that a user can open an account's details, assign a role, and navigate back to the account list successfully.",
+    "category": "账号列表",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /login"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the username field with {{LOGIN_USER}}"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the password field with {{LOGIN_PASSWORD}}"
+      },
+      {
+        "type": "action",
+        "description": "Read the displayed captcha and fill it into the captcha field"
+      },
+      {
+        "type": "action",
+        "description": "Submit the login form"
+      },
+      {
+        "type": "action",
+        "description": "Open the account list page from the sidebar"
+      },
+      {
+        "type": "action",
+        "description": "Open an account's detail view"
+      },
+      {
+        "type": "action",
+        "description": "Assign a role to the account"
+      },
+      {
+        "type": "action",
+        "description": "Return to the account list"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the account detail view is displayed"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the role assignment is reflected in the account information"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC009",
+    "title": "View an account's details",
+    "description": "A user can open an account from the account list and reach its detail page.",
+    "category": "账号列表",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /login"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the username field with {{LOGIN_USER}}"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the password field with {{LOGIN_PASSWORD}}"
+      },
+      {
+        "type": "action",
+        "description": "Read the displayed captcha and fill in the captcha field with the matching value"
+      },
+      {
+        "type": "action",
+        "description": "Submit the login form"
+      },
+      {
+        "type": "action",
+        "description": "Navigate to /adminAuth/adminList"
+      },
+      {
+        "type": "action",
+        "description": "Open the account details for a row"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the account detail page is displayed"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the selected account's details are shown"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC010",
+    "title": "Open and close pages from the sidebar and tags view",
+    "description": "Verifies that a logged-in user can switch between pages using the sidebar and close a page from the tags view without losing navigation state.",
+    "category": "Admin shell",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /login"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the username field with {{LOGIN_USER}}"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the password field with {{LOGIN_PASSWORD}}"
+      },
+      {
+        "type": "action",
+        "description": "Read the displayed captcha and fill it into the captcha field"
+      },
+      {
+        "type": "action",
+        "description": "Submit the login form"
+      },
+      {
+        "type": "action",
+        "description": "Open the account list page from the sidebar"
+      },
+      {
+        "type": "action",
+        "description": "Open the role list page from the sidebar"
+      },
+      {
+        "type": "action",
+        "description": "Close the active page from the tags view"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the role list page is no longer active"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the previous page remains accessible through the tags view"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC011",
+    "title": "View account details from the account list",
+    "description": "Verify an admin can open an account's details page from the account list and see the account information.",
+    "category": "布局与导航",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /login"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the username field with {{LOGIN_USER}}"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the password field with {{LOGIN_PASSWORD}}"
+      },
+      {
+        "type": "action",
+        "description": "Read the displayed captcha value and fill it into the captcha field"
+      },
+      {
+        "type": "action",
+        "description": "Submit the login form"
+      },
+      {
+        "type": "action",
+        "description": "Open the account list page from the sidebar"
+      },
+      {
+        "type": "action",
+        "description": "Open the details view for an account"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the account details are displayed"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC012",
+    "title": "Switch between visited pages with TagsView",
+    "description": "Verify a signed-in user can reopen a previously visited page from the tag list and see it become active.",
+    "category": "布局与导航",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /login"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the username field with {{LOGIN_USER}}"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the password field with {{LOGIN_PASSWORD}}"
+      },
+      {
+        "type": "action",
+        "description": "Read the displayed captcha value and fill it into the captcha field"
+      },
+      {
+        "type": "action",
+        "description": "Submit the login form"
+      },
+      {
+        "type": "action",
+        "description": "Open two different pages from the sidebar"
+      },
+      {
+        "type": "action",
+        "description": "Switch to a previously visited page from the tag list"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the previously visited page is active"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC013",
+    "title": "Toggle full-screen mode from the application shell",
+    "description": "A user can enter and exit full-screen mode from the top-level application shell.",
+    "category": "全屏切换",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /login"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the username field with {{LOGIN_USER}}"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the password field with {{LOGIN_PASSWORD}}"
+      },
+      {
+        "type": "action",
+        "description": "Read the displayed captcha and fill in the captcha field with the matching value"
+      },
+      {
+        "type": "action",
+        "description": "Submit the login form"
+      },
+      {
+        "type": "action",
+        "description": "Navigate to /home"
+      },
+      {
+        "type": "action",
+        "description": "Toggle full-screen mode"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the application enters full-screen mode"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the application shell remains visible in full-screen mode"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC014",
+    "title": "Toggle full screen from the top bar",
+    "description": "Verifies that a logged-in user can enter and exit full-screen mode from the admin shell controls.",
+    "category": "Admin shell",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /login"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the username field with {{LOGIN_USER}}"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the password field with {{LOGIN_PASSWORD}}"
+      },
+      {
+        "type": "action",
+        "description": "Read the displayed captcha and fill it into the captcha field"
+      },
+      {
+        "type": "action",
+        "description": "Submit the login form"
+      },
+      {
+        "type": "action",
+        "description": "Toggle full-screen mode from the top bar"
+      },
+      {
+        "type": "action",
+        "description": "Toggle full-screen mode again from the top bar"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the application returns to normal windowed mode"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the shell remains visible after toggling full screen"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC015",
+    "title": "Launch the guided walkthrough from the home page",
+    "description": "A user can reach the home page and start the guided walkthrough entry point.",
+    "category": "首页引导",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /login"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the username field with {{LOGIN_USER}}"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the password field with {{LOGIN_PASSWORD}}"
+      },
+      {
+        "type": "action",
+        "description": "Read the displayed captcha and fill in the captcha field with the matching value"
+      },
+      {
+        "type": "action",
+        "description": "Submit the login form"
+      },
+      {
+        "type": "action",
+        "description": "Navigate to /home"
+      },
+      {
+        "type": "action",
+        "description": "Start the guided walkthrough"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the walkthrough overlay is displayed"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the guided tour has started"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC016",
+    "title": "Import accounts from Excel",
+    "description": "Verify an admin can import accounts from an Excel file using the account list import flow.",
+    "category": "布局与导航",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /login"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the username field with {{LOGIN_USER}}"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the password field with {{LOGIN_PASSWORD}}"
+      },
+      {
+        "type": "action",
+        "description": "Read the displayed captcha value and fill it into the captcha field"
+      },
+      {
+        "type": "action",
+        "description": "Submit the login form"
+      },
+      {
+        "type": "action",
+        "description": "Open the account list page from the sidebar"
+      },
+      {
+        "type": "action",
+        "description": "Start the account import flow"
+      },
+      {
+        "type": "action",
+        "description": "Complete the Excel import with a valid file"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify an import success confirmation is visible"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC017",
+    "title": "Close a page tag",
+    "description": "Verify a signed-in user can close a visited page from the tag list and remove it from the visible tag set.",
+    "category": "布局与导航",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /login"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the username field with {{LOGIN_USER}}"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the password field with {{LOGIN_PASSWORD}}"
+      },
+      {
+        "type": "action",
+        "description": "Read the displayed captcha value and fill it into the captcha field"
+      },
+      {
+        "type": "action",
+        "description": "Submit the login form"
+      },
+      {
+        "type": "action",
+        "description": "Open a page from the sidebar"
+      },
+      {
+        "type": "action",
+        "description": "Close the corresponding page tag"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the page tag is removed"
+      }
+    ],
+    "priority": "Medium"
+  },
+  {
+    "id": "TC018",
+    "title": "Create content in the rich text editor",
+    "description": "Verify a signed-in user can open the rich text editor, enter content, and see the content remain in the editor.",
+    "category": "布局与导航",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /login"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the username field with {{LOGIN_USER}}"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the password field with {{LOGIN_PASSWORD}}"
+      },
+      {
+        "type": "action",
+        "description": "Read the displayed captcha value and fill it into the captcha field"
+      },
+      {
+        "type": "action",
+        "description": "Submit the login form"
+      },
+      {
+        "type": "action",
+        "description": "Open the rich text editor page from the sidebar"
+      },
+      {
+        "type": "action",
+        "description": "Enter content into the editor"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the editor content is displayed"
+      }
+    ],
+    "priority": "Medium"
+  },
+  {
+    "id": "TC019",
+    "title": "Reject a short password",
+    "description": "Verify the login form blocks submission when the password is too short and shows a validation error.",
+    "category": "用户登录",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /login"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the username field with {{LOGIN_USER}}"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the password field with 12345"
+      },
+      {
+        "type": "action",
+        "description": "Read the displayed captcha value and fill it into the captcha field"
+      },
+      {
+        "type": "action",
+        "description": "Submit the login form"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify a password validation error is visible"
+      }
+    ],
+    "priority": "Medium"
+  },
+  {
+    "id": "TC020",
+    "title": "Write markdown and see live preview updates",
+    "description": "Verifies that a user can enter Markdown text and see the preview update alongside the source content.",
+    "category": "Markdown 编辑器",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /login"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the username field with {{LOGIN_USER}}"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the password field with {{LOGIN_PASSWORD}}"
+      },
+      {
+        "type": "action",
+        "description": "Read the displayed captcha and fill it into the captcha field"
+      },
+      {
+        "type": "action",
+        "description": "Submit the login form"
+      },
+      {
+        "type": "action",
+        "description": "Open the markdown editor page"
+      },
+      {
+        "type": "action",
+        "description": "Enter markdown text in the editor"
+      },
+      {
+        "type": "action",
+        "description": "Update the markdown content"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the live preview updates"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the source content remains visible"
+      }
+    ],
+    "priority": "Medium"
+  },
+  {
+    "id": "TC021",
+    "title": "Drag the demo element to a new position",
+    "description": "A logged-in user can move the draggable demo element and see its position change.",
+    "category": "vueUse 示例",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /login"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the username field with {{LOGIN_USER}}"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the password field with {{LOGIN_PASSWORD}}"
+      },
+      {
+        "type": "action",
+        "description": "Read the displayed captcha value"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the captcha field with the displayed captcha value"
+      },
+      {
+        "type": "action",
+        "description": "Submit the login form"
+      },
+      {
+        "type": "action",
+        "description": "Click the entry for the draggable demo"
+      },
+      {
+        "type": "action",
+        "description": "Drag the draggable element to a new position"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the element's position is updated"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify updated coordinates are displayed"
+      }
+    ],
+    "priority": "Medium"
+  },
+  {
+    "id": "TC022",
+    "title": "Preview Markdown content while editing",
+    "description": "Verify a signed-in user can open the Markdown editor, enter content, and see the live preview update.",
+    "category": "布局与导航",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /login"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the username field with {{LOGIN_USER}}"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the password field with {{LOGIN_PASSWORD}}"
+      },
+      {
+        "type": "action",
+        "description": "Read the displayed captcha value and fill it into the captcha field"
+      },
+      {
+        "type": "action",
+        "description": "Submit the login form"
+      },
+      {
+        "type": "action",
+        "description": "Open the Markdown editor page from the sidebar"
+      },
+      {
+        "type": "action",
+        "description": "Enter Markdown content into the editor"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the live preview is displayed"
+      }
+    ],
+    "priority": "Medium"
+  },
+  {
+    "id": "TC023",
+    "title": "Inspect the permission tree hierarchy",
+    "description": "A user can expand and collapse permission nodes to inspect the application permission hierarchy.",
+    "category": "权限列表",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /login"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the username field with {{LOGIN_USER}}"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the password field with {{LOGIN_PASSWORD}}"
+      },
+      {
+        "type": "action",
+        "description": "Read the displayed captcha and fill in the captcha field with the matching value"
+      },
+      {
+        "type": "action",
+        "description": "Submit the login form"
+      },
+      {
+        "type": "action",
+        "description": "Navigate to /adminAuth/permissionList"
+      },
+      {
+        "type": "action",
+        "description": "Expand a permission node"
+      },
+      {
+        "type": "action",
+        "description": "Collapse the same permission node"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify nested permission children are displayed"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the tree collapses back to its folded state"
+      }
+    ],
+    "priority": "Medium"
+  },
+  {
+    "id": "TC024",
+    "title": "Create and format rich text content",
+    "description": "Verifies that a user can enter content in the rich text editor and apply formatting that appears in the document.",
+    "category": "富文本编辑器",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /login"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the username field with {{LOGIN_USER}}"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the password field with {{LOGIN_PASSWORD}}"
+      },
+      {
+        "type": "action",
+        "description": "Read the displayed captcha and fill it into the captcha field"
+      },
+      {
+        "type": "action",
+        "description": "Submit the login form"
+      },
+      {
+        "type": "action",
+        "description": "Open the rich text editor page"
+      },
+      {
+        "type": "action",
+        "description": "Enter content in the editor"
+      },
+      {
+        "type": "action",
+        "description": "Apply formatting from the toolbar"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the formatted content is displayed in the document"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the editor retains the entered content"
+      }
+    ],
+    "priority": "Medium"
+  },
+  {
+    "id": "TC025",
+    "title": "See coordinates update while dragging",
+    "description": "A logged-in user can drag the draggable demo element and observe the coordinate readout change.",
+    "category": "vueUse 示例",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /login"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the username field with {{LOGIN_USER}}"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the password field with {{LOGIN_PASSWORD}}"
+      },
+      {
+        "type": "action",
+        "description": "Read the displayed captcha value"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the captcha field with the displayed captcha value"
+      },
+      {
+        "type": "action",
+        "description": "Submit the login form"
+      },
+      {
+        "type": "action",
+        "description": "Click the entry for the draggable demo"
+      },
+      {
+        "type": "action",
+        "description": "Drag the draggable element to a new position"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the coordinate display changes"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the draggable element remains visible"
+      }
+    ],
+    "priority": "Medium"
+  },
+  {
+    "id": "TC026",
+    "title": "Reject an incorrect captcha",
+    "description": "Verify the login form shows a captcha error when the entered captcha does not match the displayed value.",
+    "category": "用户登录",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /login"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the username field with {{LOGIN_USER}}"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the password field with {{LOGIN_PASSWORD}}"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the captcha field with 0000"
+      },
+      {
+        "type": "action",
+        "description": "Submit the login form"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify a captcha validation error is visible"
+      }
+    ],
+    "priority": "Medium"
+  },
+  {
+    "id": "TC027",
+    "title": "Drop a supported item into the drop zone",
+    "description": "A logged-in user can drop supported content into the drop zone and see the drop area respond.",
+    "category": "vueUse 示例",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /login"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the username field with {{LOGIN_USER}}"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the password field with {{LOGIN_PASSWORD}}"
+      },
+      {
+        "type": "action",
+        "description": "Read the displayed captcha value"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the captcha field with the displayed captcha value"
+      },
+      {
+        "type": "action",
+        "description": "Submit the login form"
+      },
+      {
+        "type": "action",
+        "description": "Click the entry for the drop zone demo"
+      },
+      {
+        "type": "action",
+        "description": "Drop a supported item into the drop area"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the drop zone response is displayed"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the dropped content is shown in the demo"
+      }
+    ],
+    "priority": "Medium"
+  },
+  {
+    "id": "TC028",
+    "title": "Launch the guided walkthrough",
+    "description": "Verify a signed-in user can start the guided walkthrough and see the introduction steps appear.",
+    "category": "布局与导航",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /login"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the username field with {{LOGIN_USER}}"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the password field with {{LOGIN_PASSWORD}}"
+      },
+      {
+        "type": "action",
+        "description": "Read the displayed captcha value and fill it into the captcha field"
+      },
+      {
+        "type": "action",
+        "description": "Submit the login form"
+      },
+      {
+        "type": "action",
+        "description": "Start the guided walkthrough"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the walkthrough steps are displayed"
+      }
+    ],
+    "priority": "Medium"
+  },
+  {
+    "id": "TC029",
+    "title": "Create content with Markdown preview",
+    "description": "A content editor can write Markdown and see the rendered preview update in the editor page.",
+    "category": "Markdown编辑器",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /login"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the username field with {{LOGIN_USER}}"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the password field with {{LOGIN_PASSWORD}}"
+      },
+      {
+        "type": "action",
+        "description": "Read the displayed captcha and fill in the captcha field with the matching value"
+      },
+      {
+        "type": "action",
+        "description": "Submit the login form"
+      },
+      {
+        "type": "action",
+        "description": "Navigate to /third/markdown"
+      },
+      {
+        "type": "action",
+        "description": "Enter Markdown content into the editor"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the Markdown content is displayed in the editor"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the rendered preview is displayed"
+      }
+    ],
+    "priority": "Medium"
+  },
+  {
+    "id": "TC030",
+    "title": "Detect when the target enters the viewport",
+    "description": "A logged-in user can scroll the intersection observer demo until the target enters view and the intersection state changes.",
+    "category": "vueUse 示例",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /login"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the username field with {{LOGIN_USER}}"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the password field with {{LOGIN_PASSWORD}}"
+      },
+      {
+        "type": "action",
+        "description": "Read the displayed captcha value"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the captcha field with the displayed captcha value"
+      },
+      {
+        "type": "action",
+        "description": "Submit the login form"
+      },
+      {
+        "type": "action",
+        "description": "Click the entry for the intersection observer demo"
+      },
+      {
+        "type": "action",
+        "description": "Scroll until the observed target enters the viewport"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the intersection state changes to visible"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the observed target is displayed"
+      }
+    ],
+    "priority": "Medium"
+  },
+  {
+    "id": "TC031",
+    "title": "Switch tabs in the animated tab demo",
+    "description": "Verifies that a logged-in user can switch between tabs and see the animated content change on the tab demo page.",
+    "category": "CSS 动画示例",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /login"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the username field with {{LOGIN_USER}}"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the password field with {{LOGIN_PASSWORD}}"
+      },
+      {
+        "type": "action",
+        "description": "Read the displayed captcha and fill it into the captcha field"
+      },
+      {
+        "type": "action",
+        "description": "Submit the login form"
+      },
+      {
+        "type": "action",
+        "description": "Open the animated tabs page"
+      },
+      {
+        "type": "action",
+        "description": "Select a different tab"
+      },
+      {
+        "type": "action",
+        "description": "Select another tab"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the tab content changes after switching"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the animated tab transition is displayed"
+      }
+    ],
+    "priority": "Low"
+  },
+  {
+    "id": "TC032",
+    "title": "Retain draggable demo access after navigating away and back",
+    "description": "A logged-in user can leave the draggable demo and return to it through the app navigation without losing access.",
+    "category": "vueUse 示例",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /login"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the username field with {{LOGIN_USER}}"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the password field with {{LOGIN_PASSWORD}}"
+      },
+      {
+        "type": "action",
+        "description": "Read the displayed captcha value"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the captcha field with the displayed captcha value"
+      },
+      {
+        "type": "action",
+        "description": "Submit the login form"
+      },
+      {
+        "type": "action",
+        "description": "Click the entry for the draggable demo"
+      },
+      {
+        "type": "action",
+        "description": "Click another available demo link"
+      },
+      {
+        "type": "action",
+        "description": "Click the entry for the draggable demo again"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the draggable demo page is displayed again"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the draggable element is available"
+      }
+    ],
+    "priority": "Low"
+  },
+  {
+    "id": "TC033",
+    "title": "Use the draggable demo to move an element",
+    "description": "A user can open the draggable demo and drag the sample element to a new position.",
+    "category": "VueUse拖拽示例",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /login"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the username field with {{LOGIN_USER}}"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the password field with {{LOGIN_PASSWORD}}"
+      },
+      {
+        "type": "action",
+        "description": "Read the displayed captcha and fill in the captcha field with the matching value"
+      },
+      {
+        "type": "action",
+        "description": "Submit the login form"
+      },
+      {
+        "type": "action",
+        "description": "Navigate to /elements/useDraggable"
+      },
+      {
+        "type": "action",
+        "description": "Drag the draggable element to a new position"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the element remains visible in its new position"
+      }
+    ],
+    "priority": "Low"
+  },
+  {
+    "id": "TC034",
+    "title": "Use the draggable demo",
+    "description": "Verify a signed-in user can open the draggable demo and move the draggable element to a new position.",
+    "category": "布局与导航",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /login"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the username field with {{LOGIN_USER}}"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the password field with {{LOGIN_PASSWORD}}"
+      },
+      {
+        "type": "action",
+        "description": "Read the displayed captcha value and fill it into the captcha field"
+      },
+      {
+        "type": "action",
+        "description": "Submit the login form"
+      },
+      {
+        "type": "action",
+        "description": "Open the draggable demo page from the sidebar"
+      },
+      {
+        "type": "action",
+        "description": "Drag the draggable element to a new position"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the element has moved"
+      }
+    ],
+    "priority": "Low"
+  },
+  {
+    "id": "TC035",
+    "title": "Use the drop zone demo to accept a dragged item",
+    "description": "A user can open the drop zone demo and place an item into the drop area.",
+    "category": "VueUse拖放示例",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /login"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the username field with {{LOGIN_USER}}"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the password field with {{LOGIN_PASSWORD}}"
+      },
+      {
+        "type": "action",
+        "description": "Read the displayed captcha and fill in the captcha field with the matching value"
+      },
+      {
+        "type": "action",
+        "description": "Submit the login form"
+      },
+      {
+        "type": "action",
+        "description": "Navigate to /elements/useDropZone"
+      },
+      {
+        "type": "action",
+        "description": "Drag an item into the drop zone"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the drop zone shows that an item was accepted"
+      }
+    ],
+    "priority": "Low"
+  },
+  {
+    "id": "TC036",
+    "title": "View the shooting star animation",
+    "description": "Verifies that a logged-in user can open the shooting star demo page and observe the animation running.",
+    "category": "CSS 动画示例",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /login"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the username field with {{LOGIN_USER}}"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the password field with {{LOGIN_PASSWORD}}"
+      },
+      {
+        "type": "action",
+        "description": "Read the displayed captcha and fill it into the captcha field"
+      },
+      {
+        "type": "action",
+        "description": "Submit the login form"
+      },
+      {
+        "type": "action",
+        "description": "Open the shooting star animation page"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the shooting star animation is displayed"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the animation content remains visible"
+      }
+    ],
+    "priority": "Low"
+  },
+  {
+    "id": "TC037",
+    "title": "Keep dragging behavior stable after repeated movement",
+    "description": "A logged-in user can repeatedly move the draggable demo element and continue seeing position updates.",
+    "category": "vueUse 示例",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /login"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the username field with {{LOGIN_USER}}"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the password field with {{LOGIN_PASSWORD}}"
+      },
+      {
+        "type": "action",
+        "description": "Read the displayed captcha value"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the captcha field with the displayed captcha value"
+      },
+      {
+        "type": "action",
+        "description": "Submit the login form"
+      },
+      {
+        "type": "action",
+        "description": "Click the entry for the draggable demo"
+      },
+      {
+        "type": "action",
+        "description": "Drag the draggable element to two different positions"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the position updates after repeated dragging"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the coordinate display remains visible"
+      }
+    ],
+    "priority": "Low"
+  },
+  {
+    "id": "TC038",
+    "title": "Use the drop zone demo",
+    "description": "Verify a signed-in user can open the drop zone demo and add a dropped item to the drop area.",
+    "category": "布局与导航",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /login"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the username field with {{LOGIN_USER}}"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the password field with {{LOGIN_PASSWORD}}"
+      },
+      {
+        "type": "action",
+        "description": "Read the displayed captcha value and fill it into the captcha field"
+      },
+      {
+        "type": "action",
+        "description": "Submit the login form"
+      },
+      {
+        "type": "action",
+        "description": "Open the drop zone demo page from the sidebar"
+      },
+      {
+        "type": "action",
+        "description": "Drop a supported item into the drop area"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the dropped item is displayed"
+      }
+    ],
+    "priority": "Low"
+  },
+  {
+    "id": "TC039",
+    "title": "Use the intersection observer demo to reveal content on scroll",
+    "description": "A user can scroll through the intersection observer demo and see content appear as it enters the viewport.",
+    "category": "VueUse交叉观察示例",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /login"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the username field with {{LOGIN_USER}}"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the password field with {{LOGIN_PASSWORD}}"
+      },
+      {
+        "type": "action",
+        "description": "Read the displayed captcha and fill in the captcha field with the matching value"
+      },
+      {
+        "type": "action",
+        "description": "Submit the login form"
+      },
+      {
+        "type": "action",
+        "description": "Navigate to /elements/useIntersectionObserver"
+      },
+      {
+        "type": "action",
+        "description": "Scroll through the demo page"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify additional observed content is displayed"
+      }
+    ],
+    "priority": "Low"
+  },
+  {
+    "id": "TC040",
+    "title": "Use the intersection observer demo",
+    "description": "Verify a signed-in user can open the intersection observer demo and see the observed state change while scrolling.",
+    "category": "布局与导航",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /login"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the username field with {{LOGIN_USER}}"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the password field with {{LOGIN_PASSWORD}}"
+      },
+      {
+        "type": "action",
+        "description": "Read the displayed captcha value and fill it into the captcha field"
+      },
+      {
+        "type": "action",
+        "description": "Submit the login form"
+      },
+      {
+        "type": "action",
+        "description": "Open the intersection observer demo page from the sidebar"
+      },
+      {
+        "type": "action",
+        "description": "Scroll to the observed content"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the observed state is displayed"
+      }
+    ],
+    "priority": "Low"
+  },
+  {
+    "id": "TC041",
+    "title": "Reveal and hide the password",
+    "description": "Verify the user can toggle password visibility while staying on the login form.",
+    "category": "用户登录",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /login"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the password field with {{LOGIN_PASSWORD}}"
+      },
+      {
+        "type": "action",
+        "description": "Toggle password visibility"
+      },
+      {
+        "type": "action",
+        "description": "Verify the password is shown in visible form"
+      },
+      {
+        "type": "action",
+        "description": "Toggle password visibility again"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the password is hidden again"
+      }
+    ],
+    "priority": "Low"
+  },
+  {
+    "id": "TC042",
+    "title": "Explore a CSS animation demo",
+    "description": "A user can open a CSS animation sample and see the animation playing on the page.",
+    "category": "CSS动画示例",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /login"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the username field with {{LOGIN_USER}}"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the password field with {{LOGIN_PASSWORD}}"
+      },
+      {
+        "type": "action",
+        "description": "Read the displayed captcha and fill in the captcha field with the matching value"
+      },
+      {
+        "type": "action",
+        "description": "Submit the login form"
+      },
+      {
+        "type": "action",
+        "description": "Navigate to /cssAnimation/shootingStar"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the animation demo content is displayed"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the animation is visible"
+      }
+    ],
+    "priority": "Low"
+  },
+  {
+    "id": "TC043",
+    "title": "View the clock animation",
+    "description": "Verifies that a logged-in user can open the clock demo page and see the clock animation displayed.",
+    "category": "CSS 动画示例",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /login"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the username field with {{LOGIN_USER}}"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the password field with {{LOGIN_PASSWORD}}"
+      },
+      {
+        "type": "action",
+        "description": "Read the displayed captcha and fill it into the captcha field"
+      },
+      {
+        "type": "action",
+        "description": "Submit the login form"
+      },
+      {
+        "type": "action",
+        "description": "Open the clock animation page"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the clock animation is displayed"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the clock content remains visible"
+      }
+    ],
+    "priority": "Low"
+  },
+  {
+    "id": "TC044",
+    "title": "Show an empty drop zone before any item is dropped",
+    "description": "A logged-in user can open the drop zone demo and see the initial empty state before dropping anything.",
+    "category": "vueUse 示例",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /login"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the username field with {{LOGIN_USER}}"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the password field with {{LOGIN_PASSWORD}}"
+      },
+      {
+        "type": "action",
+        "description": "Read the displayed captcha value"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the captcha field with the displayed captcha value"
+      },
+      {
+        "type": "action",
+        "description": "Submit the login form"
+      },
+      {
+        "type": "action",
+        "description": "Click the entry for the drop zone demo"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the drop area is displayed"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the empty drop state is displayed"
+      }
+    ],
+    "priority": "Low"
+  },
+  {
+    "id": "TC045",
+    "title": "View the 401 error page",
+    "description": "Verify a signed-in user can open the 401 page and see the access denied screen.",
+    "category": "布局与导航",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /login"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the username field with {{LOGIN_USER}}"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the password field with {{LOGIN_PASSWORD}}"
+      },
+      {
+        "type": "action",
+        "description": "Read the displayed captcha value and fill it into the captcha field"
+      },
+      {
+        "type": "action",
+        "description": "Submit the login form"
+      },
+      {
+        "type": "action",
+        "description": "Open the 401 error page from the sidebar or a valid route entry"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the access denied page is displayed"
+      }
+    ],
+    "priority": "Low"
+  }
+]

@@ -19,7 +19,7 @@ export default defineConfig({
 			symbolId: "icon-[name]"
 		}),
 		viteMockServe({
-			enable: false,
+			enable: true,
 			logger: true,
 			mockPath: "./src/mock/",
 			supportTs: false

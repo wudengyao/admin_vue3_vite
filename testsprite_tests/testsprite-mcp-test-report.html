@@ -1,0 +1,1570 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TestSprite AI Project Test Report</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjUiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NSA2NCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGcgY2xpcC1wYXRoPSJ1cmwoI2NsaXAwXzI0N181MzEpIj4KPHBhdGggZD0iTTMxLjA3MDcgMjguNzMzNEwxNi43Mjg5IDM3LjA5NjVDMTUuODc5NiAzNy41OTE4IDE1LjQzNzcgMzguNDQwMiAxNS40MDQ5IDM5LjMwMzFMOS43MDMyOCAzNS43OTM3QzkuMjg3ODQgMzUuNTM3NiA5LjAzNTE4IDM1LjA4NDMgOS4wMzUwMSAzNC41OTYyVjM0LjQ4NjFDOS44ODU5MSAzMi45MTUgMTEuMTczNSAzMS41MzAyIDEyLjg5NzkgMzAuNTI0OEwyMy41MTk4IDI0LjMzMDdMMzEuMDcwNyAyOC43MzM0WiIgZmlsbD0id2hpdGUiLz4KPHBhdGggZD0iTTQ5LjAzOTggOS40NTE4NUM1NS44OTM4IDUuNDU1OTMgNjQuNDk4NyAxMC4zOTk4IDY0LjQ5OSAxOC4zMzM2TDY0LjUgMzQuNTk2MkM2NC41IDM1LjE2MjggNjQuNDUyNiAzNS43MjI4IDY0LjM2MTkgMzYuMjcxN0M2NC4zMTc4IDM2LjE5NDEgNjQuMjcxNSAzNi4xMTcgNjQuMjIyOCAzNi4wNDA5QzYyLjcxMzEgMzMuNjgyNiA1OS41NzcyIDMyLjk5NDMgNTcuMjE4NSAzNC41MDM1TDU3LjA4OTEgMzQuNTg1NkM1Ny4wMjYxIDM0LjQ0NzMgNTYuOTYxNyAzNC4zMDk0IDU2Ljg5MyAzNC4xNzMyVjE4LjMzNDVDNTYuODkzIDE2LjI3MDUgNTQuNjU0OSAxNC45ODQzIDUyLjg3MTggMTYuMDIzNkw0MS4xMzkzIDIyLjg2MzdMMzMuNTg3NCAxOC40NjFMNDkuMDM5OCA5LjQ1MTg1WiIgZmlsbD0id2hpdGUiLz4KPHBhdGggZD0iTTAuNSAxOC45NjY4QzAuNTAwMDA2IDExLjA5NTYgOC45ODM4IDYuMTQzMjcgMTUuODM3NSAxMC4wMTM2TDUyLjYyNDYgMzAuNzlDNTQuNDMxOSAzMS44MTA3IDU1Ljc3MDEgMzMuMjQzNyA1Ni42NCAzNC44NzRMNTAuMTQ2NSAzOS4wMjk1QzQ5Ljk3MDIgMzguMzgxMiA0OS41NDk3IDM3Ljc4OTIgNDguODgzNCAzNy40MTI5TDEyLjA5NzMgMTYuNjM3NEMxMC4zMTQyIDE1LjYzMDQgOC4xMDY5NSAxNi45MTg5IDguMTA2OTUgMTguOTY2OFYzNC43MTI4QzguMTA3MDIgMzUuNjQxNSA4LjU4ODg5IDM2LjUwNDEgOS4zNzk3NyAzNi45OTA5TDE1LjA2NTkgNDAuNDkwNkMxMy41ODE5IDQwLjY3MzggMTIuMTkzMyA0MS41MDg2IDExLjM1NDcgNDIuODg0N0MxMC42MTQyIDQ0LjA5OTggMTAuNDQ2MyA0NS41MDI2IDEwLjc3MzMgNDYuNzgwNEw1LjM5MjMyIDQzLjQ2ODlDMi4zNTIyMyA0MS41OTc2IDAuNTAwMDQ4IDM4LjI4MjYgMC41IDM0LjcxMjhWMTguOTY2OFoiIGZpbGw9IndoaXRlIi8+CjxwYXRoIGQ9Ik0xNS44MDcxIDQ1LjQzNjFMMjcuNDEzNSA1Mi41MDg3QzMwLjg4MiA1NC42MjI0IDM1LjI1MiA1NC41NzQzIDM4LjY3MzIgNTIuMzg0N0w2MC4wNzQyIDM4LjY4OCIgc3Ryb2tlPSIjMTlDMzc5IiBzdHJva2Utd2lkdGg9IjcuNDg3NyIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+CjwvZz4KPGRlZnM+CjxjbGlwUGF0aCBpZD0iY2xpcDBfMjQ3XzUzMSI+CjxyZWN0IHg9IjAuNSIgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiByeD0iMTIiIGZpbGw9IndoaXRlIi8+CjwvY2xpcFBhdGg+CjwvZGVmcz4KPC9zdmc+Cg==">
+  <style>
+@import url('https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap');
+
+/* Custom CSS Variables for Design System */
+:root {
+  --fg-highlighted: #19c379;
+  --fg-default: #f7f7f8;
+  --fg-muted: #e4e4e4;
+  --fg-secondary: #959597;
+  --fg-primary: #f7f7f8;
+  --fg-success: #19c379;
+  --fg-error: #ef4146;
+  
+  --bg-default: #000000;
+  --bg-default-rgb: 9, 9, 9;
+  --bg-lifted: #101011;
+  --bg-elevated: #17181A;
+  --bg-success: #10a36333;
+  --bg-error: #c2353933;
+  
+  --border-default: #17181A;
+  --border-elevated: #212224;
+  --border-primary: #10a363;
+  
+  --interactive-bg-default: #212224;
+  --interactive-bg-primary: #1a7f53;
+  --interactive-fg-primary: #ffffff;
+  
+  --logo-icon-color: #19c379;
+  --logo-text-color: #f7f7f8;
+  
+  /* Status tag colors */
+  --status-success-bg: rgba(16, 163, 99, 0.2);
+  --status-success-border: rgba(16, 163, 99, 0.2);
+  --status-success-text: #93E6C2;
+  --status-warning-bg: rgba(183, 112, 28, 0.2);
+  --status-warning-border: rgba(183, 112, 28, 0.2);
+  --status-warning-text: #F4C47D;
+  --status-error-bg: rgba(194, 53, 57, 0.2);
+  --status-error-border: rgba(194, 53, 57, 0.2);
+  --status-error-text: #FFB3B3;
+  
+  --border-radius-medium: 6px;
+  --border-radius-large: 8px;
+}
+
+/* Light Theme Variables */
+[data-theme="light"] {
+  --fg-highlighted: #10a363;
+  --fg-default: #090909;
+  --fg-muted: #6b6b6d;
+  --fg-secondary: #88888B;
+  --fg-primary: #f7f7f8;
+  --fg-success: #10a363;
+  --fg-error: #c23539;
+  
+  --bg-default: #ffffff;
+  --bg-default-rgb: 255, 255, 255;
+  --bg-lifted: #FAFAFA;
+  --bg-elevated: #ffffff;
+  --bg-success: #10a36333;
+  --bg-error: #c2353933;
+  
+  --border-default: #eeeeef;
+  --border-elevated: #eaeaeb;
+  --border-primary: #1a7f53;
+  
+  --interactive-bg-default: #ffffff;
+  --interactive-bg-primary: #10a363;
+  --interactive-fg-primary: #ffffff;
+  
+  --logo-icon-color: #10a363;
+  --logo-text-color: #090909;
+  
+  /* Status tag colors */
+  --status-success-bg: rgba(16, 163, 99, 0.1);
+  --status-success-border: rgba(16, 163, 99, 0.15);
+  --status-success-text: #10A363;
+  --status-warning-bg: rgba(183, 112, 28, 0.1);
+  --status-warning-border: rgba(183, 112, 28, 0.15);
+  --status-warning-text: #B7701C;
+  --status-error-bg: rgba(194, 53, 57, 0.1);
+  --status-error-border: rgba(194, 53, 57, 0.15);
+  --status-error-text: #C23539;
+}
+
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Geist', sans-serif;
+  background-color: var(--bg-default);
+  color: var(--fg-default);
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  padding-top: 72px; /* Account for fixed header height */
+}
+
+/* Layout Components */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: rgba(var(--bg-default-rgb), 0.6);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border-default);
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 12px 60px;
+  width: 100%;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.logo-section {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: 1;
+}
+
+.logo-image {
+  width: 120px;
+}
+
+.logo-link {
+  display: inline-block;
+  text-decoration: none;
+  position: relative;
+}
+
+.logo-light,
+.logo-dark {
+  transition: opacity 0.3s ease;
+}
+
+.logo-light {
+  display: none;
+}
+
+.logo-dark {
+  display: block;
+}
+
+[data-theme="light"] .logo-light {
+  display: block;
+}
+
+[data-theme="light"] .logo-dark {
+  display: none;
+}
+
+.logo-divider {
+  width: 1px;
+  height: 24px;
+  background-color: var(--border-elevated);
+  margin: 0 8px;
+}
+
+.logo-text {
+  font-size: 20px;
+  font-weight: 550;
+  letter-spacing: -0.02em;
+}
+
+.logo-text-test {
+  color: var(--fg-default);
+}
+
+.logo-text-report {
+  color: var(--fg-highlighted);
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+  background: var(--bg-lifted);
+  border: 1px solid var(--border-default);
+  border-radius: var(--border-radius-medium);
+  padding: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.theme-toggle:hover {
+  background: var(--border-default);
+  border-color: var(--border-elevated);
+}
+
+.theme-icon {
+  transition: all 0.2s ease;
+  position: absolute;
+}
+
+.sun-icon {
+  opacity: 0;
+  transform: rotate(180deg);
+}
+
+.moon-icon {
+  opacity: 1;
+  transform: rotate(0deg);
+}
+
+/* Light theme toggle states */
+[data-theme="light"] .sun-icon {
+  opacity: 1;
+  transform: rotate(0deg);
+}
+
+[data-theme="light"] .moon-icon {
+  opacity: 0;
+  transform: rotate(-180deg);
+}
+
+.main-content {
+  padding: 90px 60px;
+  display: flex;
+  justify-content: center;
+  gap: 120px;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.content-section {
+  flex: 1;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.sidebar {
+  position: sticky;
+  top: 120px; /* Stick below the fixed header with additional spacing when scrolling */
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 260px;
+  height: fit-content;
+  max-height: calc(100vh - 92px); /* Don't exceed viewport height minus header and spacing */
+  overflow-y: auto; /* Allow scrolling if content is too long */
+}
+
+/* Typography */
+.title-group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.title-main {
+  font-family: 'Geist', sans-serif;
+  font-weight: 550;
+  font-size: 36px;
+  line-height: 42px;
+  letter-spacing: -0.4px;
+  color: var(--fg-default);
+  margin: 0;
+}
+
+.title-subtitle {
+  font-family: 'Geist', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 26px;
+  letter-spacing: -0.18px;
+  color: var(--fg-secondary);
+  margin: 0;
+}
+
+.section-subtitle {
+  font-family: 'Geist', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.16px;
+  color: var(--fg-secondary);
+  margin: 0;
+}
+
+.title-section {
+  font-family: 'Geist', sans-serif;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: -0.3px;
+  color: var(--fg-default);
+  margin: 0;
+}
+
+.title-requirement {
+  font-family: 'Geist', sans-serif;
+  font-weight:480;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+  color: var(--fg-default);
+  margin: 0;
+}
+
+.title-requirement::before {
+  counter-increment: accordion-counter;
+  content: counter(accordion-counter) ". ";
+  color: var(--fg-secondary);
+  margin-right: 4px;
+}
+
+.text-body {
+  font-family: 'Geist', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.16px;
+  color: var(--fg-default);
+  margin: 0;
+}
+
+.text-body-medium {
+  font-family: 'Geist', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.16px;
+  color: var(--fg-secondary);
+  margin: 0;
+}
+
+.text-link {
+  color: var(--fg-default);
+  text-decoration: underline;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  word-break: break-all;
+  transition: color 0.2s ease;
+}
+
+.text-link:hover {
+  color: var(--fg-secondary);
+}
+
+/* Metadata Section */
+.metadata-section {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.metadata-container {
+  padding: 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.metadata-row {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+.metadata-label {
+  width: 200px;
+  flex-shrink: 0;
+}
+
+.metadata-value {
+  flex: 1;
+}
+
+/* Divider */
+.divider {
+  height: 1px;
+  background-color: var(--border-default);
+  width: 100%;
+}
+
+/* Requirements Section */
+.requirements-section {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.requirement-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.requirement-description {
+  color: var(--fg-secondary);
+}
+
+/* Accordion Styles */
+.accordion-container {
+  border: 1px solid var(--border-default);
+  border-radius: var(--border-radius-large);
+  overflow: hidden;
+  counter-reset: accordion-counter;
+}
+
+.accordion-item {
+  border: none;
+  border-radius: 0;
+  overflow: hidden;
+}
+
+.accordion-item:not(:last-child) {
+  border-bottom: 1px solid var(--border-default);
+}
+
+.accordion-header {
+  padding: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  background-color: var(--bg-lifted);
+  transition: background-color 0.2s ease;
+}
+
+.requirement-content {
+  flex: 1;
+}
+
+.requirement-title-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 4px;
+}
+
+.requirement-status-tag {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 4px 2px 2px;
+  border-radius: var(--border-radius-medium);
+  font-family: 'Geist', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: -0.24px;
+  flex-shrink: 0;
+}
+
+.requirement-description {
+  margin: 0;
+}
+
+.requirement-status-tag.status-success {
+  background-color: var(--status-success-bg);
+  border: 1px solid var(--status-success-border);
+  color: var(--status-success-text);
+}
+
+.requirement-status-tag.status-warning {
+  background-color: var(--status-warning-bg);
+  border: 1px solid var(--status-warning-border);
+  color: var(--status-warning-text);
+}
+
+.requirement-status-tag.status-error {
+  background-color: var(--status-error-bg);
+  border: 1px solid var(--status-error-border);
+  color: var(--status-error-text);
+}
+
+.accordion-header:hover {
+  background-color: var(--bg-elevated);
+}
+
+/* Light mode specific hover - darker than bg-lifted */
+[data-theme="light"] .accordion-header:hover {
+  background-color: #F0F0F0;
+}
+
+.accordion-icon {
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+  margin-top: 2px;
+}
+
+.accordion-item.active .accordion-icon {
+  transform: rotate(180deg);
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+  background-color: var(--bg-lifted);
+}
+
+.accordion-item.active .accordion-content {
+  max-height: 100%; /* Arbitrary large value to allow full expansion */
+  transition: max-height 0.5s ease-in;
+}
+
+.accordion-content .test-wrapper {
+  padding: 16px;
+  gap: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Test Cards */
+.test-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.test-card {
+  background-color: var(--bg-lifted);
+  border: 1px solid var(--border-elevated);
+  border-radius: var(--border-radius-large);
+  overflow: hidden;
+}
+
+.test-header {
+  background-color: var(--bg-elevated);
+  border-bottom: 1px solid var(--border-elevated);
+  padding: 10px 16px;
+}
+
+.test-content {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.test-field {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+.test-field-label {
+  width: 200px;
+  flex-shrink: 0;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.test-field-value {
+  flex: 1;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  min-width: 0;
+}
+
+/* Status Components */
+.status-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.status-icon {
+  width: 18px;
+  height: 18px;
+}
+
+.status-pass {
+  color: var(--fg-success);
+}
+
+.status-fail {
+  color: var(--fg-error);
+}
+
+/* Coverage Metrics */
+.coverage-section {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.coverage-summary {
+  background-color: var(--bg-lifted);
+  border: 1px solid var(--border-default);
+  border-radius: var(--border-radius-large);
+  padding: 16px;
+}
+
+.coverage-list {
+  list-style: disc;
+  list-style-position: outside;
+  margin-left: 21px;
+  color: var(--fg-secondary);
+}
+
+.coverage-list li {
+  padding-left: 12px;
+  margin-bottom: 12px;
+}
+
+.coverage-list li:last-child {
+  margin-bottom: 0;
+}
+
+.coverage-highlight {
+  color: var(--fg-default);
+  font-weight: 500;
+}
+
+/* Data Table */
+.data-table {
+  border-radius: var(--border-radius-large);
+  overflow: hidden;
+}
+
+.table-header {
+  background-color: var(--bg-default);
+  display: flex;
+  border-bottom: 1px solid var(--border-elevated);
+}
+
+.table-header-cell {
+  padding: 8px 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex: 1;
+  min-width: 100px;
+  color: var(--fg-default);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: -0.14px;
+}
+
+.table-header-cell:first-child {
+  flex: 3;
+}
+
+.table-rows {
+  display: flex;
+  flex-direction: column;
+}
+
+.table-row {
+  display: flex;
+  border-bottom: 1px solid var(--border-default);
+  transition: background-color 0.2s ease;
+}
+
+.table-row:last-child {
+  border-bottom: none;
+}
+
+.table-row:hover {
+  background-color: var(--bg-lifted);
+}
+
+.table-cell {
+  padding: 8px 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex: 1;
+  min-width: 100px;
+  background-color: var(--bg-default);
+  color: var(--fg-secondary);
+}
+
+.table-cell:first-child {
+  flex: 3;
+  color: var(--fg-default);
+  font-weight: 500;
+}
+
+.table-cell .text-body {
+  color: var(--fg-secondary);
+}
+
+.table-cell:first-child .text-body {
+  color: var(--fg-default);
+  font-weight: 500;
+}
+
+.table-header-cell .text-body-medium {
+  color: var(--fg-default);
+  font-weight: 500;
+}
+
+/* Footer */
+.footer {
+  background-color: var(--bg-default);
+  border-top: 1px solid var(--border-default);
+  margin-top: 80px;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 60px 60px 60px;
+  width: 100%;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  gap: 80px;
+}
+
+.footer-brand {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  flex-shrink: 0;
+  align-items: flex-start;
+}
+
+.footer-logo {
+  width: auto;
+  margin-left: -8px;
+}
+
+.footer-copyright {
+  font-family: 'Geist', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--fg-secondary);
+  margin: 0;
+  margin-left: -8px;
+}
+
+.footer-links {
+  display: flex;
+  gap: 60px;
+}
+
+.footer-column {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  min-width: 140px;
+}
+
+.footer-column-title {
+  font-family: 'Geist', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--fg-default);
+  margin: 0;
+}
+
+.footer-link-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.footer-link {
+  font-family: 'Geist', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--fg-secondary);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-link:hover {
+  color: var(--fg-default);
+}
+
+/* Footer responsive adjustments for larger screens */
+@media (max-width: 1200px) {
+  .footer-content {
+    flex-direction: column;
+    gap: 40px;
+  }
+  
+  .footer-links {
+    gap: 40px;
+  }
+}
+
+@media (max-width: 900px) {
+  .footer-content {
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .footer-links {
+    gap: 30px;
+  }
+  
+  .footer-column {
+    min-width: 130px;
+  }
+}
+
+/* References Section */
+.references-section {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* Sidebar */
+.sidebar-title {
+  padding: 0;
+  color: var(--fg-muted);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: -0.14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.sidebar-title-icon {
+  color: var(--fg-secondary);
+  flex-shrink: 0;
+}
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  position: relative;
+}
+
+.sidebar-nav::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background-color: var(--border-default);
+  z-index: 0;
+}
+
+.sidebar-nav-item {
+  padding: 6px 16px;
+  color: var(--fg-secondary);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: -0.14px;
+  text-decoration: none;
+  display: block;
+  cursor: pointer;
+  position: relative;
+  border-left: 2px solid transparent;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 1;
+}
+
+.sidebar-nav-item.active {
+  color: var(--fg-highlighted);
+  border-left: 2px solid var(--fg-highlighted);
+  background-color: transparent;
+  font-size: 14.5px;
+  font-weight: 400;
+}
+
+.sidebar-nav-item:hover:not(.active) {
+  color: var(--fg-default);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .main-content {
+    flex-direction: column;
+    gap: 30px;
+    padding: 40px 20px;
+    align-items: center;
+  }
+  
+  .content-section {
+    width: 100%;
+    max-width: 800px;
+  }
+  
+  .sidebar {
+    order: -1;
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  
+  .sidebar-nav {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  
+  .sidebar-nav-item {
+    flex: 1;
+    min-width: 200px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 1200px) {
+  .sidebar {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .header-container {
+    padding: 12px 20px;
+  }
+  
+  .main-content {
+    padding: 30px 20px;
+  }
+  
+  .title-main {
+    font-size: 30px;
+    line-height: 36px;
+  }
+  
+  .title-section {
+    font-size: 20px;
+    line-height: 28px;
+  }
+  
+  .metadata-row {
+    flex-direction: column;
+    gap: 4px;
+  }
+  
+  .metadata-label {
+    width: auto;
+  }
+  
+  .test-field {
+    flex-direction: column;
+    gap: 4px;
+  }
+  
+  .test-field-label {
+    width: auto;
+  }
+  
+  .table-header-cell,
+  .table-cell {
+    padding: 8px 4px;
+    font-size: 14px;
+    min-width: 80px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  
+  .table-header-cell:first-child,
+  .table-cell:first-child {
+    flex: 2;
+    padding-right: 8px;
+    white-space: normal;
+    overflow: visible;
+  }
+  
+  .table-header-cell:not(:first-child),
+  .table-cell:not(:first-child) {
+    flex: 1;
+    text-align: center;
+  }
+  
+  .footer-container {
+    padding: 40px 20px;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .footer-content {
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .footer-links {
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: flex-start;
+  }
+  
+  .footer-column {
+    min-width: 120px;
+    max-width: 150px;
+    flex: 0 0 auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-content {
+    flex-direction: column;
+    gap: 12px;
+    align-items: stretch;
+  }
+  
+  .logo-section {
+    justify-content: center;
+  }
+  
+  .theme-toggle {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+  }
+  
+  .open-app-btn {
+    align-self: center;
+  }
+  
+  .sidebar-nav {
+    flex-direction: column;
+  }
+  
+  .sidebar-nav-item {
+    min-width: auto;
+    text-align: left;
+  }
+}
+  </style>
+    </head>
+    <body>
+  <!-- Header Section -->
+  <header class="header">
+    <div class="header-container">
+      <div class="header-content">
+    <div class="logo-section">
+          <a href="https://www.testsprite.com/" target="_blank" class="logo-link">
+                  <svg class="logo-dark" width="128" height="28" viewBox="0 0 293 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_273_308)">
+                      <g clip-path="url(#clip1_273_308)">
+                        <path
+                          d="M30.5707 28.7334L16.2289 37.0965C15.3796 37.5918 14.9377 38.4402 14.9049 39.3031L9.20328 35.7937C8.78784 35.5376 8.53518 35.0843 8.53501 34.5962V34.4861C9.38591 32.915 10.6735 31.5302 12.3979 30.5248L23.0198 24.3307L30.5707 28.7334Z"
+                          fill="#F7F7F8" />
+                        <path
+                          d="M48.5398 9.45185C55.3938 5.45593 63.9987 10.3998 63.999 18.3336L64 34.5962C64 35.1628 63.9526 35.7228 63.8619 36.2717C63.8178 36.1941 63.7715 36.117 63.7228 36.0409C62.2131 33.6826 59.0772 32.9943 56.7185 34.5035L56.5891 34.5856C56.5261 34.4473 56.4617 34.3094 56.393 34.1732V18.3345C56.393 16.2705 54.1549 14.9843 52.3718 16.0236L40.6393 22.8637L33.0874 18.461L48.5398 9.45185Z"
+                          fill="#F7F7F8" />
+                        <path
+                          d="M0 18.9668C6.14031e-06 11.0956 8.4838 6.14327 15.3375 10.0136L52.1246 30.79C53.9319 31.8107 55.2701 33.2437 56.14 34.874L49.6465 39.0295C49.4702 38.3812 49.0497 37.7892 48.3834 37.4129L11.5973 16.6374C9.8142 15.6304 7.60696 16.9189 7.60695 18.9668V34.7128C7.60702 35.6415 8.08889 36.5041 8.87977 36.9909L14.5659 40.4906C13.0819 40.6738 11.6933 41.5086 10.8547 42.8847C10.1142 44.0998 9.94632 45.5026 10.2733 46.7804L4.89232 43.4689C1.85223 41.5976 4.83587e-05 38.2826 0 34.7128V18.9668Z"
+                          fill="#F7F7F8" />
+                        <path d="M15.3071 45.4361L26.9135 52.5087C30.382 54.6224 34.752 54.5743 38.1732 52.3847L59.5742 38.688"
+                          stroke="#19C379" stroke-width="7.4877" stroke-linecap="round" />
+                      </g>
+                      <path
+                        d="M208.882 49L214.482 20.2001H222.882V22.1702C222.882 22.1825 222.896 22.1895 222.906 22.1822L223.781 21.5263C224.246 21.177 224.756 20.8906 225.297 20.6743C226.08 20.361 226.916 20.2001 227.759 20.2001H245.282V14.6001L253.282 12.2001V20.2001H258.082L256.082 27.4001H250.882L248.952 38.5951C248.906 38.8646 248.882 39.1375 248.882 39.411V40.5515C248.882 41.0948 249.098 41.6159 249.482 42C249.866 42.3842 250.388 42.6001 250.931 42.6001H254.082L252.482 49H246.691C245.032 49 243.452 48.2906 242.349 47.0506C241.404 45.9873 240.882 44.6143 240.882 43.1917V42.6001L242.882 27.4001H238.882L235.282 49H226.482L230.082 27.4001H227.562C226.052 27.4001 224.552 27.6435 223.12 28.1209C222.963 28.1733 222.816 28.253 222.687 28.3564L220.882 29.8001L217.682 49H208.882Z"
+                        fill="#F7F7F8" />
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M180.483 59L187.282 20.6H203.171C205.035 20.6 206.823 21.3406 208.141 22.6589C209.624 24.1415 210.367 26.2086 210.169 28.2959L209.909 31.0176C209.759 32.5923 209.32 34.1257 208.612 35.5405L207.909 36.9474C206.708 39.3494 204.964 41.4389 202.815 43.0502C201.797 43.8144 200.696 44.4637 199.535 44.9863L196.645 46.2866C194.409 47.2929 192.076 48.068 189.682 48.6L188.082 59H180.483ZM194.083 27.4L192.083 41.7999L194.066 40.9734C195.92 40.2011 197.576 39.0205 198.91 37.5196L199.229 37.1601C199.796 36.5228 200.276 35.8136 200.657 35.0509L201.098 34.1689C201.483 33.4002 201.683 32.5525 201.683 31.6931V30.8142C201.683 29.9087 201.323 29.0402 200.683 28.4C200.042 27.7597 199.174 27.4 198.268 27.4H194.083Z"
+                        fill="#F7F7F8" />
+                      <path d="M78.084 17.8L78.884 9.40002H111.284L109.684 18.2H98.4839L92.8839 49.4H81.684L88.4839 17.8H78.084Z"
+                        fill="#F7F7F8" />
+                      <path
+                        d="M242.484 11C242.484 14.3137 238.998 17 235.684 17C232.37 17 230.484 14.3137 230.484 11C230.484 7.68629 233.57 5 236.884 5C240.198 5 242.484 7.68629 242.484 11Z"
+                        fill="#F7F7F8" />
+                      <path
+                        d="M292.884 44.6001C292.884 47.9138 289.398 50.6001 286.085 50.6001C282.771 50.6001 280.885 47.9138 280.885 44.6001C280.885 41.2864 283.971 38.6001 287.284 38.6001C290.598 38.6001 292.884 41.2864 292.884 44.6001Z"
+                        fill="#F7F7F8" />
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M111.842 42.0801L117.346 37.9521C118.895 36.7903 120.266 35.408 121.415 33.8491L124.15 30.1366C124.886 29.1385 125.282 27.9312 125.282 26.6913C125.282 25.5867 124.967 24.5051 124.374 23.5732L124.286 23.4349C123.157 21.6608 121.226 20.5582 119.124 20.4881L113.95 20.3156C111.671 20.2397 109.407 20.7093 107.347 21.6853C104.454 23.0555 102.104 25.3558 100.673 28.2185L100.617 28.3314C99.2296 31.1056 98.757 34.2481 99.267 37.3076L99.4266 38.2652C99.8531 40.8243 101.069 43.1862 102.903 45.0207C104.206 46.324 105.783 47.3216 107.518 47.9415L108.046 48.1298C109.658 48.7056 111.358 49 113.07 49H130.618C132.605 49 134.536 48.3432 136.111 47.1318C137.894 45.7604 139.099 43.7718 139.49 41.5568L139.508 41.4564C139.879 39.3504 139.511 37.1808 138.467 35.3149L134.509 28.2477C134.497 28.2264 134.512 28.2 134.537 28.2H145.124C145.206 28.2 145.268 28.2746 145.252 28.355L143.052 39.7218C142.939 40.3059 142.882 40.8996 142.882 41.4946V43.074C142.882 44.3156 143.333 45.5151 144.151 46.4495C145.124 47.5619 146.53 48.2 148.008 48.2H171.584C173.737 48.2 175.845 47.5809 177.657 46.4164L178.544 45.8462C179.808 45.0332 180.807 43.868 181.418 42.4942C181.856 41.5091 182.082 40.443 182.082 39.3649V38.8937C182.082 36.8791 181.469 34.9121 180.324 33.2542L170.553 19.1022C170.523 19.059 170.554 19 170.606 19H184.209C184.598 19 184.931 18.7203 184.997 18.3371L186.473 9.85462C186.478 9.82613 186.456 9.80005 186.427 9.80005H171.986C169.477 9.80005 167.062 10.752 165.228 12.4636C163.222 14.3366 162.082 16.9586 162.082 19.7037V20.6754C162.082 22.9776 162.737 25.2324 163.97 27.1767L172.417 40.4979C172.445 40.5422 172.414 40.6 172.361 40.6H152.631C152.135 40.6 151.759 40.1536 151.842 39.6649L153.968 27.2649C154.034 26.8808 154.367 26.6 154.757 26.6H158.176C158.579 26.6 158.92 26.2996 158.97 25.8993L159.57 21.0993C159.629 20.6218 159.257 20.2 158.776 20.2H156.082C155.64 20.2 155.282 19.8419 155.282 19.4V13.0133C155.282 12.4389 154.695 12.0517 154.167 12.278L147.367 15.1922C147.073 15.3183 146.882 15.6075 146.882 15.9276V20.1577C146.882 20.1811 146.863 20.2 146.84 20.2H133.255C131.471 20.2 129.751 20.8652 128.43 22.0655C126.935 23.425 126.082 25.3522 126.082 27.3732V29.4108C126.082 30.9876 126.399 32.5483 127.013 34.0004L130.45 42.1231C130.465 42.1596 130.438 42.2 130.399 42.2H111.882C111.818 42.2 111.791 42.1185 111.842 42.0801ZM106.883 36.1998L111.787 33.7481C112.249 33.5168 112.682 33.2297 113.074 32.8931L113.845 32.2325C114.758 31.4501 115.283 30.3079 115.283 29.1057V28.2484C115.283 27.7051 115.067 27.184 114.683 26.7999C114.299 26.4157 113.778 26.1999 113.235 26.1999H111.535C110.843 26.1999 110.161 26.3609 109.543 26.6701C108.6 27.1413 107.855 27.9312 107.44 28.8996L107.314 29.1943C107.03 29.8578 106.883 30.572 106.883 31.2938V36.1998Z"
+                        fill="#F7F7F8" />
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M278.481 42.5998L276.881 48.1998H270.585C267.897 48.1998 265.257 47.4861 262.936 46.1317L262.692 45.9898C262.02 45.5974 261.386 45.1416 260.8 44.6287L259.976 43.908C258.995 43.0493 258.241 41.9607 257.783 40.7398C257.451 39.8537 257.281 38.9151 257.281 37.9688V32.5021C257.281 30.4658 257.786 28.4613 258.752 26.6684C259.627 25.0435 260.856 23.6362 262.348 22.5508L262.848 22.1874C263.927 21.403 265.146 20.8336 266.44 20.5101C267.264 20.304 268.111 20.1998 268.96 20.1998H276.759C277.625 20.1998 278.477 20.426 279.229 20.8559C280.293 21.4638 281.095 22.4424 281.483 23.6047L281.723 24.3266C281.96 25.0374 282.081 25.7818 282.081 26.5311V26.7865C282.081 27.9821 281.83 29.1643 281.344 30.2569L281.282 30.3964C280.754 31.5854 279.981 32.6496 279.014 33.52L277.497 34.8854C276.82 35.4942 276.101 36.0532 275.344 36.5581L269.291 40.5934C269.286 40.5966 269.285 40.6035 269.29 40.6072C270.835 41.8947 272.782 42.5998 274.793 42.5998H278.481ZM264.08 36.5997L268.983 34.148C269.446 33.9167 269.878 33.6296 270.271 33.293L271.042 32.6324C271.954 31.85 272.48 30.7078 272.48 29.5056V28.6483C272.48 28.105 272.264 27.5839 271.88 27.1997C271.496 26.8156 270.974 26.5997 270.431 26.5997H268.731C268.04 26.5997 267.358 26.7608 266.739 27.07C265.797 27.5412 265.052 28.3311 264.637 29.2995L264.511 29.5942C264.226 30.2577 264.08 30.9719 264.08 31.6937V36.5997Z"
+                        fill="#F7F7F8" />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_273_308">
+                        <rect width="292.885" height="64" fill="white" />
+                      </clipPath>
+                      <clipPath id="clip1_273_308">
+                        <rect x="7.62939e-06" width="64" height="64" rx="12" fill="white" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+
+                  <svg class="logo-light" width="128" height="28" viewBox="0 0 293 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_273_288)">
+                      <g clip-path="url(#clip1_273_288)">
+                        <path
+                          d="M30.5707 28.7334L16.2289 37.0965C15.3796 37.5918 14.9377 38.4402 14.9049 39.3031L9.20328 35.7937C8.78784 35.5376 8.53518 35.0843 8.53501 34.5962V34.4861C9.38591 32.915 10.6735 31.5302 12.3979 30.5248L23.0198 24.3307L30.5707 28.7334Z"
+                          fill="#090909" />
+                        <path
+                          d="M48.5398 9.45185C55.3938 5.45593 63.9987 10.3998 63.999 18.3336L64 34.5962C64 35.1628 63.9526 35.7228 63.8619 36.2717C63.8178 36.1941 63.7715 36.117 63.7228 36.0409C62.2131 33.6826 59.0772 32.9943 56.7185 34.5035L56.5891 34.5856C56.5261 34.4473 56.4617 34.3094 56.393 34.1732V18.3345C56.393 16.2705 54.1549 14.9843 52.3718 16.0236L40.6393 22.8637L33.0874 18.461L48.5398 9.45185Z"
+                          fill="#090909" />
+                        <path
+                          d="M0 18.9668C6.14031e-06 11.0956 8.4838 6.14327 15.3375 10.0136L52.1246 30.79C53.9319 31.8107 55.2701 33.2437 56.14 34.874L49.6465 39.0295C49.4702 38.3812 49.0497 37.7892 48.3834 37.4129L11.5973 16.6374C9.8142 15.6304 7.60695 16.9189 7.60695 18.9668V34.7128C7.60702 35.6415 8.08889 36.5041 8.87977 36.9909L14.5659 40.4906C13.0819 40.6738 11.6933 41.5086 10.8547 42.8847C10.1142 44.0998 9.94632 45.5026 10.2733 46.7804L4.89232 43.4689C1.85223 41.5976 4.83587e-05 38.2826 0 34.7128V18.9668Z"
+                          fill="#090909" />
+                        <path d="M15.3071 45.4361L26.9135 52.5087C30.382 54.6224 34.752 54.5743 38.1732 52.3847L59.5742 38.688"
+                          stroke="#19C379" stroke-width="7.4877" stroke-linecap="round" />
+                      </g>
+                      <path
+                        d="M208.882 49L214.482 20.2001H222.882V22.1702C222.882 22.1825 222.896 22.1895 222.906 22.1822L223.781 21.5263C224.247 21.177 224.756 20.8906 225.297 20.6743C226.08 20.361 226.916 20.2001 227.759 20.2001H245.282V14.6001L253.282 12.2001V20.2001H258.082L256.082 27.4001H250.882L248.952 38.5951C248.906 38.8646 248.882 39.1375 248.882 39.411V40.5515C248.882 41.0948 249.098 41.6159 249.482 42C249.867 42.3842 250.388 42.6001 250.931 42.6001H254.082L252.482 49H246.691C245.032 49 243.452 48.2906 242.349 47.0506C241.404 45.9873 240.882 44.6143 240.882 43.1917V42.6001L242.882 27.4001H238.882L235.282 49H226.482L230.082 27.4001H227.562C226.052 27.4001 224.552 27.6435 223.12 28.1209C222.963 28.1733 222.816 28.253 222.687 28.3564L220.882 29.8001L217.682 49H208.882Z"
+                        fill="#090909" />
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M180.483 59L187.282 20.6H203.171C205.035 20.6 206.823 21.3406 208.141 22.6589C209.624 24.1415 210.367 26.2086 210.169 28.2959L209.909 31.0176C209.759 32.5923 209.32 34.1257 208.612 35.5405L207.909 36.9474C206.708 39.3494 204.964 41.4389 202.815 43.0502C201.797 43.8144 200.696 44.4637 199.535 44.9863L196.645 46.2866C194.409 47.2929 192.076 48.068 189.682 48.6L188.082 59H180.483ZM194.083 27.4L192.083 41.7999L194.066 40.9734C195.92 40.2011 197.576 39.0205 198.91 37.5196L199.229 37.1601C199.796 36.5228 200.276 35.8136 200.657 35.0509L201.098 34.1689C201.483 33.4002 201.683 32.5525 201.683 31.6931V30.8142C201.683 29.9087 201.323 29.0402 200.683 28.4C200.042 27.7597 199.174 27.4 198.268 27.4H194.083Z"
+                        fill="#090909" />
+                      <path d="M78.084 17.8L78.884 9.40002H111.284L109.684 18.2H98.4839L92.884 49.4H81.684L88.484 17.8H78.084Z"
+                        fill="#090909" />
+                      <path
+                        d="M242.484 11C242.484 14.3137 238.998 17 235.684 17C232.37 17 230.484 14.3137 230.484 11C230.484 7.68629 233.57 5 236.884 5C240.198 5 242.484 7.68629 242.484 11Z"
+                        fill="#090909" />
+                      <path
+                        d="M292.884 44.6001C292.884 47.9138 289.398 50.6001 286.085 50.6001C282.771 50.6001 280.885 47.9138 280.885 44.6001C280.885 41.2864 283.971 38.6001 287.284 38.6001C290.598 38.6001 292.884 41.2864 292.884 44.6001Z"
+                        fill="#090909" />
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M111.842 42.0801L117.346 37.9521C118.895 36.7903 120.266 35.408 121.415 33.8491L124.15 30.1366C124.886 29.1385 125.282 27.9312 125.282 26.6913C125.282 25.5867 124.967 24.5051 124.374 23.5732L124.286 23.4349C123.157 21.6608 121.226 20.5582 119.124 20.4881L113.95 20.3156C111.671 20.2397 109.407 20.7093 107.347 21.6853C104.454 23.0555 102.104 25.3558 100.673 28.2185L100.617 28.3314C99.2296 31.1056 98.757 34.2481 99.267 37.3076L99.4266 38.2652C99.8531 40.8243 101.069 43.1862 102.903 45.0207C104.206 46.324 105.783 47.3216 107.518 47.9415L108.046 48.1298C109.658 48.7056 111.358 49 113.07 49H130.618C132.605 49 134.536 48.3432 136.111 47.1318C137.894 45.7604 139.099 43.7718 139.49 41.5568L139.508 41.4564C139.879 39.3504 139.511 37.1808 138.467 35.3149L134.509 28.2477C134.497 28.2264 134.512 28.2 134.537 28.2H145.124C145.206 28.2 145.268 28.2746 145.252 28.355L143.052 39.7218C142.939 40.3059 142.882 40.8996 142.882 41.4946V43.074C142.882 44.3156 143.333 45.5151 144.151 46.4495C145.124 47.5619 146.53 48.2 148.008 48.2H171.584C173.737 48.2 175.845 47.5809 177.657 46.4164L178.544 45.8462C179.808 45.0332 180.807 43.868 181.418 42.4942C181.856 41.5091 182.082 40.443 182.082 39.3649V38.8937C182.082 36.8791 181.469 34.9121 180.324 33.2542L170.553 19.1022C170.523 19.059 170.554 19 170.606 19H184.209C184.598 19 184.931 18.7203 184.997 18.3371L186.473 9.85462C186.478 9.82613 186.456 9.80005 186.427 9.80005H171.986C169.477 9.80005 167.062 10.752 165.228 12.4636C163.222 14.3366 162.082 16.9586 162.082 19.7037V20.6754C162.082 22.9776 162.737 25.2324 163.97 27.1767L172.417 40.4979C172.445 40.5422 172.414 40.6 172.361 40.6H152.631C152.135 40.6 151.759 40.1536 151.842 39.6649L153.968 27.2649C154.034 26.8808 154.367 26.6 154.757 26.6H158.176C158.579 26.6 158.92 26.2996 158.97 25.8993L159.57 21.0993C159.629 20.6218 159.257 20.2 158.776 20.2H156.082C155.64 20.2 155.282 19.8419 155.282 19.4V13.0133C155.282 12.4389 154.695 12.0517 154.167 12.278L147.367 15.1922C147.073 15.3183 146.882 15.6075 146.882 15.9276V20.1577C146.882 20.1811 146.863 20.2 146.84 20.2H133.255C131.471 20.2 129.751 20.8652 128.43 22.0655C126.935 23.425 126.082 25.3522 126.082 27.3732V29.4108C126.082 30.9876 126.399 32.5483 127.013 34.0004L130.45 42.1231C130.465 42.1596 130.438 42.2 130.399 42.2H111.882C111.818 42.2 111.791 42.1185 111.842 42.0801ZM106.883 36.1998L111.787 33.7481C112.249 33.5168 112.682 33.2297 113.074 32.8931L113.845 32.2325C114.758 31.4501 115.283 30.3079 115.283 29.1057V28.2484C115.283 27.7051 115.067 27.184 114.683 26.7999C114.299 26.4157 113.778 26.1999 113.235 26.1999H111.535C110.843 26.1999 110.161 26.3609 109.543 26.6701C108.6 27.1413 107.855 27.9312 107.44 28.8996L107.314 29.1943C107.03 29.8578 106.883 30.572 106.883 31.2938V36.1998Z"
+                        fill="#090909" />
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M278.481 42.5998L276.881 48.1998H270.585C267.897 48.1998 265.257 47.4861 262.936 46.1317L262.692 45.9898C262.02 45.5974 261.386 45.1416 260.8 44.6287L259.976 43.908C258.995 43.0493 258.241 41.9607 257.783 40.7398C257.451 39.8537 257.281 38.9151 257.281 37.9688V32.5021C257.281 30.4658 257.786 28.4613 258.752 26.6684C259.627 25.0435 260.856 23.6362 262.348 22.5508L262.848 22.1874C263.927 21.403 265.146 20.8336 266.44 20.5101C267.264 20.304 268.111 20.1998 268.96 20.1998H276.759C277.625 20.1998 278.477 20.426 279.229 20.8559C280.293 21.4638 281.095 22.4424 281.483 23.6047L281.723 24.3266C281.96 25.0374 282.081 25.7818 282.081 26.5311V26.7865C282.081 27.9821 281.83 29.1643 281.344 30.2569L281.282 30.3964C280.754 31.5854 279.981 32.6496 279.014 33.52L277.497 34.8854C276.82 35.4942 276.101 36.0532 275.344 36.5581L269.291 40.5934C269.286 40.5966 269.285 40.6035 269.29 40.6072C270.835 41.8947 272.782 42.5998 274.793 42.5998H278.481ZM264.08 36.5997L268.983 34.148C269.446 33.9167 269.878 33.6296 270.271 33.293L271.042 32.6324C271.954 31.85 272.48 30.7078 272.48 29.5056V28.6483C272.48 28.105 272.264 27.5839 271.88 27.1997C271.496 26.8156 270.974 26.5997 270.431 26.5997H268.731C268.04 26.5997 267.358 26.7608 266.739 27.07C265.797 27.5412 265.052 28.3311 264.637 29.2995L264.511 29.5942C264.226 30.2577 264.08 30.9719 264.08 31.6937V36.5997Z"
+                        fill="#090909" />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_273_288">
+                        <rect width="292.885" height="64" fill="white" />
+                      </clipPath>
+                      <clipPath id="clip1_273_288">
+                        <rect x="7.62939e-06" width="64" height="64" rx="12" fill="white" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+
+          </a>
+          <div class="logo-divider"></div>
+          <span class="logo-text">
+            <span class="logo-text-test">Test</span>
+            <span class="logo-text-report">Report</span>
+          </span>
+    </div>
+    
+    <!-- Theme Toggle Button -->
+    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+          <svg class="theme-icon sun-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_sun)">
+              <path d="M8 12C8 13.0609 8.42143 14.0783 9.17157 14.8284C9.92172 15.5786 10.9391 16 12 16C13.0609 16 14.0783 15.5786 14.8284 14.8284C15.5786 14.0783 16 13.0609 16 12C16 10.9391 15.5786 9.92172 14.8284 9.17157C14.0783 8.42143 13.0609 8 12 8C10.9391 8 9.92172 8.42143 9.17157 9.17157C8.42143 9.92172 8 10.9391 8 12Z" stroke="var(--fg-secondary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M3 12H4M12 3V4M20 12H21M12 20V21M5.6 5.6L6.3 6.3M18.4 5.6L17.7 6.3M17.7 17.7L18.4 18.4M6.3 17.7L5.6 18.4" stroke="var(--fg-secondary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </g>
+            <defs>
+              <clipPath id="clip0_sun">
+                <rect width="24" height="24" fill="white"/>
+              </clipPath>
+            </defs>
+      </svg>
+          <svg class="theme-icon moon-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_moon)">
+              <path d="M11.9998 2.99994C12.1318 2.99994 12.2628 2.99994 12.3928 2.99994C11.1081 4.19365 10.2824 5.79979 10.0591 7.53916C9.83577 9.27854 10.229 11.0412 11.1705 12.5207C12.112 14.0002 13.5422 15.103 15.2124 15.6374C16.8826 16.1718 18.6873 16.1041 20.3128 15.4459C19.6875 16.9504 18.6656 18.257 17.356 19.2262C16.0464 20.1954 14.4982 20.791 12.8767 20.9493C11.2552 21.1077 9.62104 20.8229 8.14867 20.1253C6.6763 19.4278 5.42089 18.3436 4.51637 16.9885C3.61185 15.6334 3.09213 14.0582 3.01267 12.4309C2.9332 10.8036 3.29696 9.18524 4.06515 7.74846C4.83334 6.31167 5.97714 5.11037 7.37454 4.27268C8.77195 3.43499 10.3705 2.99234 11.9998 2.99194V2.99994Z" stroke="var(--fg-secondary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </g>
+            <defs>
+              <clipPath id="clip0_moon">
+                <rect width="24" height="24" fill="white"/>
+              </clipPath>
+            </defs>
+      </svg>
+    </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <div class="content-section">
+      <!-- Metadata Section -->
+      <div id="metadata" class="metadata-section">
+        <!-- Title -->
+        <div class="title-group">
+          <h1 class="title-main">TestSprite AI Test Report</h1>
+          <p class="title-subtitle">Generated automatically by TestSprite AI Agent – providing detailed test results.</p>
+        </div>
+        <div class="metadata-container">
+        <div class="metadata-row">
+          <div class="metadata-label text-body-medium">Project Name</div>
+          <div class="metadata-value text-body">admin_vue3_vite</div>
+        </div>
+        <div class="metadata-row">
+          <div class="metadata-label text-body-medium">Date</div>
+          <div class="metadata-value text-body">8/31/2026</div>
+        </div>
+        <div class="metadata-row">
+          <div class="metadata-label text-body-medium">Prepared by</div>
+            <div class="metadata-value text-body">TestSprite AI Agent</div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Divider -->
+      <div class="divider"></div>
+      
+      <!-- Coverage & Matching Metrics -->
+      <div id="coverage" class="coverage-section">
+        <div class="title-group">
+          <h2 class="title-section">Coverage & Matching Metrics</h2>
+          <p class="section-subtitle">High-level overview of test outcomes and requirement validation results.</p>
+        </div>
+        
+        <div class="coverage-summary">
+          <ul class="coverage-list text-body">
+            <li><span class="coverage-highlight">0/0</span> of tests passed</li>
+            <li><span class="coverage-highlight">Key gaps / risks:</span>
+            
+              <blockquote>
+<p>附可视化测试详情：TestSprite Dashboard（各用例含 Playwright 录像与逐步快照，portalUrl 见 <code>testsprite_tests/tmp/test_results.json</code>）</p>
+</blockquote>
+<p><strong>失败优先级结论：</strong></p>
+<ul>
+<li><strong>优先级低（演示设计）</strong>：TC002/TC003——角色权限保存在本项目中被刻意 mock 化（保存未调真实接口、回显随机），若作为生产系统使用这是高风险空缺，但作为演示模板属预期。</li>
+<li><strong>建议复核（测试侧）</strong>：TC010（点击 tag 链接而非关闭按钮）、TC013（与 TC014 断言结论冲突）。</li>
+</ul>
+<p><strong>本次测试发现的其他代码级风险（未在用例中断言，建议关注）：</strong></p>
+<ol>
+<li><strong>路由 name 重复</strong>：css-animation 的 <code>tabs</code> 与 vueUse 的 <code>clock</code> 路由共用相同 name，keep-alive 缓存与跳转 <code>name</code> 匹配可能产生歧义。</li>
+<li><strong><code>/audio/*</code> 菜单 404</strong>：菜单中存在音频相关入口但路由模块未注册，点击进入 404。</li>
+<li><strong>分页 total 不一致</strong>：mock <code>getRoleList</code> 返回 <code>total_items=2</code> 但角色实际 6 条，分页组件总数展示会错误。</li>
+<li><strong>登录验证码形同虚设</strong>：验证码为纯文本 DOM 直接可读（<code>.code-img</code>），自动化可轻易绕过，安全上仅作演示用途。</li>
+</ol>
+<p><strong>生产环境风险：</strong></p>
+<ul>
+<li>所有后端接口依赖 <code>vite-plugin-mock</code>，<code>vite preview</code>/生产构建默认无 mock，部署后登录等接口直接 404。若该项目要被真实部署，需要接入真实后端或在生产构建中显式启用 mock。</li>
+</ul>
+
+            </li>
+</ul>
+        </div>
+        
+        <!-- Data Table -->
+        <div class="data-table">
+          <div class="table-header">
+            <div class="table-header-cell">
+              <span class="text-body-medium">Requirement</span>
+            </div>
+            <div class="table-header-cell">
+              <span class="text-body-medium">Total Tests</span>
+            </div>
+            <div class="table-header-cell">
+              <span class="text-body-medium">Passed</span>
+            </div>
+            <div class="table-header-cell">
+              <span class="text-body-medium">Failed</span>
+            </div>
+          </div>
+          <div class="table-rows">
+            
+            <div class="table-row">
+              <div class="table-cell"><span class="text-body">✅ Requirement 用户登录（Login）- 全部通过</span></div>
+              <div class="table-cell"><span class="text-body">0</span></div>
+              <div class="table-cell"><span class="text-body">0</span></div>
+              <div class="table-cell"><span class="text-body">0</span></div>
+            </div>
+        
+          </div>
+        </div>
+      </div>
+      
+      <!-- Divider -->
+      <div class="divider"></div>
+      <!-- Requirements Section -->
+      <div id="requirements" class="requirements-section">
+        <div class="title-group">
+          <h2 class="title-section">Requirement Validation Summary</h2>
+          <p class="section-subtitle">Detailed test results and validation status for each functional requirement.</p>
+        </div>
+        
+        <div class="accordion-container">
+
+        
+                <div class="requirement-wrapper accordion-item active">
+          <div class="accordion-header" onclick="toggleAccordion(this)">
+            <div class="requirement-content">
+                                          <div class="requirement-title-row">
+              <h3 class="title-requirement">✅ Requirement 用户登录（Login）- 全部通过</h3>
+                <div class="requirement-status-tag status-success">
+              <svg width="18" height="18" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="7.99961" cy="7.99998" r="6.4" fill="#10A363" fill-opacity="0.2"/>
+                <path d="M5.59961 8.00002L7.19961 9.60002L10.3996 6.40002" stroke="#19C379" stroke-width="1.28" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <span>0/0</span>
+            </div>
+              </div>
+              <p class="text-body-medium requirement-description">Proper error handling for API calls and invalid data scenarios.</p>
+            </div>
+            <div class="accordion-icon">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M11.4276 6C11.9145 6 12.1687 6.61626 11.875 7.01439L11.8316 7.06689L8.40295 10.817C8.30455 10.9246 8.17364 10.9892 8.03476 10.9988C7.89589 11.0083 7.7586 10.9621 7.64865 10.8688L7.59493 10.817L4.16629 7.06689L4.11886 7.00814L4.088 6.96002L4.05714 6.90002L4.04743 6.87752L4.032 6.83564L4.01371 6.76814L4.008 6.73501L4.00229 6.69751L4 6.66189V6.58814L4.00286 6.55188L4.008 6.51438L4.01371 6.48188L4.032 6.41438L4.04743 6.37251L4.08743 6.29L4.12457 6.23375L4.16629 6.18313L4.22 6.13125L4.26401 6.0975L4.31886 6.06375L4.33944 6.05313L4.37772 6.03625L4.43944 6.01625L4.46972 6.01L4.50401 6.00375L4.53658 6.00125L11.4276 6Z" fill="var(--fg-secondary)"/>
+              </svg>
+            </div>
+          </div>
+
+            <div class="accordion-content">
+            <div class="test-wrapper">
+
+            </div>
+          </div>
+        </div>
+          
+        </div>
+      </div>
+      
+      <!-- Divider -->
+      <div class="divider"></div>
+      
+      <!-- References Section -->
+      <div id="references" class="references-section">
+        <h2 class="title-section">References</h2>
+        <div class="metadata-container">
+        <div class="metadata-row">
+          <div class="metadata-label text-body-medium">Product Spec</div>
+          <div class="metadata-value text-body">prd.md</div>
+        </div>
+        <div class="metadata-row">
+          <div class="metadata-label text-body-medium">Code Repo</div>
+          <div class="metadata-value text-body">admin_vue3_vite</div>
+        </div>
+        <div class="metadata-row">
+          <div class="metadata-label text-body-medium">Test Results</div>
+          <div class="metadata-value text-body">testsprite-mcp-test-report.md</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-title">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="sidebar-title-icon">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+          <path d="M4 6l16 0" />
+          <path d="M4 12l10 0" />
+          <path d="M4 18l14 0" />
+        </svg>
+        In This Report
+      </div>
+      <nav class="sidebar-nav">
+        <a href="#metadata" class="sidebar-nav-item active">Report Metadata</a>
+        <a href="#coverage" class="sidebar-nav-item">Coverage & Matching Metrics</a>
+        <a href="#requirements" class="sidebar-nav-item">Requirement Validation Summary</a>
+        <a href="#references" class="sidebar-nav-item">References</a>
+      </nav>
+        </aside>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+    <div class="footer-content">
+      <div class="footer-brand">
+        <a href="https://www.testsprite.com/" target="_blank" class="logo-link">
+        <svg class="footer-logo" height="32" viewBox="0 0 313 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M30.4218 27.7334L16.568 35.8119C15.5541 36.4033 15.037 37.4273 15.0227 38.4581L9.91201 35.3131C9.74859 35.2124 9.60821 35.0839 9.49047 34.9393C10.2246 33.1396 11.5402 31.5349 13.432 30.4319L24.2397 24.1293L30.4218 27.7334Z" fill="var(--logo-text-color)"/>
+            <path d="M48.1752 10.1743C54.4027 6.54349 62.2223 11.0361 62.2223 18.2448V33.8769C62.2222 34.3558 62.1847 34.8296 62.1132 35.2949C60.7357 33.3198 58.0409 32.759 55.9856 34.0428C55.9886 33.988 55.9946 33.9333 55.9947 33.878V18.2448C55.9947 15.8419 53.387 14.3439 51.3112 15.5543L39.4366 22.4772L33.2544 18.8731L48.1752 10.1743Z" fill="var(--logo-text-color)"/>
+            <path d="M1.77783 18.8521C1.77784 11.7005 9.48639 7.20114 15.7135 10.718L51.0783 30.6915C52.8432 31.6885 54.1162 33.1175 54.8971 34.7376L49.5285 38.1724C49.3552 37.3489 48.8511 36.5858 48.015 36.1135L12.6503 16.1411C10.5746 14.9689 8.00544 16.4683 8.00543 18.8521V33.9899C8.00559 35.0709 8.56647 36.0752 9.48706 36.6419L14.858 39.9471C13.6912 40.204 12.6268 40.9179 11.9561 42.0184C11.3708 42.9791 11.1858 44.0711 11.3516 45.101L6.22271 41.9446C3.46075 40.2444 1.77803 37.2332 1.77783 33.9899V18.8521Z" fill="var(--logo-text-color)"/>
+            <path d="M15.9481 44.2971L27.0192 51.0435C30.4065 53.1077 34.6742 53.0607 38.0153 50.9224L58.5033 37.81" stroke="#19C379" stroke-width="6.22759" stroke-linecap="round"/>
+            <path d="M219.332 50.889L225.554 18.889H234.887V21.0781C234.887 21.0917 234.903 21.0995 234.914 21.0913L235.885 20.3626C236.403 19.9745 236.969 19.6562 237.57 19.416C238.44 19.0679 239.369 18.889 240.306 18.889H259.776V12.6668L268.665 10.0001V18.889H273.998L271.776 26.889H265.998L263.854 39.3279C263.802 39.6273 263.776 39.9306 263.776 40.2345V41.5017C263.776 42.1054 264.016 42.6843 264.443 43.1112C264.869 43.5381 265.448 43.7779 266.052 43.7779H269.554L267.776 50.889H261.341C259.497 50.889 257.742 50.1007 256.517 48.7229C255.467 47.5415 254.887 46.0159 254.887 44.4353V43.7779L257.109 26.889H252.665L248.665 50.889H238.887L242.887 26.889H240.087C238.409 26.889 236.742 27.1594 235.151 27.6899C234.977 27.7481 234.814 27.8367 234.67 27.9516L232.665 29.5557L229.109 50.889H219.332Z" fill="var(--logo-text-color)"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M187.776 62L195.332 19.3333H212.985C215.057 19.3333 217.043 20.1562 218.508 21.621C220.155 23.2684 220.981 25.5651 220.761 27.8843L220.473 30.9085C220.306 32.6581 219.817 34.3619 219.031 35.9339L218.25 37.4971C216.915 40.1661 214.978 42.4876 212.59 44.278C211.458 45.1271 210.236 45.8486 208.945 46.4293L205.735 47.874C203.25 48.9921 200.658 49.8534 197.998 50.4444L196.221 62H187.776ZM202.887 26.8889L200.665 42.8889L202.869 41.9705C204.929 41.1123 206.768 39.8006 208.251 38.133L208.606 37.7336C209.235 37.0254 209.769 36.2374 210.192 35.3899L210.682 34.4099C211.109 33.5558 211.332 32.614 211.332 31.659V30.6825C211.332 29.6763 210.932 28.7114 210.221 28C209.509 27.2886 208.544 26.8889 207.538 26.8889H202.887Z" fill="var(--logo-text-color)"/>
+            <path d="M74 16.2223L74.8889 6.889H110.889L109.111 16.6668H96.6666L90.4444 51.3334H78L85.5555 16.2223H74Z" fill="var(--logo-text-color)"/>
+            <path d="M256.667 8.66666C256.667 12.3486 252.793 15.3333 249.111 15.3333C245.429 15.3333 243.333 12.3486 243.333 8.66666C243.333 4.98477 246.763 2 250.444 2C254.126 2 256.667 4.98477 256.667 8.66666Z" fill="var(--logo-text-color)"/>
+            <path d="M312.667 46.0001C312.667 49.682 308.794 52.6667 305.112 52.6667C301.43 52.6667 299.334 49.682 299.334 46.0001C299.334 42.3182 302.763 39.3334 306.445 39.3334C310.127 39.3334 312.667 42.3182 312.667 46.0001Z" fill="var(--logo-text-color)"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M111.509 43.2001L117.625 38.6135C119.346 37.3226 120.869 35.7867 122.145 34.0546L125.184 29.9296C126.002 28.8206 126.443 27.4791 126.443 26.1015C126.443 24.8742 126.093 23.6723 125.434 22.6368L125.336 22.4833C124.081 20.5121 121.935 19.2868 119.6 19.209L113.851 19.0174C111.319 18.933 108.804 19.4547 106.514 20.5392C103.3 22.0616 100.689 24.6175 99.099 27.7984L99.0363 27.9238C97.4951 31.0063 96.97 34.4979 97.5366 37.8973L97.714 38.9613C98.1879 41.8048 99.5384 44.4291 101.577 46.4675C103.025 47.9156 104.776 49.024 106.705 49.7127L107.291 49.922C109.082 50.5618 110.971 50.8889 112.873 50.8889H132.371C134.579 50.8889 136.725 50.1591 138.474 48.8131C140.455 47.2894 141.794 45.0798 142.229 42.6187L142.248 42.5071C142.661 40.1672 142.253 37.7564 141.092 35.6833L136.694 27.8308C136.681 27.8071 136.698 27.7778 136.725 27.7778H148.489C148.58 27.7778 148.649 27.8607 148.631 27.95L146.187 40.5797C146.061 41.2288 145.998 41.8884 145.998 42.5495V44.3045C145.998 45.684 146.499 47.0168 147.407 48.055C148.489 49.291 150.051 50 151.694 50H177.889C180.281 50 182.624 49.3121 184.636 48.0182L185.622 47.3846C187.027 46.4813 188.137 45.1867 188.816 43.6602C189.302 42.5656 189.553 41.3811 189.553 40.1833V39.6597C189.553 37.4212 188.872 35.2357 187.6 33.3936L176.743 17.6692C176.71 17.6211 176.744 17.5556 176.803 17.5556H191.917C192.349 17.5556 192.719 17.2448 192.793 16.819L194.432 7.39403C194.437 7.36237 194.413 7.3334 194.381 7.3334H178.335C175.548 7.3334 172.865 8.39109 170.827 10.2929C168.597 12.374 167.331 15.2873 167.331 18.3374V19.4171C167.331 21.9751 168.059 24.4804 169.429 26.6407L178.815 41.4421C178.846 41.4913 178.811 41.5556 178.752 41.5556H156.83C156.279 41.5556 155.861 41.0595 155.954 40.5165L158.316 26.7387C158.389 26.312 158.759 26 159.192 26H162.991C163.439 26 163.817 25.6662 163.873 25.2214L164.54 19.8881C164.606 19.3575 164.192 18.8889 163.658 18.8889H160.665C160.174 18.8889 159.776 18.491 159.776 18.0001V10.9037C159.776 10.2655 159.123 9.83525 158.537 10.0866L150.981 13.3247C150.654 13.4648 150.442 13.7862 150.442 14.1417V18.8419C150.442 18.8679 150.421 18.8889 150.395 18.8889H135.302C133.319 18.8889 131.407 19.628 129.94 20.9617C128.279 22.4722 127.331 24.6136 127.331 26.8592V29.1231C127.331 30.8751 127.683 32.6092 128.366 34.2227L132.184 43.248C132.201 43.2885 132.172 43.3334 132.128 43.3334H111.554C111.482 43.3334 111.452 43.2428 111.509 43.2001ZM105.999 36.6665L111.447 33.9423C111.961 33.6853 112.442 33.3663 112.878 32.9923L113.735 32.2584C114.749 31.3891 115.332 30.1199 115.332 28.7841V27.8315C115.332 27.2279 115.093 26.6489 114.666 26.2221C114.239 25.7952 113.66 25.5554 113.056 25.5554H111.168C110.399 25.5554 109.641 25.7343 108.954 26.0779C107.907 26.6015 107.079 27.4792 106.618 28.5552L106.478 28.8826C106.162 29.6197 105.999 30.4134 105.999 31.2154V36.6665Z" fill="var(--logo-text-color)"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M296.663 43.7776L294.885 49.9998H287.891C284.904 49.9998 281.971 49.2068 279.391 47.7019L279.12 47.5443C278.373 47.1082 277.669 46.6018 277.017 46.032L276.102 45.2311C275.012 44.277 274.175 43.0675 273.666 41.7109C273.297 40.7264 273.108 39.6835 273.108 38.632V32.5579C273.108 30.2953 273.669 28.0682 274.742 26.076C275.714 24.2706 277.08 22.707 278.738 21.5009L279.293 21.0972C280.492 20.2256 281.847 19.5929 283.284 19.2335C284.2 19.0045 285.141 18.8887 286.085 18.8887H294.749C295.712 18.8887 296.659 19.14 297.495 19.6177C298.676 20.2931 299.568 21.3805 299.998 22.6719L300.266 23.4741C300.529 24.2639 300.663 25.091 300.663 25.9235V26.2072C300.663 27.5357 300.384 28.8493 299.845 30.0633L299.776 30.2183C299.189 31.5393 298.33 32.7219 297.256 33.6889L295.57 35.206C294.818 35.8825 294.019 36.5036 293.177 37.0646L286.452 41.5483C286.446 41.5518 286.446 41.5595 286.451 41.5636C288.168 42.9942 290.331 43.7776 292.566 43.7776H296.663ZM280.662 37.1108L286.11 34.3866C286.624 34.1297 287.105 33.8106 287.541 33.4367L288.397 32.7027C289.412 31.8334 289.995 30.5643 289.995 29.2285V28.2759C289.995 27.6722 289.755 27.0933 289.329 26.6664C288.902 26.2395 288.323 25.9997 287.719 25.9997H285.83C285.062 25.9997 284.304 26.1786 283.617 26.5223C282.57 27.0458 281.742 27.9235 281.281 28.9995L281.141 29.3269C280.825 30.0641 280.662 30.8577 280.662 31.6597V37.1108Z" fill="var(--logo-text-color)"/>
+            </svg>
+            
+        </a>
+        <p class="footer-copyright">Copyright © 2025 TestSprite</p>
+      </div>
+      
+      <div class="footer-links">
+        <div class="footer-column">
+          <h4 class="footer-column-title">Solutions</h4>
+          <ul class="footer-link-list">
+            <li><a href="https://www.testsprite.com/solutions/mcp" class="footer-link" target="_blank">MCP Server</a></li>
+            <li><a href="https://www.testsprite.com/solutions/backend" class="footer-link" target="_blank">Backend Testing</a></li>
+            <li><a href="https://www.testsprite.com/solutions/frontend" class="footer-link" target="_blank">Frontend Testing</a></li>
+            <li><a href="#" class="footer-link">Data Testing</a></li>
+            <li><a href="#" class="footer-link">AI Agent/Model Testing</a></li>
+</ul>
+        </div>
+        
+        <div class="footer-column">
+          <h4 class="footer-column-title">Connect</h4>
+          <ul class="footer-link-list">
+            <li><a href="https://calendly.com/contact-hmul/schedule" class="footer-link" target="_blank">Contact Us</a></li>
+            <li><a href="https://discord.com/invite/GXWFjCe4an" class="footer-link" target="_blank">Discord</a></li>
+            <li><a href="https://www.linkedin.com/company/testsprite" class="footer-link" target="_blank">Linkedin</a></li>
+            <li><a href="https://x.com/test_sprite?s=21" class="footer-link" target="_blank">Twitter</a></li>
+</ul>
+        </div>
+        
+        <div class="footer-column">
+          <h4 class="footer-column-title">Resources</h4>
+          <ul class="footer-link-list">
+            <li><a href="https://docs.testsprite.com/" class="footer-link" target="_blank">Docs</a></li>
+            <li><a href="https://www.testsprite.com/about" class="footer-link" target="_blank">About</a></li>
+            <li><a href="https://www.testsprite.com/blog" class="footer-link" target="_blank">Blog</a></li>
+</ul>
+        </div>
+        
+        <div class="footer-column">
+          <h4 class="footer-column-title">Legal</h4>
+          <ul class="footer-link-list">
+            <li><a href="https://www.testsprite.com/terms" class="footer-link" target="_blank">Terms & Conditions</a></li>
+            <li><a href="https://www.testsprite.com/privacy" class="footer-link" target="_blank">Privacy Policy</a></li>
+</ul>
+        </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Theme switching functionality
+    function initTheme() {
+      // Check for saved theme preference or default to 'dark'
+      const savedTheme = localStorage.getItem('theme') || 'dark';
+      document.documentElement.setAttribute('data-theme', savedTheme);
+      
+      // Add event listener to theme toggle button
+      const themeToggle = document.getElementById('theme-toggle');
+      if (themeToggle) {
+        themeToggle.addEventListener('click', toggleTheme);
+      }
+    }
+    
+    function toggleTheme() {
+      const currentTheme = document.documentElement.getAttribute('data-theme');
+      const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+      
+      document.documentElement.setAttribute('data-theme', newTheme);
+      localStorage.setItem('theme', newTheme);
+    }
+    
+    function toggleAccordion(element) {
+      const accordionItem = element.parentElement;
+      
+      // Simply toggle the current accordion item
+      accordionItem.classList.toggle('active');
+    }
+
+    // Scroll-based navigation highlighting
+    function updateActiveNavItem() {
+      const sections = document.querySelectorAll('#metadata, #coverage, #requirements, #references');
+      const navItems = document.querySelectorAll('.sidebar-nav-item');
+      
+      if (sections.length === 0) return;
+      
+      const scrollTop = window.scrollY;
+      const windowHeight = window.innerHeight;
+      const documentHeight = document.documentElement.scrollHeight;
+      const headerOffset = 150; // Increased offset for better detection
+      
+      let currentSection = sections[0].getAttribute('id'); // Default to first section
+      
+      // Check if we're near the bottom of the page (more generous threshold)
+      if (scrollTop + windowHeight >= documentHeight - 50) {
+        currentSection = sections[sections.length - 1].getAttribute('id');
+      } else {
+        // Find the section that's currently most visible
+        sections.forEach(section => {
+          const sectionTop = section.offsetTop;
+          const sectionBottom = sectionTop + section.offsetHeight;
+          const viewportTop = scrollTop + headerOffset;
+          
+          // If the section is in view, make it active
+          if (viewportTop >= sectionTop && viewportTop < sectionBottom) {
+            currentSection = section.getAttribute('id');
+          }
+        });
+      }
+      
+      // Update active state
+      navItems.forEach(item => {
+        item.classList.remove('active');
+        if (item.getAttribute('href') === '#' + currentSection) {
+          item.classList.add('active');
+        }
+      });
+    }
+
+    // Smooth scroll for navigation links
+    function setupSmoothScroll() {
+      const navItems = document.querySelectorAll('.sidebar-nav-item');
+      
+      navItems.forEach(item => {
+        item.addEventListener('click', function(e) {
+          e.preventDefault();
+          const targetId = this.getAttribute('href').substring(1);
+          const targetSection = document.getElementById(targetId);
+          
+          if (targetSection) {
+            const headerHeight = 72; // Account for fixed header
+            let targetPosition = targetSection.offsetTop - headerHeight;
+            
+            // Special handling for metadata section to include the title
+            if (targetId === 'metadata') {
+              const titleElement = document.querySelector('.title-main');
+              if (titleElement) {
+                targetPosition = titleElement.offsetTop - headerHeight - 20; // Extra 20px padding
+              }
+            }
+            
+            window.scrollTo({
+              top: targetPosition,
+              behavior: 'smooth'
+            });
+          }
+        });
+      });
+    }
+
+    // Initialize everything
+    document.addEventListener('DOMContentLoaded', function() {
+      // Initialize theme
+      initTheme();
+      
+      // Initialize first accordion as open
+      const firstAccordion = document.querySelector('.accordion-item');
+      if (firstAccordion) {
+        firstAccordion.classList.add('active');
+      }
+      
+      // Setup navigation
+      setupSmoothScroll();
+      
+      // Set initial active state and delay scroll listener to prevent conflicts
+      setTimeout(() => {
+        updateActiveNavItem();
+        window.addEventListener('scroll', updateActiveNavItem);
+      }, 100);
+    });
+  </script>
+    </body>
+    </html>
+  

@@ -51,10 +51,6 @@
 				<span>{{!loading ? '登 录' : '登 录 中...'}}</span>
 			</el-button>
 		</el-form>
-		<!--  底部  -->
-		<div class="el-login-footer">
-			<span>项目搭建博客地址：https://juejin.cn/user/1310273591836957</span>
-		</div>
 	</div>
 </template>
 
