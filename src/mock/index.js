@@ -585,7 +585,7 @@ export default [
 				page_info: {
 					cur_page: "1",
 					page_size: "10",
-					total_items: "2"
+					total_items: "6"
 				}
 			};
 		}
