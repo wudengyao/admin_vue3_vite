@@ -29,3 +29,4 @@ coverage
 .vercel
 testsprite_tests/tmp/
 testsprite_tests/tmp/config.json
+.env*

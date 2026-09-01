@@ -22,8 +22,12 @@ export default defineConfig({
 			enable: true,
 			logger: true,
 			mockPath: "./src/mock/",
-			supportTs: false
-
+			supportTs: false,
+			prodEnabled: true,
+			injectCode: `
+				import { setupProdMockServer } from './mockProdServer.js';
+				setupProdMockServer();
+			`
 		}),
 		vitePluginGitInfo()
 

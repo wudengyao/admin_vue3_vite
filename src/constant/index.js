@@ -8,8 +8,8 @@ export const MO_URL = " 1模测环境接口域名";
 export const YFB_URL = "2预发布环境接口域名";
 // 3线上环境
 export const PRO_URL = "3线上环境接口域名";
-// 4本地开发,会触发代理
-export const DEV_URL = "/api";
+// 4本地开发,会触发代理；生产构建时走浏览器端 mock 拦截，不使用代理前缀
+export const DEV_URL = import.meta.env.PROD ? "" : "/api";
 // 接口版本号
 export const VERSION = "10000";
 // 接口测试版本号s

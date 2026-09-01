@@ -34,14 +34,14 @@ async def run_test():
 
         # Interact with the page elements to simulate user flow
         # -> navigate
-        await page.goto("https://oil-revenues-cage-musicians.trycloudflare.com")
+        await page.goto("https://admin-vue3-vite.vercel.app")
         try:
             await page.wait_for_load_state("domcontentloaded", timeout=5000)
         except Exception:
             pass
         
         # -> Open the Login page by navigating to '/login' so the login form (username, password, captcha) can be inspected.
-        await page.goto("https://oil-revenues-cage-musicians.trycloudflare.com/login")
+        await page.goto("https://admin-vue3-vite.vercel.app/login")
         try:
             await page.wait_for_load_state("domcontentloaded", timeout=5000)
         except Exception:
@@ -59,7 +59,7 @@ async def run_test():
         await elem.click(timeout=10000)
         
         # -> Click the '登 录' button to submit the login form and sign in.
-        await page.goto("https://oil-revenues-cage-musicians.trycloudflare.com/adminAuth/adminList")
+        await page.goto("https://admin-vue3-vite.vercel.app/adminAuth/adminList")
         try:
             await page.wait_for_load_state("domcontentloaded", timeout=5000)
         except Exception:

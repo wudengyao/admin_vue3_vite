@@ -34,14 +34,14 @@ async def run_test():
 
         # Interact with the page elements to simulate user flow
         # -> navigate
-        await page.goto("https://oil-revenues-cage-musicians.trycloudflare.com")
+        await page.goto("https://admin-vue3-vite.vercel.app")
         try:
             await page.wait_for_load_state("domcontentloaded", timeout=5000)
         except Exception:
             pass
         
         # -> Open the login page by navigating to /login so the username/password/captcha fields and the 'code-img' text are visible.
-        await page.goto("https://oil-revenues-cage-musicians.trycloudflare.com/login")
+        await page.goto("https://admin-vue3-vite.vercel.app/login")
         try:
             await page.wait_for_load_state("domcontentloaded", timeout=5000)
         except Exception:
@@ -65,7 +65,7 @@ async def run_test():
         await elem.click(timeout=10000)
         
         # -> Open the role list page and open a role's 'Assign Permissions' (分配权限) dialog so the permission tree can be inspected.
-        await page.goto("https://oil-revenues-cage-musicians.trycloudflare.com/adminAuth/getRoleList")
+        await page.goto("https://admin-vue3-vite.vercel.app/adminAuth/getRoleList")
         try:
             await page.wait_for_load_state("domcontentloaded", timeout=5000)
         except Exception:
